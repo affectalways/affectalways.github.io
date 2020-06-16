@@ -23,10 +23,35 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Tue, 16 Jun 2020 22:13:23 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 16 Jun 2020 22:20:02 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>关于我</title>
+                <link>https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</guid>
+                <pubDate>Tue, 16 Jun 2020 22:18:32 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;​	理工男，非强迫症，不可一日无书&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
     </channel>
 </rss>

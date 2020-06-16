@@ -3,26 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://affectalways.github.io/about/</loc>
-    <lastmod>2020-06-16T22:21:45+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://affectalways.github.io/</loc>
-    <lastmod>2020-06-16T22:21:45+08:00</lastmod>
+    <lastmod>2020-06-16T22:47:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
-    <lastmod>2020-06-16T22:21:45+08:00</lastmod>
+    <loc>https://affectalways.github.io/tags/hugo/</loc>
+    <lastmod>2020-06-16T22:47:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://affectalways.github.io/categories/</loc>
+    <loc>https://affectalways.github.io/posts/</loc>
+    <lastmod>2020-06-16T22:47:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://affectalways.github.io/tags/</loc>
+    <lastmod>2020-06-16T22:47:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo_install/</loc>
+    <lastmod>2020-06-16T22:47:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/about/</loc>
+    <lastmod>2020-06-16T22:39:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
+    <lastmod>2020-06-16T22:39:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/categories/</loc>
   </url>
   
 </urlset>

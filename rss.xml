@@ -23,13 +23,13 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 17 Jun 2020 20:57:12 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2020 20:59:23 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
         
             <item>
-                <title>Hugo添加tags等分类</title>
+                <title>Hugo 添加tags等分类</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_tags/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_tags/</guid>
                 <pubDate>Wed, 17 Jun 2020 20:19:37 &#43;0800</pubDate>

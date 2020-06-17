@@ -23,10 +23,191 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 17 Jun 2020 21:39:30 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 00:18:46 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Hugo 添加评论功能</title>
+                <link>https://affectalways.github.io/posts/hugo/hugo_comment/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_comment/</guid>
+                <pubDate>Wed, 17 Jun 2020 21:48:44 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h1 id=&#34;不能评论&#34;&gt;不能评论!&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; 是一个强大的静态网页生成器，使用 go 开发，速度贼快。不过 Hugo 还比较年轻，没有像 &lt;a href=&#34;https://theme-next.iissnan.com/&#34;&gt;NexT&lt;/a&gt; 那样功能强大，成熟稳定的主题。所以很多东西需要自己动手撸。&lt;/p&gt;
+&lt;p&gt;比如评论系统。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;评论系统排名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;valine &amp;gt; gitalk &amp;gt; gitment &amp;gt; livere &amp;gt; 畅言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于valine&#34;&gt;关于Valine&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/valine.png?raw=true&#34; alt=&#34;valine.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;官方网址： &amp;laquo;&lt;a href=&#34;https://valine.js.org/%3E%3E&#34;&gt;https://valine.js.org/&amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其特性不一一赘述，官方网址有介绍&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;添加评论区&#34;&gt;添加评论区&lt;/h2&gt;
+&lt;p&gt;目前博客使用的主题是meme&lt;/p&gt;
+&lt;p&gt;不同的主题可能有所区别，但原理大都类似&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;原理&#34;&gt;原理？&lt;/h3&gt;
+&lt;p&gt;Hugo 会将 &lt;strong&gt;Markdown 文档&lt;/strong&gt; 按照 &lt;strong&gt;主题 (包括 HTML 模板、CSS、JavaScript 等)&lt;/strong&gt; 编译成静态网页&lt;/p&gt;
+&lt;p&gt;那么我们只需要将 Gitalk 作为一个 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 插入到 HTML 模板中，然后在 &lt;code&gt;config.toml&lt;/code&gt; 中添加相关配置，就可以添加&lt;code&gt;评论区&lt;/code&gt;了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;leancloud相关配置&#34;&gt;Leancloud相关配置&lt;/h2&gt;
+&lt;p&gt;评论系统依赖于&lt;code&gt;leancloud&lt;/code&gt;，所以需要先在&lt;code&gt;leancloud&lt;/code&gt;中进行相关的准备工作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://leancloud.cn/dashboard/login.html#/signin&#34;&gt;登录&lt;/a&gt; 或 &lt;a href=&#34;https://leancloud.cn/dashboard/login.html#/signup&#34;&gt;注册&lt;/a&gt; LeanCloud&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;登录成功后，进入后台点击左上角的创建应用：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud.png?raw=true&#34; alt=&#34;leancloud.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建好应用，进入应用，左边栏找到 &lt;strong&gt;设置&lt;/strong&gt; ，然后点击 &lt;strong&gt;应用Key&lt;/strong&gt;，此时记录出现的 &lt;strong&gt;App ID&lt;/strong&gt; 和 &lt;strong&gt;App Key&lt;/strong&gt;，后面配置文件中会用到：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_key.png?raw=true&#34; alt=&#34;lc_key.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因为评论和文章阅读数统计依赖于存储，所以还需要建立两个新的存储 &lt;code&gt;Class&lt;/code&gt;，左边栏找到并点击 &lt;strong&gt;存储&lt;/strong&gt;，点击 &lt;strong&gt;创建Class&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_class.png?raw=true&#34; alt=&#34;lc_class.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建两个存储Class，分别命名为: &lt;code&gt;Counter&lt;/code&gt; 和 &lt;code&gt;Comment&lt;/code&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还需要为应用添加安全域名，左边栏点击 &lt;strong&gt;设置&lt;/strong&gt;，找到 &lt;strong&gt;安全中心&lt;/strong&gt;，点击后会看到 &lt;strong&gt;安全域名&lt;/strong&gt; 设置框，输入博客使用的域名，点击保存即可：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_safe.png?raw=true&#34; alt=&#34;lc_safe.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;configtoml开启comment&#34;&gt;config.toml开启comment&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将&lt;code&gt;enableComments = false&lt;/code&gt;设置为&lt;code&gt;enableComments = true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将&lt;code&gt;enableValine = false&lt;/code&gt;设置为&lt;code&gt;enableValine = true&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加 &lt;strong&gt;Valine&lt;/strong&gt; 参数项：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;## Valine
+    enableValine = true
+    valineAppId = &amp;quot;************&amp;quot;
+    valineAppKey = &amp;quot;*****************&amp;quot;
+    valinePlaceholder = &amp;quot;Just go go&amp;quot;
+    valinePath = &amp;quot;&amp;quot;
+    valineAvatar = &amp;quot;mm&amp;quot;
+    valineMeta = [&amp;quot;nick&amp;quot;, &amp;quot;mail&amp;quot;, &amp;quot;link&amp;quot;]
+    valinePageSize = 10
+    valineLang = &amp;quot;zh-cn&amp;quot;
+    valineVisitor = false
+    valineHighlight = true
+    valineAvatarForce = false
+    valineRecordIP = false
+    valineServerURLs = &amp;quot;&amp;quot;
+    valineEmojiCDN = &amp;quot;&amp;quot;
+    valineEmojiMaps = {}
+    valineEnableQQ = false
+    valineRequiredFields = []
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上面几项内容的含义，这里简单一说，具体还是要看 &lt;a href=&#34;https://valine.js.org/configuration.html&#34;&gt;Valine官网中配置相关的内容&lt;/a&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;enable&lt;/td&gt;
+&lt;td&gt;这是用于主题中配置的，不是官方Valine的参数，&lt;strong&gt;true&lt;/strong&gt;时控制开启此评论系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;appId&lt;/td&gt;
+&lt;td&gt;这是在 &lt;a href=&#34;https://leancloud.cn/&#34;&gt;leancloud&lt;/a&gt; 后台应用中获取的，也就是上面提到的 &lt;strong&gt;App ID&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;appKey&lt;/td&gt;
+&lt;td&gt;这是在 &lt;a href=&#34;https://leancloud.cn/&#34;&gt;leancloud&lt;/a&gt; 后台应用中获取的，也就是上面提到的 &lt;strong&gt;App Key&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;notify&lt;/td&gt;
+&lt;td&gt;用于控制是否开启邮件通知功能，具体参考&lt;a href=&#34;https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE&#34;&gt;邮件提醒配置&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;verify&lt;/td&gt;
+&lt;td&gt;用于控制是否开启评论验证码功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;avatar&lt;/td&gt;
+&lt;td&gt;用于配置评论项中用户头像样式，有多种选择：mm, identicon, monsterid, wavatar, retro, hide。详细参考：&lt;a href=&#34;https://valine.js.org/avatar.html&#34;&gt;头像配置&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;placehoder&lt;/td&gt;
+&lt;td&gt;评论框的提示符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;visitor&lt;/td&gt;
+&lt;td&gt;控制是否开启文章阅读数的统计功能i, 详情阅读&lt;a href=&#34;https://valine.js.org/visitor.html&#34;&gt;文章阅读数统计&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;修改主题文件&#34;&gt;修改主题文件&lt;/h3&gt;
+&lt;p&gt;主要是修改主题中评论相关的布局文件 &lt;code&gt;themes\meme\layouts\partials\components\comments.html&lt;/code&gt;，按照 &lt;a href=&#34;https://valine.js.org/quickstart.html&#34;&gt;Valine快速开始&lt;/a&gt; 添加 &lt;strong&gt;Valine&lt;/strong&gt; 相关代码，找到以下位置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{ if .Site.Params.enableValine }}
+{{- end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;添加的 &lt;strong&gt;Valine&lt;/strong&gt; 评论的代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{ if .Site.Params.enableValine }}
+            &amp;lt;!-- id 将作为查询条件 --&amp;gt;
+			  &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
+				
+				&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+			  &amp;lt;/span&amp;gt;
+			  &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+			  &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+			  &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
+			  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+				new Valine({
+					el: &#39;#vcomments&#39; ,
+					appId: &#39;{{ .Site.Params.valine.valineAppId }}&#39;,
+					appKey: &#39;{{ .Site.Params.valine.valineAppKey }}&#39;,
+					avatar:&#39;{{ .Site.Params.valine.valineAvatar }}&#39;, 
+					placeholder: &#39;{{ .Site.Params.valine.valinePlaceholder }}&#39;,
+					visitor: {{ .Site.Params.valine.valineVisitor }}
+				});
+			  &amp;lt;/script&amp;gt;
+        {{ end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可以看到上述代码中引用了配置文件中的相关参数，这样以后修改配置就不用修改代码了，只需要改配置文件 &lt;code&gt;config.toml&lt;/code&gt;。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/hugo/">hugo</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Hugo 让 GitHub Pages被索引到</title>

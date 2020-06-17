@@ -14,10 +14,10 @@
 
     <title>Hugo 让 GitHub Pages被索引到 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.111848a3ae22f95a9ee201a27be9c48570a4ebb0aed3d2688d7836cb8a500334.css" integrity="sha256-ERhIo64i&#43;Vqe4gGie&#43;nEhXCk67Cu09JojXg2y4pQAzQ=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.98e083c5a80458bd220d6a32235cbc8fe8c4cf54c1c942b706027728d6d03903.js" integrity="sha256-mOCDxagEWL0iDWoyI1y8j&#43;jEz1TByUK3BgJ3KNbQOQM="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -443,6 +443,10 @@ Bing 相似地，在Bing网站管理登陆、添加网站url。
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/posts/hugo/hugo_comment/" class="related-link">Hugo 添加评论功能</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/posts/hugo/hugo_tags/" class="related-link">Hugo 添加tags等分类</a>
                     </li>
                 
@@ -497,6 +501,10 @@ Bing 相似地，在Bing网站管理登陆、添加网站url。
     
         <ul class="post-nav">
             
+                <li class="post-nav-prev">
+                    <a href="/posts/hugo/hugo_comment/" rel="prev">&lt; Hugo 添加评论功能</a>
+                </li>
+            
             
                 <li class="post-nav-next">
                     <a href="/posts/hugo/hugo_tags/" rel="next">Hugo 添加tags等分类 &gt;</a>
@@ -508,6 +516,41 @@ Bing 相似地，在Bing网站管理登陆、添加网站url。
 
 
         
+    
+
+        <div class="load-comments">
+            <div id="load-comments">Load Comments?</div>
+        </div>
+
+        
+
+        
+            
+			  <span id="/posts/hugo/hugo_seo/" class="leancloud_visitors" data-flag-title="Hugo 让 GitHub Pages被索引到">
+				
+				<p></p>
+			  </span>
+			  <div id="vcomments"></div>
+			  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+			  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+			  <script type="text/javascript">
+				new Valine({
+					el: '#vcomments' ,
+					appId: '',
+					appKey: '',
+					notify:  null , 
+					verify:  null , 
+					avatar:'', 
+					placeholder: '',
+					visitor:  null 
+				});
+			  </script>
+        
+
+        
+
+    
+
 
 
     </div>
@@ -566,6 +609,63 @@ Bing 相似地，在Bing网站管理登陆、添加网站url。
 
 
 
+
+    
+
+        
+
+        
+            <script>
+    function loadComments() {
+        if (typeof Valine === 'undefined') {
+            var getScript = (options) => {
+                var script = document.createElement('script');
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                Object.keys(options).forEach((key) => {
+                    script[key] = options[key];
+                });
+                document.body.appendChild(script);
+            };
+            getScript({
+                src: 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+                onload: () => {
+                    newValine();
+                }
+            });
+        } else {
+            newValine();
+        }
+    }
+    function newValine() {
+        new Valine({
+            el: '#vcomments',
+            appId: 'RMaobbOjgpXEkuvUKbBCuFcE-gzGzoHsz',
+            appKey: '5OR7huu7T2xj1hHYx9LjH53B',
+            placeholder: 'Just go go',
+            path: location.pathname,
+            avatar: 'mm',
+            meta: ["nick","mail","link"],
+            pageSize:  10 ,
+            lang: 'zh-cn',
+            visitor:  false ,
+            highlight:  true ,
+            avatarForce:  false ,
+            recordIP:  false ,
+            serverURLs: '',
+            emojiCDN: '',
+            emojiMaps: {},
+            enableQQ:  false ,
+            requiredFields: []
+        });
+    }
+</script>
+
+        
+
+        
+
+    
 
 
 

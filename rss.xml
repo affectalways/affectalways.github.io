@@ -23,13 +23,13 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 17 Jun 2020 00:17:36 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2020 20:04:45 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
         
             <item>
-                <title>Hugo Blog 面世版(2)</title>
+                <title>Hugo 建站(2)</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_2/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_2/</guid>
                 <pubDate>Tue, 16 Jun 2020 23:30:53 &#43;0800</pubDate>
@@ -142,7 +142,6 @@ git remote add origin https://github.com/[Github 用户名]/[Github 用户名].g
 git add .
 git commit -m &amp;quot;[介绍，随便写点什么，比如日期]&amp;quot;
 git push （若是第一次发布，需要用到--set-upstream）
-
 &lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
@@ -166,7 +165,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             </item>
         
             <item>
-                <title>Hugo Blog 面世版(1)</title>
+                <title>Hugo 建站</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_1/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_1/</guid>
                 <pubDate>Tue, 16 Jun 2020 22:55:34 &#43;0800</pubDate>
@@ -192,6 +191,42 @@ git push （若是第一次发布，需要用到--set-upstream）
 &lt;h4 id=&#34;开始吧&#34;&gt;开始吧&lt;/h4&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;那就开始吧&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/hugo/">hugo</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>使用Hugo &#43; GitHub Pages搭建个人博客</title>
+                <link>https://affectalways.github.io/posts/hugo/hugo_install/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install/</guid>
+                <pubDate>Tue, 16 Jun 2020 22:40:14 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;&lt;img src=&#34;https://cdn.liuzhichao.com/images/2018/09/hugo.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	Hugo：是一种通用的网站框架。严格来说，这类应用应该被称作静态网站生成器。这类应用将 Markdown 文件和主题一起编译成由 HTML、CSS、JavaScript 组成的静态网页。&lt;/p&gt;
+&lt;p&gt;​	然后上传到 GitHub 上，通过 GitHub 提供的静态页面托管服务 (GitHub Pages) 进行访问。&lt;/p&gt;
+&lt;p&gt;​	这里就写一篇文章来记录一下踩过的坑。&lt;/p&gt;
 </description>
                 
                 

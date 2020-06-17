@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-17T00:17:36&#43;08:00</updated>
+    <updated>2020-06-17T20:04:45&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -17,10 +17,10 @@
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
         <entry>
-            <title type="text">Hugo Blog 面世版(2)</title>
+            <title type="text">Hugo 建站(2)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_2/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_2/</id>
-            <updated>2020-06-17T00:17:31&#43;08:00</updated>
+            <updated>2020-06-17T20:03:59&#43;08:00</updated>
             <published>2020-06-16T23:30:53&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -144,7 +144,6 @@ git remote add origin https://github.com/[Github 用户名]/[Github 用户名].g
 git add .
 git commit -m &amp;quot;[介绍，随便写点什么，比如日期]&amp;quot;
 git push （若是第一次发布，需要用到--set-upstream）
-
 &lt;/code&gt;&lt;/pre&gt;</content>
             
             
@@ -168,10 +167,10 @@ git push （若是第一次发布，需要用到--set-upstream）
         </entry>
     
         <entry>
-            <title type="text">Hugo Blog 面世版(1)</title>
+            <title type="text">Hugo 建站</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_1/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_1/</id>
-            <updated>2020-06-16T23:16:04&#43;08:00</updated>
+            <updated>2020-06-17T20:03:49&#43;08:00</updated>
             <published>2020-06-16T22:55:34&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -201,6 +200,47 @@ GitHub Pages搭建个人博客，使用的是轻量级的静态网页，网上�
 &lt;h4 id=&#34;开始吧&#34;&gt;开始吧&lt;/h4&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;那就开始吧&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/hugo/" term="hugo" label="hugo" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">使用Hugo &#43; GitHub Pages搭建个人博客</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install/" />
+            <id>https://affectalways.github.io/posts/hugo/hugo_install/</id>
+            <updated>2020-06-16T22:47:24&#43;08:00</updated>
+            <published>2020-06-16T22:40:14&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">​	Hugo：是一种通用的网站框架。严格来说，这类应用应该被称作静态网站生成器。这类应用将 Markdown 文件和主题一起编译成由 HTML、CSS、JavaScript 组成的静态网页。
+​	然后上传到 GitHub 上，通过 GitHub 提供的静态页面托管服务 (GitHub Pages) 进行访问。
+​	这里就写一篇文章来记录一下踩过的坑。</summary>
+            
+                <content type="html">&lt;p&gt;&lt;img src=&#34;https://cdn.liuzhichao.com/images/2018/09/hugo.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	Hugo：是一种通用的网站框架。严格来说，这类应用应该被称作静态网站生成器。这类应用将 Markdown 文件和主题一起编译成由 HTML、CSS、JavaScript 组成的静态网页。&lt;/p&gt;
+&lt;p&gt;​	然后上传到 GitHub 上，通过 GitHub 提供的静态页面托管服务 (GitHub Pages) 进行访问。&lt;/p&gt;
+&lt;p&gt;​	这里就写一篇文章来记录一下踩过的坑。&lt;/p&gt;
 </content>
             
             

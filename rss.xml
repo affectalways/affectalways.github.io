@@ -23,13 +23,13 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 17 Jun 2020 20:31:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2020 20:34:03 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
         
             <item>
-                <title>Hugo 建站(2)</title>
+                <title>Hugo 建站（2）</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_2/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_2/</guid>
                 <pubDate>Tue, 16 Jun 2020 23:30:53 &#43;0800</pubDate>
@@ -165,7 +165,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             </item>
         
             <item>
-                <title>Hugo 建站</title>
+                <title>Hugo 建站（1）</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_1/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_1/</guid>
                 <pubDate>Tue, 16 Jun 2020 22:55:34 &#43;0800</pubDate>

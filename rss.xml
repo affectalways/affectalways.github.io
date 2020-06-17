@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Thu, 18 Jun 2020 00:18:46 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 00:28:10 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -167,22 +167,19 @@
 {{- end }}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;添加的 &lt;strong&gt;Valine&lt;/strong&gt; 评论的代码如下：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{ if .Site.Params.enableValine }}
-            &amp;lt;!-- id 将作为查询条件 --&amp;gt;
-			  &amp;lt;span id=&amp;quot;{{ .URL | relURL }}&amp;quot; class=&amp;quot;leancloud_visitors&amp;quot; data-flag-title=&amp;quot;{{ .Title }}&amp;quot;&amp;gt;
-				
-				&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-			  &amp;lt;/span&amp;gt;
-			  &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-			  &amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+            &amp;lt;div id=&amp;quot;vcomments&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+			&amp;lt;script src=&amp;quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 			  &amp;lt;script src=&#39;//unpkg.com/valine/dist/Valine.min.js&#39;&amp;gt;&amp;lt;/script&amp;gt;
 			  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
 				new Valine({
 					el: &#39;#vcomments&#39; ,
-					appId: &#39;{{ .Site.Params.valine.valineAppId }}&#39;,
-					appKey: &#39;{{ .Site.Params.valine.valineAppKey }}&#39;,
-					avatar:&#39;{{ .Site.Params.valine.valineAvatar }}&#39;, 
-					placeholder: &#39;{{ .Site.Params.valine.valinePlaceholder }}&#39;,
-					visitor: {{ .Site.Params.valine.valineVisitor }}
+					appId: &#39;{{ .Site.Params.valineAppId }}&#39;,
+					appKey: &#39;{{ .Site.Params.valineAppKey }}&#39;,
+					notify: &#39;{{ .Site.Params.valineNotify }}&#39;, 
+					verify: &#39;{{ .Site.Params.valineVerify }}&#39;, 
+					avatar:&#39;{{ .Site.Params.valineAvatar }}&#39;, 
+					placeholder: &#39;{{ .Site.Params.valinePlaceholder }}&#39;,
+					visitor: &#39;{{ .Site.Params.valineVisitor }}&#39;
 				});
 			  &amp;lt;/script&amp;gt;
         {{ end }}

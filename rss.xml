@@ -23,10 +23,73 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 17 Jun 2020 20:34:03 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2020 20:57:12 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Hugo添加tags等分类</title>
+                <link>https://affectalways.github.io/posts/hugo/hugo_tags/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_tags/</guid>
+                <pubDate>Wed, 17 Jun 2020 20:19:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
+&lt;p&gt;Hugo是支持用户自定义分类的，这个称为taxonomy，可以来对网页内容进行逻辑划分，详情可以在&lt;a href=&#34;https://gohugo.io/content-management/taxonomies/&#34;&gt;这里&lt;/a&gt;查看。&lt;/p&gt;
+&lt;p&gt;分类taxonomy有3个概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Taxonomy 分类&lt;/strong&gt;: 可以用来对内容进行分类的类别&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Term 术语&lt;/strong&gt;: 分类的一个键&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Value 值&lt;/strong&gt;: 分配给这个Term的具体内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如我需要增加3个分类，分别是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tag：文章标签&lt;/li&gt;
+&lt;li&gt;topic：文章主题/文章系列&lt;/li&gt;
+&lt;li&gt;category：文章分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以tag为例，则对应Taxonomy是tag，Term是具体标签内容比如hugo，Value是打上这个标签的对应网页。&lt;/p&gt;
+&lt;h3 id=&#34;配置分类&#34;&gt;配置分类&lt;/h3&gt;
+&lt;p&gt;需要在 &lt;code&gt;config.toml&lt;/code&gt; 中增加分类。还是这个例子，则需要增加如下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[taxonomies]
+tag = &amp;quot;tags&amp;quot;
+category = &amp;quot;categories&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;而将每个post的头部也相应增加对应的分类，例如这篇的头部就相应为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: &amp;quot;Hugo添加tags等分类&amp;quot;
+date: 2020-06-17T20:19:37+08:00
+tags: [&amp;quot;hugo&amp;quot;]
+draft: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当然实际上，Hugo默认会产生 &lt;code&gt;tags&lt;/code&gt; 和 &lt;code&gt;categories&lt;/code&gt; 的分类，如果只需要这两个，可以不用在 &lt;code&gt;config.toml&lt;/code&gt; 中声明就在post头部使用。&lt;/p&gt;
+&lt;h3 id=&#34;分类集合查看&#34;&gt;分类集合查看&lt;/h3&gt;
+&lt;p&gt;使用分类taxonomy之后，Hugo会使用分类的模板 (taxonomy templates) 来自动生成一个显示所有分类的term术语的网页以及一个显示该术语的所有value内容列表网页。&lt;/p&gt;
+&lt;p&gt;还是以tag为例：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;example.com/tags/&lt;/code&gt; 会列出tags中的所有术语；&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;example.com/tags/docker&lt;/code&gt; 会列出tags标为docker的所有网页列表。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/hugo/">hugo</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Hugo 建站（2）</title>

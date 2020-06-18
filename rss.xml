@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Thu, 18 Jun 2020 23:48:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 19 Jun 2020 00:01:12 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -228,10 +228,7 @@
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_seo/hugo_seo_1.png?raw=true&#34; alt=&#34;hugo_seo_1.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;如果已经添加过资源，则需要点击左上角的按钮，然后和上面一样地添加资源即可。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_seo/hugo_seo_2.png?raw=true&#34; alt=&#34;hugo_seo_2.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;资源添加后，需要验证你对该网站有所有权。Google提供了几种方法，我选择了HTML验证文件上传，只需要根据要求，下载HTML验证文件，把文件放在GitHub Pages项目的根目录（即网站的根目录），然后进行验证即可。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;PS：下载的html验证文件直接放在网站的根目录不一定生效，需要将html验证文件重命名为index.html或者把html验证文件里面的内容加到index.html文件内&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;资源添加后，需要验证你对该网站有所有权。Google提供了几种方法，我选择了HTML验证文件上传，只需要根据要求，下载HTML验证文件，把文件放在站点根目录的static目录下（以本网站为例：affectalways/static），然后进行验证即可。&lt;/p&gt;
 &lt;h4 id=&#34;站点地图&#34;&gt;站点地图&lt;/h4&gt;
 &lt;p&gt;在左侧点击“站点地图”，并在右侧点添加/测试站点地图，并添加url，我的是&lt;code&gt;https://affectalways.github.io/sitemap.xml&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;bing&#34;&gt;Bing&lt;/h3&gt;

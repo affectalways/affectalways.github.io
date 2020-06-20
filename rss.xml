@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sat, 20 Jun 2020 10:15:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 20 Jun 2020 10:55:45 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -240,6 +240,7 @@
 
 {{- end }}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;把&lt;code&gt;content&lt;/code&gt;内容改为给定的内容，然后执行&lt;code&gt;hugo&lt;/code&gt;命令，就可以验证了&lt;/p&gt;
+&lt;h5 id=&#34;google-a&#34;&gt;Google A&lt;/h5&gt;
 &lt;h4 id=&#34;站点地图&#34;&gt;站点地图&lt;/h4&gt;
 &lt;p&gt;在左侧点击“站点地图”，并在右侧点添加/测试站点地图，并添加url，我的是&lt;code&gt;https://affectalways.github.io/sitemap.xml&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;bing&#34;&gt;Bing&lt;/h3&gt;

@@ -23,10 +23,320 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sat, 20 Jun 2020 11:24:26 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 20 Jun 2020 11:30:28 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Celery 源码解析（1）</title>
+                <link>https://affectalways.github.io/posts/celery/celery_source_code_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/celery/celery_source_code_1/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/celery/">celery</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（1）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_1/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（2）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_2/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_2/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（3）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_3/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_3/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（4）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_4/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_4/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（5）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_5/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_5/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Flask 源码解析（6）</title>
+                <link>https://affectalways.github.io/posts/flask/flask_source_code_6/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/flask/flask_source_code_6/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>WSGI 理解（1）</title>
+                <link>https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/wsgi/">wsgi</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Hugo 添加评论功能</title>

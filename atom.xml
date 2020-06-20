@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-20T09:35:31&#43;08:00</updated>
+    <updated>2020-06-20T09:47:23&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Hugo 添加评论功能</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_comment/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_comment/</id>
-            <updated>2020-06-20T09:35:27&#43;08:00</updated>
+            <updated>2020-06-20T09:45:02&#43;08:00</updated>
             <published>2020-06-17T21:48:44&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -201,7 +201,7 @@
             <title type="text">Hugo 让 GitHub Pages被索引到</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_seo/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_seo/</id>
-            <updated>2020-06-20T09:34:34&#43;08:00</updated>
+            <updated>2020-06-20T09:45:20&#43;08:00</updated>
             <published>2020-06-17T21:00:29&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -261,7 +261,7 @@
             <title type="text">Hugo 添加tags等分类</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_tags/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_tags/</id>
-            <updated>2020-06-20T09:34:12&#43;08:00</updated>
+            <updated>2020-06-20T09:45:24&#43;08:00</updated>
             <published>2020-06-17T20:19:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -332,7 +332,7 @@ draft: true
             <title type="text">Hugo 建站（2）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_2/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_2/</id>
-            <updated>2020-06-20T09:34:57&#43;08:00</updated>
+            <updated>2020-06-20T09:45:17&#43;08:00</updated>
             <published>2020-06-16T23:30:53&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -471,7 +471,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text">Hugo 建站（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_1/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_1/</id>
-            <updated>2020-06-20T09:35:04&#43;08:00</updated>
+            <updated>2020-06-20T09:45:13&#43;08:00</updated>
             <published>2020-06-16T22:55:34&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -523,7 +523,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text">使用Hugo &#43; GitHub Pages搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install/</id>
-            <updated>2020-06-20T09:35:12&#43;08:00</updated>
+            <updated>2020-06-20T09:45:09&#43;08:00</updated>
             <published>2020-06-16T22:40:14&#43;08:00</published>
             <author>
                     <name>affectalways</name>

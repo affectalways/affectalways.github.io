@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sat, 20 Jun 2020 09:47:23 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 20 Jun 2020 10:15:56 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -230,8 +230,16 @@
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_seo/hugo_seo_2.png?raw=true&#34; alt=&#34;hugo_seo_2.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;资源添加后，需要验证你对该网站有所有权。Google提供了几种方法，我选择了三种方式：&lt;/p&gt;
 &lt;h5 id=&#34;html验证文件上传&#34;&gt;HTML验证文件上传&lt;/h5&gt;
-&lt;p&gt;只需要根据要求，下载HTML验证文件，把文件放在站点根目录的static目录下（以本网站为例：affectalways/static），并将&lt;code&gt;config.toml&lt;/code&gt;中的&lt;code&gt;googleSiteVerification = &amp;quot;&amp;quot;&lt;/code&gt; 设置为 &lt;code&gt;googleSiteVerification = google******.html&lt;/code&gt;，然后执行&lt;code&gt;hugo&lt;/code&gt;命令，就可以验证了&lt;/p&gt;
+&lt;p&gt;只需要根据要求，下载HTML验证文件，把文件放在站点根目录的static目录下（以本网站为例：affectalways/static）&lt;/p&gt;
 &lt;h5 id=&#34;html标记&#34;&gt;HTML标记&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt;中的&lt;code&gt;googleSiteVerification = &amp;quot;&amp;quot;&lt;/code&gt; 设置为 &lt;code&gt;googleSiteVerification = 不为空&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;找到&lt;code&gt;themes/meme/layouts/partials/head.html&lt;/code&gt;中的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{- with .Site.Params.googleSiteVerification }}
+
+        &amp;lt;meta name=&amp;quot;google-site-verification&amp;quot; content=&amp;quot;&amp;quot; /&amp;gt;
+
+{{- end }}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;把&lt;code&gt;content&lt;/code&gt;内容改为给定的内容，然后执行&lt;code&gt;hugo&lt;/code&gt;命令，就可以验证了&lt;/p&gt;
 &lt;h4 id=&#34;站点地图&#34;&gt;站点地图&lt;/h4&gt;
 &lt;p&gt;在左侧点击“站点地图”，并在右侧点添加/测试站点地图，并添加url，我的是&lt;code&gt;https://affectalways.github.io/sitemap.xml&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;bing&#34;&gt;Bing&lt;/h3&gt;

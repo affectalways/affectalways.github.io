@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sat, 20 Jun 2020 11:30:28 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 20 Jun 2020 11:31:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -281,6 +281,44 @@
                                 
                                 
                                     <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>requests 源码解析（1）</title>
+                <link>https://affectalways.github.io/posts/requests/requests_source_code_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/requests/requests_source_code_1/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/requests/">requests</category>
                                 
                             
                                 

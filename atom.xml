@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-20T11:30:28&#43;08:00</updated>
+    <updated>2020-06-20T11:31:58&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -290,6 +290,47 @@
                             
                             
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">requests 源码解析（1）</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/requests/requests_source_code_1/" />
+            <id>https://affectalways.github.io/posts/requests/requests_source_code_1/</id>
+            <updated>2020-06-20T11:31:50&#43;08:00</updated>
+            <published>2020-06-20T11:24:01&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/requests/" term="requests" label="requests" />
                             
                         
                             

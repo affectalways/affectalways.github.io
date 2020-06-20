@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-20T11:11:10&#43;08:00</updated>
+    <updated>2020-06-20T11:20:12&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -201,7 +201,7 @@
             <title type="text">Hugo 让 GitHub Pages被索引到</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_seo/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_seo/</id>
-            <updated>2020-06-20T11:08:02&#43;08:00</updated>
+            <updated>2020-06-20T11:18:57&#43;08:00</updated>
             <published>2020-06-17T21:00:29&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -235,6 +235,9 @@
 {{- end }}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;把&lt;code&gt;content&lt;/code&gt;内容改为给定的内容，然后执行&lt;code&gt;hugo&lt;/code&gt;命令，就可以验证了&lt;/p&gt;
 &lt;h5 id=&#34;google-analytics&#34;&gt;Google Analytics&lt;/h5&gt;
+&lt;p&gt;先到&lt;a href=&#34;https://marketingplatform.google.com/about/analytics/&#34;&gt;Google Analytics&lt;/a&gt;创建一个账号，并登录。&lt;/p&gt;
+&lt;p&gt;新建一个资源，填完后获得&lt;code&gt;tracking code&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;更新&lt;code&gt;config.toml&lt;/code&gt;文件，把&lt;code&gt;enableGoogleAnalytics&lt;/code&gt;设为&lt;code&gt;true&lt;/code&gt;，&lt;code&gt;trackingCodeType&lt;/code&gt;设为&lt;code&gt;gtag&lt;/code&gt;（两个选择gtag和analytics，因为affectalways.github.io使用的是&lt;code&gt;Google Analytics给定的gtag.js&lt;/code&gt;，所以设置为gtag），&lt;code&gt;trackingID&lt;/code&gt;设为获取到的&lt;code&gt;tracking code&lt;/code&gt;。然后执行&lt;code&gt;hugo&lt;/code&gt;命令，就可以验证了。&lt;/p&gt;
 &lt;h4 id=&#34;站点地图&#34;&gt;站点地图&lt;/h4&gt;
 &lt;p&gt;在左侧点击“站点地图”，并在右侧点添加/测试站点地图，并添加url，我的是&lt;code&gt;https://affectalways.github.io/sitemap.xml&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;bing&#34;&gt;Bing&lt;/h3&gt;

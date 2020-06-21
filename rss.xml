@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sun, 21 Jun 2020 16:42:02 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jun 2020 17:28:22 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -353,13 +353,62 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_framework.png?raw=true&#34; alt=&#34;wsgi_framework.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_wsgi.png?raw=true&#34; alt=&#34;wsgi.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;python应用程序&#34;&gt;Python应用程序&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Python应用程序&lt;/code&gt;端必须定义一个 callable object，callable object 可以是以下三者之一：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Python应用程序&lt;/code&gt;端必须定义一个 &lt;code&gt;callable object&lt;/code&gt;，&lt;code&gt;callable object&lt;/code&gt; 可以是以下三者之一：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;function/method&lt;/li&gt;
-&lt;li&gt;class&lt;/li&gt;
-&lt;li&gt;instance with a __call__ method&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;function/method&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;instance with a __call__ method&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;callable object&lt;/code&gt;必须满足以下两个条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接收两个参数：environ（字典，WSGI的环境信息）、start_response（响应请求的函数, 返回HTTP status、headers给server）&lt;/li&gt;
+&lt;li&gt;返回一个可迭代的值（iterable）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重点内容：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;environ&lt;code&gt;和&lt;/code&gt;start_response&lt;code&gt;由&lt;/code&gt;http server`提供并实现&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;environ&lt;/code&gt;变量是包含环境变量的字典&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Python Application&lt;/code&gt;内部在返回前调用&lt;code&gt;start_response&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;start_response&lt;/code&gt;也是一个callable，接收两个必要的参数，&lt;code&gt;status&lt;/code&gt;和&lt;code&gt;response_headers&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;callable-object代码实现&#34;&gt;callable object代码实现&lt;/h4&gt;
+&lt;h5 id=&#34;1functionmethod&#34;&gt;1.function/method&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;def application(environ, start_response):
+	# 调用服务器程序提供的 start_response，填入两个参数
+	start_response(&#39;200 OK&#39;, [(&#39;Content-Type&#39;, &#39;text/json&#39;)])
+	return []
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;2class&#34;&gt;2.class&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;class ApplicationClass(object):
+	def __init__(self, environ, start_response):
+		self.environ = environ
+		self.start_response = start_response
+	
+	def __iter__(self):
+		self.start_response(&#39;200 OK&#39;, [(&#39;Content-Type&#39;, &#39;text/json&#39;)])
+		yield &amp;quot;随便&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;使用方式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for result in ApplicationClass(environ, start_response):
+    do_somthing(result)
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;h5 id=&#34;3instance-with-a-__call__-method&#34;&gt;3.instance with a &lt;strong&gt;call&lt;/strong&gt; method&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;class ApplicationClass(object):
+	def __init__(self):
+		pass
+		
+	def __call__(self, environ, start_response):
+		start_response(&#39;200 OK&#39;, [(&#39;Content-Type&#39;, &#39;text/json&#39;)])
+		yield &amp;quot;anything&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;使用方式&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;app = ApplicationClass()
+for result in app(environ, start_response):
+	do_something(result)
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 </description>
                 
                 

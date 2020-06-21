@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sat, 20 Jun 2020 11:31:58 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jun 2020 12:19:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -342,7 +342,25 @@
                 
                 <copyright>@2020 affectalways</copyright>
                 
-                    <description></description>
+                    <description>&lt;h2 id=&#34;wsgi-是个什么东西&#34;&gt;WSGI 是个什么东西？&lt;/h2&gt;
+&lt;p&gt;实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WSGI（Web Server Gateway Interface）&lt;/code&gt;即Web服务器网关接口，解耦了&lt;code&gt;服务器（Apache、Nginx等）&lt;/code&gt;和&lt;code&gt;Python应用程序&lt;/code&gt;，是Python开发者只需要关注Python应用程序的开发。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;服务器，如Apache、Nginx等&lt;/li&gt;
+&lt;li&gt;Python应用程序，负责处理业务逻辑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_framework.png?raw=true&#34; alt=&#34;wsgi_framework.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;python应用程序&#34;&gt;Python应用程序&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Python应用程序&lt;/code&gt;端必须定义一个 callable object，callable object 可以是以下三者之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;function/method&lt;/li&gt;
+&lt;li&gt;class&lt;/li&gt;
+&lt;li&gt;instance with a __call__ method&lt;/li&gt;
+&lt;/ul&gt;
+</description>
                 
                 
                 

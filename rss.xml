@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sun, 21 Jun 2020 18:19:51 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jun 2020 23:28:19 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -445,8 +445,62 @@ def run_with_cgi(application):
     finally:
         if hasattr(result, &#39;close&#39;):
             result.close()
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;python应用程序&#34;&gt;Python应用程序&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Python应用程序&lt;/code&gt;端必须定义一个 &lt;code&gt;callable object&lt;/code&gt;，&lt;code&gt;callable object&lt;/code&gt; 可以是以下三者之一：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;中间件middleware&#34;&gt;中间件Middleware&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Middlerware&lt;/code&gt;是位于&lt;code&gt;Http Server&lt;/code&gt;和&lt;code&gt;Python Application&lt;/code&gt;之间的功能组件。&lt;/p&gt;
+&lt;p&gt;对于&lt;code&gt;Http Server&lt;/code&gt;而言，&lt;code&gt;Middlerware&lt;/code&gt;就是应用程序；对于&lt;code&gt;Python Application&lt;/code&gt;而言，&lt;code&gt;Middlerware&lt;/code&gt;就是&lt;code&gt;Http Server&lt;/code&gt;。&lt;code&gt;Middleware&lt;/code&gt;对&lt;code&gt;Http Server&lt;/code&gt;和&lt;code&gt;Python Application&lt;/code&gt;是透明的，把从&lt;code&gt;Http Server&lt;/code&gt;接收到的请求进行处理并向后传递，一直传递给&lt;code&gt;Python Application&lt;/code&gt;，最后把&lt;code&gt;Python Application&lt;/code&gt;的处理结果返回给&lt;code&gt;Http Server&lt;/code&gt;。如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgiframeworkmiddleware.png?raw=true&#34; alt=&#34;wsgi_middlerware.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Middlerware&lt;/code&gt;组件可执行以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 url 把用户请求调度到不同的 Python Application 中。&lt;/li&gt;
+&lt;li&gt;负载均衡，转发用户请求&lt;/li&gt;
+&lt;li&gt;预处理 XSL 等相关数据&lt;/li&gt;
+&lt;li&gt;限制请求速率，设置白名单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS：WSGI 的 middleware 体现了 unix 的哲学之一：do one thing and do it well。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本例实现了一个关于异常处理的 middleware（&lt;a href=&#34;https://lucumr.pocoo.org/2007/5/21/getting-started-with-wsgi/&#34;&gt;摘自&lt;/a&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from sys import exc_info
+from traceback import format_tb
+
+class ExceptionMiddleware(object):
+    &amp;quot;&amp;quot;&amp;quot;The middleware we use.&amp;quot;&amp;quot;&amp;quot;
+
+    def __init__(self, app):
+        self.app = app
+
+    def __call__(self, environ, start_response):
+        &amp;quot;&amp;quot;&amp;quot;Call the application can catch exceptions.&amp;quot;&amp;quot;&amp;quot;
+        appiter = None
+        # just call the application and send the output back
+        # unchanged but catch exceptions
+        try:
+            appiter = self.app(environ, start_response)
+            for item in appiter:
+                yield item
+        # if an exception occours we get the exception information
+        # and prepare a traceback we can render
+        except:
+            e_type, e_value, tb = exc_info()
+            traceback = [&#39;Traceback (most recent call last):&#39;]
+            traceback += format_tb(tb)
+            traceback.append(&#39;%s: %s&#39; % (e_type.__name__, e_value))
+            # we might have not a stated response by now. try
+            # to start one with the status code 500 or ignore an
+            # raised exception if the application already started one.
+            try:
+                start_response(&#39;500 INTERNAL SERVER ERROR&#39;, [
+                               (&#39;Content-Type&#39;, &#39;text/plain&#39;)])
+            except:
+                pass
+            yield &#39;\n&#39;.join(traceback)
+
+        # wsgi applications might have a close function. If it exists
+        # it *must* be called.
+        if hasattr(appiter, &#39;close&#39;):
+            appiter.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;python-application&#34;&gt;Python Application&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Python Application&lt;/code&gt;端必须定义一个 &lt;code&gt;callable object&lt;/code&gt;，&lt;code&gt;callable object&lt;/code&gt; 可以是以下三者之一：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;function/method&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;class&lt;/code&gt;&lt;/li&gt;
@@ -500,6 +554,9 @@ def run_with_cgi(application):
 for result in app(environ, start_response):
 	do_something(result)
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;参考链接&#34;&gt;参考链接&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.python.org/dev/peps/pep-3333/#the-application-framework-side&#34;&gt;PEP-3333&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucumr.pocoo.org/2007/5/21/getting-started-with-wsgi/&#34;&gt;巨佬&lt;/a&gt;&lt;/p&gt;
 </description>
                 
                 

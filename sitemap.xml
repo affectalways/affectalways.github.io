@@ -1,157 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://affectalways.github.io/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/categories/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/about/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/celery/celery_source_code_1/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_1/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_2/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_3/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_4/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_5/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/page/2/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/flask/flask_source_code_6/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/requests/requests_source_code_1/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_comment/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_seo/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_tags/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_install_2/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_install_1/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/posts/hugo/hugo_install/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/celery/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/flask/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/hugo/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/python/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/requests/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/tags/wsgi/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://affectalways.github.io/page/3/</loc>
-  <lastmod>2020-06-20T15:23:25+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://affectalways.github.io/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/celery/</loc>
+    <lastmod>2020-06-20T11:28:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/celery/celery_source_code_1/</loc>
+    <lastmod>2020-06-20T11:28:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/flask/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_1/</loc>
+    <lastmod>2020-06-20T11:27:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_2/</loc>
+    <lastmod>2020-06-20T11:27:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_3/</loc>
+    <lastmod>2020-06-20T11:27:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_4/</loc>
+    <lastmod>2020-06-20T11:28:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_5/</loc>
+    <lastmod>2020-06-20T11:28:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/flask/flask_source_code_6/</loc>
+    <lastmod>2020-06-20T11:28:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/python/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/requests/</loc>
+    <lastmod>2020-06-20T11:31:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/requests/requests_source_code_1/</loc>
+    <lastmod>2020-06-20T11:31:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/wsgi/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</loc>
+    <lastmod>2020-06-20T23:34:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/tags/hugo/</loc>
+    <lastmod>2020-06-20T11:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_comment/</loc>
+    <lastmod>2020-06-20T10:59:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_seo/</loc>
+    <lastmod>2020-06-20T11:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_tags/</loc>
+    <lastmod>2020-06-20T11:10:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_install_2/</loc>
+    <lastmod>2020-06-20T10:59:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_install_1/</loc>
+    <lastmod>2020-06-20T10:59:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/posts/hugo/hugo_install/</loc>
+    <lastmod>2020-06-20T10:59:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/about/</loc>
+    <lastmod>2020-06-16T22:39:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/about/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
+    <lastmod>2020-06-16T22:39:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://affectalways.github.io/categories/</loc>
+  </url>
+  
 </urlset>

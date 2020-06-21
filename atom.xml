@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-21T17:28:22&#43;08:00</updated>
+    <updated>2020-06-21T18:19:51&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -348,7 +348,7 @@
             <title type="text">WSGI 理解（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/wsgi/wsgi_kl_1/" />
             <id>https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</id>
-            <updated>2020-06-21T17:28:11&#43;08:00</updated>
+            <updated>2020-06-21T18:19:03&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -358,9 +358,9 @@
             <rights>@2020 affectalways</rights><summary type="html">WSGI 是个什么东西？ 实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。
 WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服务器（Apache、Nginx等）和Python应用程序，是Python开发者只需要关注Python应用程序的开发。
  Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：
- 服务器，如Apache、Nginx等 Python应用程序，负责处理业务逻辑   Python应用程序 Python应用程序端必须定义一个 callable object，callable object 可以是以下三者之一：
- function/method class instance with a __call__ method  callable object必须满足以下两个条件：
- 接收两个参数：environ（字典，WSGI的环境信息）、start_response（响应请求的函数, 返回HTTP status、headers给server） 返回一个可迭代的值（iterable）   重点内容：</summary>
+ 服务器，如Apache、Nginx等 Python应用程序，负责处理业务逻辑   HTTP Server 实现 服务器每接收到一个请求就调用一次Python Application。服务器作用如下
+ 接收HTTP请求 提供environ和回调函数start_response，并传给callable object 调用callable object  以下是PEP-3333提供的示例
+import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.</summary>
             
                 <content type="html">&lt;h2 id=&#34;wsgi-是个什么东西&#34;&gt;WSGI 是个什么东西？&lt;/h2&gt;
 &lt;p&gt;实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。&lt;/p&gt;
@@ -374,7 +374,98 @@ WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_framework.png?raw=true&#34; alt=&#34;wsgi_framework.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_wsgi.png?raw=true&#34; alt=&#34;wsgi.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;python应用程序&#34;&gt;Python应用程序&lt;/h2&gt;
+&lt;h2 id=&#34;http-server-实现&#34;&gt;HTTP Server 实现&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;服务器&lt;/code&gt;每接收到一个请求就调用一次&lt;code&gt;Python Application&lt;/code&gt;。&lt;code&gt;服务器&lt;/code&gt;作用如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接收HTTP请求&lt;/li&gt;
+&lt;li&gt;提供&lt;code&gt;environ&lt;/code&gt;和回调函数&lt;code&gt;start_response&lt;/code&gt;，并传给&lt;code&gt;callable object&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;调用&lt;code&gt;callable object&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是&lt;a href=&#34;https://www.python.org/dev/peps/pep-3333/#the-application-framework-side&#34;&gt;PEP-3333&lt;/a&gt;提供的示例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import os, sys
+
+enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39;
+
+def unicode_to_wsgi(u):
+    # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string
+    return u.encode(enc, esc).decode(&#39;iso-8859-1&#39;)
+
+def wsgi_to_bytes(s):
+    return s.encode(&#39;iso-8859-1&#39;)
+
+
+def run_with_cgi(application):
+	&amp;quot;&amp;quot;&amp;quot;
+		application: 是Python Application中的callable object
+	&amp;quot;&amp;quot;&amp;quot;
+    # 构造environ变量，dict类型，里面的内容是一次HTTP请求的环境变量
+    environ = {k: unicode_to_wsgi(v) for k,v in os.environ.items()}
+    environ[&#39;wsgi.input&#39;]        = sys.stdin.buffer
+    environ[&#39;wsgi.errors&#39;]       = sys.stderr
+    environ[&#39;wsgi.version&#39;]      = (1, 0)
+    environ[&#39;wsgi.multithread&#39;]  = False
+    environ[&#39;wsgi.multiprocess&#39;] = True
+    environ[&#39;wsgi.run_once&#39;]     = True
+
+    if environ.get(&#39;HTTPS&#39;, &#39;off&#39;) in (&#39;on&#39;, &#39;1&#39;):
+        environ[&#39;wsgi.url_scheme&#39;] = &#39;https&#39;
+    else:
+        environ[&#39;wsgi.url_scheme&#39;] = &#39;http&#39;
+
+    headers_set = []
+    headers_sent = []
+
+    # 把响应信息写到终端
+    def write(data):
+        out = sys.stdout.buffer
+
+        if not headers_set:
+             raise AssertionError(&amp;quot;write() before start_response()&amp;quot;)
+
+        elif not headers_sent:
+             # Before the first output, send the stored headers
+             status, response_headers = headers_sent[:] = headers_set
+             out.write(wsgi_to_bytes(&#39;Status: %s\r\n&#39; % status))
+             for header in response_headers:
+                 out.write(wsgi_to_bytes(&#39;%s: %s\r\n&#39; % header))
+             out.write(wsgi_to_bytes(&#39;\r\n&#39;))
+
+        out.write(data)
+        out.flush()
+
+    # 定义start_response回调函数
+    def start_response(status, response_headers, exc_info=None):
+        if exc_info:
+            try:
+                if headers_sent:
+                    # Re-raise original exception if headers sent
+                    raise exc_info[1].with_traceback(exc_info[2])
+            finally:
+                exc_info = None     # avoid dangling circular ref
+        elif headers_set:
+            raise AssertionError(&amp;quot;Headers already set!&amp;quot;)
+
+        headers_set[:] = [status, response_headers]
+
+        # Note: error checking on the headers should happen here,
+        # *after* the headers are set.  That way, if an error
+        # occurs, start_response can only be re-called with
+        # exc_info set.
+
+        return write
+
+    result = application(environ, start_response)
+    try:
+        # 处理application返回的结果（可迭代）
+        for data in result:
+            if data:    # don&#39;t send headers until body appears
+                write(data)
+        if not headers_sent:
+            write(&#39;&#39;)   # send headers now if body was empty
+    finally:
+        if hasattr(result, &#39;close&#39;):
+            result.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;python应用程序&#34;&gt;Python应用程序&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Python应用程序&lt;/code&gt;端必须定义一个 &lt;code&gt;callable object&lt;/code&gt;，&lt;code&gt;callable object&lt;/code&gt; 可以是以下三者之一：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;function/method&lt;/code&gt;&lt;/li&gt;
@@ -389,7 +480,7 @@ WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服
 &lt;blockquote&gt;
 &lt;p&gt;重点内容：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;environ&lt;code&gt;和&lt;/code&gt;start_response&lt;code&gt;由&lt;/code&gt;http server`提供并实现&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;environ&lt;/code&gt;和&lt;code&gt;start_response&lt;/code&gt;由&lt;code&gt;http server&lt;/code&gt;提供并实现&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;environ&lt;/code&gt;变量是包含环境变量的字典&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Python Application&lt;/code&gt;内部在返回前调用&lt;code&gt;start_response&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;start_response&lt;/code&gt;也是一个callable，接收两个必要的参数，&lt;code&gt;status&lt;/code&gt;和&lt;code&gt;response_headers&lt;/code&gt;&lt;/li&gt;

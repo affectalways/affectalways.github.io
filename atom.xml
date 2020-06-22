@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-22T22:06:14&#43;08:00</updated>
+    <updated>2020-06-22T22:08:22&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">(1)两数之和相加 leetcode</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</id>
-            <updated>2020-06-22T22:06:08&#43;08:00</updated>
+            <updated>2020-06-22T22:08:18&#43;08:00</updated>
             <published>2020-06-22T21:51:44&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -76,18 +76,6 @@ class Solution:
                             
                             
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/categories/%E7%AE%97%E6%B3%95/" term="算法" label="算法" />
                             
                         
                     

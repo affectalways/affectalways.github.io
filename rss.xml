@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 22:06:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jun 2020 22:08:22 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -85,18 +85,6 @@ class Solution:
                                 
                                 
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://affectalways.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
                                 
                             
                         

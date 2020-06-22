@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 22:08:22 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jun 2020 22:12:14 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -103,6 +103,64 @@ class Solution:
             </item>
         
             <item>
+                <title>Gunicorn_source_code_1</title>
+                <link>https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</guid>
+                <pubDate>Sat, 20 Jun 2020 11:29:06 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/gunicorn/">gunicorn</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/server/">server</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/gunicorn/">gunicorn</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>Celery 源码解析（1）</title>
                 <link>https://affectalways.github.io/posts/celery/celery_source_code_1/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/celery/celery_source_code_1/</guid>
@@ -158,6 +216,20 @@ class Solution:
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
+                        
                     
                         
                             
@@ -195,6 +267,20 @@ class Solution:
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
                         
                     
                         
@@ -234,6 +320,20 @@ class Solution:
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
+                        
                     
                         
                             
@@ -271,6 +371,20 @@ class Solution:
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
                         
                     
                         
@@ -310,6 +424,20 @@ class Solution:
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
+                        
                     
                         
                             
@@ -348,6 +476,20 @@ class Solution:
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/flask/">flask</category>
+                                
+                            
+                        
                     
                         
                             
@@ -385,6 +527,20 @@ class Solution:
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/requests/">requests</category>
+                                
+                            
                         
                     
                         
@@ -639,6 +795,20 @@ for result in app(environ, start_response):
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/wsgi/">WSGI</category>
+                                
+                            
+                        
                     
                         
                             
@@ -829,6 +999,20 @@ for result in app(environ, start_response):
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
+                        
                     
                         
                             
@@ -997,7 +1181,7 @@ description: &amp;quot;Hugo 添加tags等分类&amp;quot;
             </item>
         
             <item>
-                <title>Hugo 建站（2）</title>
+                <title>Hugo blog（2）</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_2/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_2/</guid>
                 <pubDate>Tue, 16 Jun 2020 23:30:53 &#43;0800</pubDate>
@@ -1118,6 +1302,20 @@ git push （若是第一次发布，需要用到--set-upstream）
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1133,7 +1331,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             </item>
         
             <item>
-                <title>Hugo 建站（1）</title>
+                <title>Hugo blog（1）</title>
                 <link>https://affectalways.github.io/posts/hugo/hugo_install_1/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/hugo/hugo_install_1/</guid>
                 <pubDate>Tue, 16 Jun 2020 22:55:34 &#43;0800</pubDate>
@@ -1166,6 +1364,20 @@ git push （若是第一次发布，需要用到--set-upstream）
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
                         
                     
                         
@@ -1202,6 +1414,20 @@ git push （若是第一次发布，需要用到--set-upstream）
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
                         
                     
                         

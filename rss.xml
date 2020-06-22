@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 22:12:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jun 2020 22:16:09 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -103,7 +103,7 @@ class Solution:
             </item>
         
             <item>
-                <title>Gunicorn_source_code_1</title>
+                <title>Gunicorn 源码解析(1)</title>
                 <link>https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</guid>
                 <pubDate>Sat, 20 Jun 2020 11:29:06 &#43;0800</pubDate>

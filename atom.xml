@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-22T22:12:14&#43;08:00</updated>
+    <updated>2020-06-22T22:16:09&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -94,10 +94,10 @@ class Solution:
         </entry>
     
         <entry>
-            <title type="text">Gunicorn_source_code_1</title>
+            <title type="text">Gunicorn 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/" />
             <id>https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</id>
-            <updated>2020-06-22T22:11:26&#43;08:00</updated>
+            <updated>2020-06-22T22:15:57&#43;08:00</updated>
             <published>2020-06-20T11:29:06&#43;08:00</published>
             <author>
                     <name>affectalways</name>

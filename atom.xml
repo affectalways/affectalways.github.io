@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-22T21:42:07&#43;08:00</updated>
+    <updated>2020-06-22T21:43:31&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -796,7 +796,7 @@ for result in app(environ, start_response):
             <title type="text">Hugo 让 GitHub Pages被索引到</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_seo/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_seo/</id>
-            <updated>2020-06-20T11:18:57&#43;08:00</updated>
+            <updated>2020-06-22T21:43:24&#43;08:00</updated>
             <published>2020-06-17T21:00:29&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -806,9 +806,8 @@ for result in app(environ, start_response):
             <rights>@2020 affectalways</rights><summary type="html">Hugo 让 GitHub Pages被索引到, seo</summary>
             
                 <content type="html">&lt;h2 id=&#34;居然都找不到&#34;&gt;居然都找不到！&lt;/h2&gt;
-&lt;p&gt;其实Blog我主要是用来做一些记录，更何况忙起来经常不更新，因此尽管有加上一些流量统计的功能，但实际上也不怎么关心到底有多少访问量。在浏览网上其他人的博客布局寻找灵感时，突然看到有博客提到GitHub Pages屏蔽了百度的爬虫，所以百度是搜索不到GitHub Pages上的网页的。&lt;/p&gt;
-&lt;p&gt;什么？所以百度搜索搜不到我的个人博客？不死心，尝试一下，找得到github、gist主页，但是就是找不到github.io后缀的网页。除了百度之外，我还尝试了Bing、Google，都没有，所以常用的三大搜索引擎都找不到我的博客，小小网站在浩瀚的网络世界中就像是一个孤岛，只有知道url才能达到。突然想到传说中的暗网是否也是加上了反爬，所以大众难以发现？&lt;/p&gt;
-&lt;p&gt;话说回来，反爬也有反爬的好处，比如有时博客内容特别个人，只是想找个地方发泄一下、记录一下，不被搜索引擎索引到也降低了被他人发现的几率，就像是一个打开的日记本，但是不用担心被家长偷看的感觉。&lt;/p&gt;
+&lt;p&gt;其实Blog我主要是用来做一些记录，突然看到有博客提到GitHub Pages屏蔽了百度的爬虫，所以百度是搜索不到GitHub Pages上的网页的。&lt;/p&gt;
+&lt;p&gt;什么？所以百度搜索搜不到我的个人博客？不死心，尝试一下，找得到github、gist主页，但是就是找不到github.io后缀的网页。除了百度之外，我还尝试了Bing、Google，都没有。&lt;/p&gt;
 &lt;h2 id=&#34;如何让搜索引擎索引到呢&#34;&gt;如何让搜索引擎索引到呢？&lt;/h2&gt;
 &lt;p&gt;发现流行的搜索引擎居然都找不到博客，那就需要赶紧找解决方法。Google和Bing还不清楚是怎么回事，但网上流传的email回复内容都点明了Github Pages禁止了百度爬虫的爬去，似乎原因是百度爬虫爬得太过于频繁，会严重影响服务器性能。针对百度爬虫的问题，大家找了很多方法。自建服务器托管博客、将博客放在Gitlab上或者CDN方法都不在我的选择范围内，因为暂时我还没有购买服务器或者域名的打算，所以决定放弃百度……但不管怎么样Bing和Google还是要设置好的！&lt;/p&gt;
 &lt;h3 id=&#34;google&#34;&gt;Google&lt;/h3&gt;

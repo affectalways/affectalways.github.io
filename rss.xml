@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 21:54:33 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jun 2020 22:00:57 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -692,7 +692,7 @@ for result in app(environ, start_response):
 &lt;blockquote&gt;
 &lt;h3 id=&#34;原理&#34;&gt;原理？&lt;/h3&gt;
 &lt;p&gt;Hugo 会将 &lt;strong&gt;Markdown 文档&lt;/strong&gt; 按照 &lt;strong&gt;主题 (包括 HTML 模板、CSS、JavaScript 等)&lt;/strong&gt; 编译成静态网页&lt;/p&gt;
-&lt;p&gt;那么我们只需要将 Gitalk 作为一个 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 插入到 HTML 模板中，然后在 &lt;code&gt;config.toml&lt;/code&gt; 中添加相关配置，就可以添加&lt;code&gt;评论区&lt;/code&gt;了&lt;/p&gt;
+&lt;p&gt;那么我们只需要将 &lt;code&gt;Valine&lt;/code&gt;作为一个 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 插入到 HTML 模板中，然后在 &lt;code&gt;config.toml&lt;/code&gt; 中添加相关配置，就可以添加&lt;code&gt;评论区&lt;/code&gt;了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;leancloud相关配置&#34;&gt;Leancloud相关配置&lt;/h2&gt;
 &lt;p&gt;评论系统依赖于&lt;code&gt;leancloud&lt;/code&gt;，所以需要先在&lt;code&gt;leancloud&lt;/code&gt;中进行相关的准备工作。&lt;/p&gt;

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-22T22:16:09&#43;08:00</updated>
+    <updated>2020-06-22T22:30:00&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,55 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+        <entry>
+            <title type="text">单例模式</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" />
+            <id>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+            <updated>2020-06-22T22:29:56&#43;08:00</updated>
+            <published>2020-06-22T22:28:03&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" term="设计模式" label="设计模式" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" term="设计模式" label="设计模式" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">(1)两数之和相加 leetcode</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/" />

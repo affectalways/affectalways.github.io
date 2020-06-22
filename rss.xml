@@ -23,10 +23,56 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 22:16:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jun 2020 22:30:00 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>单例模式</title>
+                <link>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+                <pubDate>Mon, 22 Jun 2020 22:28:03 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>(1)两数之和相加 leetcode</title>

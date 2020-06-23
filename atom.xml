@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-23T23:06:11&#43;08:00</updated>
+    <updated>2020-06-23T23:10:06&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,189 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+        <entry>
+            <title type="text">Werkzeug 源码解析(1)</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/" />
+            <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</id>
+            <updated>2020-06-23T23:09:32&#43;08:00</updated>
+            <published>2020-06-23T23:08:16&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Werkzeug 源码解析(2)</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/" />
+            <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</id>
+            <updated>2020-06-23T23:09:51&#43;08:00</updated>
+            <published>2020-06-23T23:08:16&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Werkzeug 源码解析(3)</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/" />
+            <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</id>
+            <updated>2020-06-23T23:10:02&#43;08:00</updated>
+            <published>2020-06-23T23:08:16&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">（2）两数相加</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" />
@@ -233,7 +416,7 @@ class Solution:
             <title type="text">Gunicorn 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/" />
             <id>https://affectalways.github.io/posts/gunicorn/gunicorn_source_code_1/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:29:06&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -335,7 +518,7 @@ class Solution:
             <title type="text">Flask 源码解析（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_1/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_1/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -390,7 +573,7 @@ class Solution:
             <title type="text">Flask 源码解析（2）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_2/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_2/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -445,7 +628,7 @@ class Solution:
             <title type="text">Flask 源码解析（3）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_3/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_3/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -500,7 +683,7 @@ class Solution:
             <title type="text">Flask 源码解析（4）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_4/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_4/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -555,7 +738,7 @@ class Solution:
             <title type="text">Flask 源码解析（5）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_5/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_5/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -610,7 +793,7 @@ class Solution:
             <title type="text">Flask 源码解析（6）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/flask/flask_source_code_6/" />
             <id>https://affectalways.github.io/posts/flask/flask_source_code_6/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -665,7 +848,7 @@ class Solution:
             <title type="text">requests 源码解析（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/requests/requests_source_code_1/" />
             <id>https://affectalways.github.io/posts/requests/requests_source_code_1/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -720,7 +903,7 @@ class Solution:
             <title type="text">WSGI 理解（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/wsgi/wsgi_kl_1/" />
             <id>https://affectalways.github.io/posts/wsgi/wsgi_kl_1/</id>
-            <updated>2020-06-21T23:29:41&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-20T11:24:01&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1001,7 +1184,7 @@ for result in app(environ, start_response):
             <title type="text">Hugo 添加评论功能</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_comment/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_comment/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-17T21:48:44&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1196,7 +1379,7 @@ for result in app(environ, start_response):
             <title type="text">Hugo 让 GitHub Pages被索引到</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_seo/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_seo/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-17T21:00:29&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1281,7 +1464,7 @@ for result in app(environ, start_response):
             <title type="text">Hugo 添加tags等分类</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_tags/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_tags/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-17T20:19:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1383,7 +1566,7 @@ description: &amp;quot;Hugo 添加tags等分类&amp;quot;
             <title type="text">Hugo blog（2）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_2/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_2/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-16T23:30:53&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1536,7 +1719,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text">Hugo blog（1）</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install_1/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install_1/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-16T22:55:34&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1602,7 +1785,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text">使用Hugo &#43; GitHub Pages搭建个人博客</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/hugo/hugo_install/" />
             <id>https://affectalways.github.io/posts/hugo/hugo_install/</id>
-            <updated>2020-06-20T22:51:04&#43;08:00</updated>
+            <updated>2020-06-23T23:07:28&#43;08:00</updated>
             <published>2020-06-16T22:40:14&#43;08:00</published>
             <author>
                     <name>affectalways</name>

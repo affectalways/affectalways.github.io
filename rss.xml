@@ -23,10 +23,184 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Tue, 23 Jun 2020 23:06:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jun 2020 23:10:06 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Werkzeug 源码解析(1)</title>
+                <link>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Werkzeug 源码解析(2)</title>
+                <link>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Werkzeug 源码解析(3)</title>
+                <link>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>（2）两数相加</title>

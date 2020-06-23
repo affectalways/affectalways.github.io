@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Mon, 22 Jun 2020 22:30:00 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jun 2020 21:44:51 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -1127,6 +1127,20 @@ for result in app(environ, start_response):
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
+                        
                     
                         
                             
@@ -1211,6 +1225,20 @@ description: &amp;quot;Hugo 添加tags等分类&amp;quot;
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/blog/">blog</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/hugo/">hugo</category>
+                                
+                            
                         
                     
                         

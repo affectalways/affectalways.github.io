@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 24 Jun 2020 20:04:03 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 24 Jun 2020 20:06:11 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -333,7 +333,7 @@ class Solution(object):
             </item>
         
             <item>
-                <title>(1) 两数之和相加</title>
+                <title>（1）两数之和相加</title>
                 <link>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</guid>
                 <pubDate>Mon, 22 Jun 2020 21:51:44 &#43;0800</pubDate>

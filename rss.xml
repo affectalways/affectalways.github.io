@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 24 Jun 2020 20:06:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 28 Jun 2020 21:48:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -38,7 +38,18 @@
                 
                 <copyright>@2020 affectalways</copyright>
                 
-                    <description></description>
+                    <description>&lt;h1 id=&#34;werkzeug是什么&#34;&gt;Werkzeug是什么？&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Werkzeug&lt;/code&gt;是一个基于&lt;a href=&#34;https://affectalways.github.io/posts/wsgi/wsgi_kl_1/&#34;&gt;WSGI&lt;/a&gt;的Web应用框架（说框架可能不合理，&lt;a href=&#34;https://werkzeug.palletsprojects.com/en/1.0.x/&#34;&gt;官方文档&lt;/a&gt;给出的是&lt;code&gt;应用程序库&lt;/code&gt;）。想要了解更多请看&lt;a href=&#34;https://werkzeug.palletsprojects.com/en/1.0.x/&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;为什么要了解werkzeug&#34;&gt;为什么要了解Werkzeug？&lt;/h1&gt;
+&lt;p&gt;因为目前所用的web框架为Flask，而Flask是以Werkzeug为基础的，所以绕不开Werkzeug了。&lt;/p&gt;
+&lt;h1 id=&#34;基础知识&#34;&gt;基础知识&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://affectalways.github.io/posts/wsgi/wsgi_kl_1/&#34;&gt;WSGI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;生成器&lt;/li&gt;
+&lt;li&gt;非常简单的网络知识&lt;/li&gt;
+&lt;/ol&gt;
+</description>
                 
                 
                 

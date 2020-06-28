@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-24T20:06:10&#43;08:00</updated>
+    <updated>2020-06-28T21:48:07&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -20,16 +20,29 @@
             <title type="text">Werkzeug 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</id>
-            <updated>2020-06-23T23:09:32&#43;08:00</updated>
+            <updated>2020-06-28T21:47:37&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            <rights>@2020 affectalways</rights><summary type="html">Werkzeug是什么？ Werkzeug是一个基于WSGI的Web应用框架（说框架可能不合理，官方文档给出的是应用程序库）。想要了解更多请看官方文档
+为什么要了解Werkzeug？ 因为目前所用的web框架为Flask，而Flask是以Werkzeug为基础的，所以绕不开Werkzeug了。
+基础知识  WSGI Python 生成器 非常简单的网络知识  </summary>
             
-                <content type="html"></content>
+                <content type="html">&lt;h1 id=&#34;werkzeug是什么&#34;&gt;Werkzeug是什么？&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Werkzeug&lt;/code&gt;是一个基于&lt;a href=&#34;https://affectalways.github.io/posts/wsgi/wsgi_kl_1/&#34;&gt;WSGI&lt;/a&gt;的Web应用框架（说框架可能不合理，&lt;a href=&#34;https://werkzeug.palletsprojects.com/en/1.0.x/&#34;&gt;官方文档&lt;/a&gt;给出的是&lt;code&gt;应用程序库&lt;/code&gt;）。想要了解更多请看&lt;a href=&#34;https://werkzeug.palletsprojects.com/en/1.0.x/&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;为什么要了解werkzeug&#34;&gt;为什么要了解Werkzeug？&lt;/h1&gt;
+&lt;p&gt;因为目前所用的web框架为Flask，而Flask是以Werkzeug为基础的，所以绕不开Werkzeug了。&lt;/p&gt;
+&lt;h1 id=&#34;基础知识&#34;&gt;基础知识&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://affectalways.github.io/posts/wsgi/wsgi_kl_1/&#34;&gt;WSGI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;生成器&lt;/li&gt;
+&lt;li&gt;非常简单的网络知识&lt;/li&gt;
+&lt;/ol&gt;
+</content>
             
             
             

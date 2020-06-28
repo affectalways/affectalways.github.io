@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-28T22:01:17&#43;08:00</updated>
+    <updated>2020-06-28T22:04:31&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -94,7 +94,7 @@
             <title type="text">Werkzeug 源码解析(2)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</id>
-            <updated>2020-06-28T22:01:06&#43;08:00</updated>
+            <updated>2020-06-28T22:04:19&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -212,6 +212,9 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;requestresponserun_simple最不重要的&#34;&gt;Request、Response、run_simple（最不重要的）&lt;/h1&gt;
+&lt;p&gt;之后的文章就重点关注以上三个，而且肯定会延伸到Werkzeug的其他地方（源码），不必担心，肯定会有所涉猎。&lt;/p&gt;
+&lt;p&gt;讲真，感觉run_simple可以不重点关注，希望不要打脸&lt;/p&gt;
 </content>
             
             

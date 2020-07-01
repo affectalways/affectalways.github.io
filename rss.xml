@@ -23,7 +23,7 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sun, 28 Jun 2020 22:04:31 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2020 23:36:43 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
@@ -275,7 +275,91 @@
                 
                 <copyright>@2020 affectalways</copyright>
                 
-                    <description></description>
+                    <description>&lt;h1 id=&#34;werkzeug-request-源码解析&#34;&gt;Werkzeug Request 源码解析&lt;/h1&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from werkzeug.wrappers import Request, Response
+
+def application(environ, start_response):
+    request = Request(environ)
+    text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;)
+    response = Response(text, mimetype=&#39;text/plain&#39;)
+    return response(environ, start_response)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;请注意，之后&lt;code&gt;Request&lt;/code&gt;和&lt;code&gt;Response&lt;/code&gt;的相关源码都会围绕&lt;code&gt;Werkzeug&lt;/code&gt;给出的以上代码讲解。&lt;/p&gt;
+&lt;h1 id=&#34;request-类&#34;&gt;Request 类&lt;/h1&gt;
+&lt;h3 id=&#34;文件定位&#34;&gt;文件定位&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;src/werkzeug/wrappers/request.py&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;p&gt;根据&lt;code&gt;Request&lt;/code&gt;类的名称其实就可以知道，&lt;code&gt;Request&lt;/code&gt;类是处理请求的，实际上，通过阅读相关代码，&lt;code&gt;Request&lt;/code&gt;类的作用确实如此&lt;/p&gt;
+&lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;BaseRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;AcceptMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ETagRequestMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;UserAgentMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;AuthorizationMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;CORSRequestMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;CommonRequestDescriptorsMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Full featured request object implementing the following mixins:
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`AcceptMixin` for accept header parsing
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`ETagRequestMixin` for etag and cache control handling
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`UserAgentMixin` for user agent introspection
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`AuthorizationMixin` for http auth handling
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`~werkzeug.wrappers.cors.CORSRequestMixin` for Cross
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;        Origin Resource Sharing headers
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`CommonRequestDescriptorsMixin` for common headers
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;​	根据注释可知，除了&lt;code&gt;BaseRequest&lt;/code&gt;类之外，其他的&lt;code&gt;Mixin&lt;/code&gt;类都是作为添加&lt;code&gt;高级方法&lt;/code&gt;的类。而且&lt;code&gt;Request&lt;/code&gt;类也没有&lt;code&gt;初始化&lt;/code&gt;方法，所以可以将注意力从&lt;code&gt;Request&lt;/code&gt;转移到&lt;code&gt;BaseRequest&lt;/code&gt;类上面。&lt;/p&gt;
+&lt;h1 id=&#34;baserequest-类&#34;&gt;BaseRequest 类&lt;/h1&gt;
+&lt;p&gt;截取以上代码示例的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;request = Request(environ)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;调用父类&lt;code&gt;BaseRequest&lt;/code&gt;的&lt;code&gt;__init__&lt;/code&gt;方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;populate_request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;populate_request&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;werkzeug.request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
                 
                 
                 

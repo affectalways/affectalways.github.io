@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-06-28T22:04:31&#43;08:00</updated>
+    <updated>2020-07-01T23:36:43&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Werkzeug 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</id>
-            <updated>2020-06-28T21:47:37&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -94,7 +94,7 @@
             <title type="text">Werkzeug 源码解析(2)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</id>
-            <updated>2020-06-28T22:04:19&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -103,7 +103,7 @@
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">从哪开始呢？   熟悉目录层级
   参照Werkzeug官方文档给出的示例，重点关注Request,Response,run_simple
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  from werkzeug.</summary>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &amp;#39;Hello %s!</summary>
             
                 <content type="html">&lt;h1 id=&#34;从哪开始呢&#34;&gt;从哪开始呢？&lt;/h1&gt;
 &lt;ol&gt;
@@ -267,16 +267,104 @@
             <title type="text">Werkzeug 源码解析(3)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</id>
-            <updated>2020-06-23T23:10:02&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            <rights>@2020 affectalways</rights><summary type="html">Werkzeug Request 源码解析 代码示例：
+from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;) response = Response(text, mimetype=&#39;text/plain&#39;) return response(environ, start_response) 请注意，之后Request和Response的相关源码都会围绕Werkzeug给出的以上代码讲解。
+Request 类 文件定位 src/werkzeug/wrappers/request.py
+作用 根据Request类的名称其实就可以知道，Request类是处理请求的，实际上，通过阅读相关代码，Request类的作用确实如此
+分析 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Request( BaseRequest, AcceptMixin, ETagRequestMixin, UserAgentMixin, AuthorizationMixin, CORSRequestMixin, CommonRequestDescriptorsMixin, ): &amp;#34;&amp;#34;&amp;#34;Full featured request object implementing the following mixins: - :class:`AcceptMixin` for accept header parsing - :class:`ETagRequestMixin` for etag and cache control handling - :class:`UserAgentMixin` for user agent introspection - :class:`AuthorizationMixin` for http auth handling - :class:`~werkzeug.</summary>
             
-                <content type="html"></content>
+                <content type="html">&lt;h1 id=&#34;werkzeug-request-源码解析&#34;&gt;Werkzeug Request 源码解析&lt;/h1&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from werkzeug.wrappers import Request, Response
+
+def application(environ, start_response):
+    request = Request(environ)
+    text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;)
+    response = Response(text, mimetype=&#39;text/plain&#39;)
+    return response(environ, start_response)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;请注意，之后&lt;code&gt;Request&lt;/code&gt;和&lt;code&gt;Response&lt;/code&gt;的相关源码都会围绕&lt;code&gt;Werkzeug&lt;/code&gt;给出的以上代码讲解。&lt;/p&gt;
+&lt;h1 id=&#34;request-类&#34;&gt;Request 类&lt;/h1&gt;
+&lt;h3 id=&#34;文件定位&#34;&gt;文件定位&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;src/werkzeug/wrappers/request.py&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
+&lt;p&gt;根据&lt;code&gt;Request&lt;/code&gt;类的名称其实就可以知道，&lt;code&gt;Request&lt;/code&gt;类是处理请求的，实际上，通过阅读相关代码，&lt;code&gt;Request&lt;/code&gt;类的作用确实如此&lt;/p&gt;
+&lt;h3 id=&#34;分析&#34;&gt;分析&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;BaseRequest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;AcceptMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ETagRequestMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;UserAgentMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;AuthorizationMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;CORSRequestMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;CommonRequestDescriptorsMixin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Full featured request object implementing the following mixins:
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`AcceptMixin` for accept header parsing
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`ETagRequestMixin` for etag and cache control handling
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`UserAgentMixin` for user agent introspection
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`AuthorizationMixin` for http auth handling
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`~werkzeug.wrappers.cors.CORSRequestMixin` for Cross
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;        Origin Resource Sharing headers
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    -   :class:`CommonRequestDescriptorsMixin` for common headers
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;​	根据注释可知，除了&lt;code&gt;BaseRequest&lt;/code&gt;类之外，其他的&lt;code&gt;Mixin&lt;/code&gt;类都是作为添加&lt;code&gt;高级方法&lt;/code&gt;的类。而且&lt;code&gt;Request&lt;/code&gt;类也没有&lt;code&gt;初始化&lt;/code&gt;方法，所以可以将注意力从&lt;code&gt;Request&lt;/code&gt;转移到&lt;code&gt;BaseRequest&lt;/code&gt;类上面。&lt;/p&gt;
+&lt;h1 id=&#34;baserequest-类&#34;&gt;BaseRequest 类&lt;/h1&gt;
+&lt;p&gt;截取以上代码示例的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;request = Request(environ)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;调用父类&lt;code&gt;BaseRequest&lt;/code&gt;的&lt;code&gt;__init__&lt;/code&gt;方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;populate_request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;populate_request&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;werkzeug.request&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;
+        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shallow&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
             
             
             
@@ -1040,7 +1128,7 @@ WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服
  Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：
  服务器，如Apache、Nginx等 Python应用程序，负责处理业务逻辑   HTTP Server 实现 服务器每接收到一个请求就调用一次Python Application。服务器作用如下
  接收HTTP请求 提供environ和回调函数start_response，并传给callable object 调用callable object  以下是PEP-3333提供的示例
-import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.</summary>
+import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.encode(enc, esc).decode(&#39;iso-8859-1&#39;) def wsgi_to_bytes(s): return s.encode(&#39;iso-8859-1&#39;) def run_with_cgi(application): &amp;quot;&amp;quot;&amp;quot; application: 是Python Application中的callable object &amp;quot;&amp;quot;&amp;quot; # 构造environ变量，dict类型，里面的内容是一次HTTP请求的环境变量 environ = {k: unicode_to_wsgi(v) for k,v in os.</summary>
             
                 <content type="html">&lt;h2 id=&#34;wsgi-是个什么东西&#34;&gt;WSGI 是个什么东西？&lt;/h2&gt;
 &lt;p&gt;实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。&lt;/p&gt;

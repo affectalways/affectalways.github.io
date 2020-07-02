@@ -23,10 +23,951 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Thu, 02 Jul 2020 23:01:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 02 Jul 2020 23:19:01 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>25 K 个一组翻转链表</title>
+                <link>https://affectalways.github.io/posts/leetcode/25-k-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/25-k-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+                <pubDate>Thu, 02 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
+
+k 是一个正整数，它的值小于或等于链表的长度。
+
+如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。
+示例：
+
+给你这个链表：1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+
+当 k = 2 时，应当返回: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5
+
+当 k = 3 时，应当返回: 3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5
+说明：
+
+你的算法只能使用常数的额外空间。
+你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;迭代&#34;&gt;迭代&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def reverseKGroup(self, head, k):
+        cur = head
+        if cur is None or cur.next is None:
+            return cur
+
+        tmp = list()
+        while cur:
+            tmp.append(cur)
+            cur = cur.next
+
+        pre = ListNode(None)
+        cur = pre
+        length = len(tmp)
+        final_node = None
+        if length % k &amp;lt; k and length % k != 0:
+            final_node = tmp[-(length % k)]
+        for node_index in range(k - 1, length, k):
+            for key in range(k):
+                cur.next = tmp[node_index - key]
+                cur = cur.next
+        cur.next = final_node
+        return pre.next
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>33 搜索旋转排序数组</title>
+                <link>https://affectalways.github.io/posts/leetcode/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</guid>
+                <pubDate>Thu, 02 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;搜索旋转排序数组假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+
+( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。
+
+搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
+
+你可以假设数组中不存在重复的元素。
+
+你的算法时间复杂度必须是 O(log n) 级别。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,5,6,7,0,1,2], target = 0
+输出: 4
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,5,6,7,0,1,2], target = 3
+输出: -1
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;题目要求 O(logN)O(logN) 的时间复杂度，基本可以断定本题是需要使用二分查找，怎么分是关键。
+由于题目说数字了无重复，举个例子：
+1 2 3 4 5 6 7 可以大致分为两类，
+第一类 2 3 4 5 6 7 1 这种，也就是 nums[start] &amp;lt;= nums[mid]。此例子中就是 2 &amp;lt;= 5。
+这种情况下，前半部分有序。因此如果 nums[start] &amp;lt;=target&amp;lt;nums[mid]，则在前半部分找，否则去后半部分找。
+第二类 6 7 1 2 3 4 5 这种，也就是 nums[start] &amp;gt; nums[mid]。此例子中就是 6 &amp;gt; 2。
+这种情况下，后半部分有序。因此如果 nums[mid] &amp;lt;target&amp;lt;=nums[end]，则在后半部分找，否则去前半部分找。
+
+此题有个存在重复数字的变形题，可参考 此题解 。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;代码&#34;&gt;代码：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def search(self, nums, target: int) -&amp;gt; int:
+        if not nums:
+            return -1
+        if len(nums) == 1:
+            if target in nums:
+                return 0
+            else:
+                return -1
+        length = len(nums)
+        start = 0
+        end = length - 1
+
+        while start &amp;lt;= end:
+            mid = start + (end - start) // 2
+            if nums[mid] == target:
+                return mid
+
+            if nums[start] &amp;lt;= nums[mid]:
+            #     前半部分有序
+                if target &amp;gt;= nums[start] and target &amp;lt; nums[mid]:
+                    end = mid - 1
+                else:
+                    start = mid + 1
+            else:
+                if target &amp;lt;= nums[end] and target &amp;gt; nums[mid]:
+                    start = mid + 1
+                else:
+                    end = mid - 1
+        return -1
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>39 组合综合</title>
+                <link>https://affectalways.github.io/posts/leetcode/39-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/39-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88/</guid>
+                <pubDate>Thu, 02 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个&lt;strong&gt;无重复元素&lt;/strong&gt;的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。&lt;/p&gt;
+&lt;p&gt;candidates 中的数字可以无限制重复被选取。&lt;/p&gt;
+&lt;h5 id=&#34;说明&#34;&gt;说明：&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;所有数字（包括 target）都是正整数。&lt;/li&gt;
+&lt;li&gt;解集不能包含重复的组合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: candidates = [2,3,6,7], target = 7,
+所求解集为:
+[
+  [7],
+  [2,2,3]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: candidates = [2,3,5], target = 8,
+所求解集为:
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;回溯法&#34;&gt;回溯法&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def combinationSum(self, candidates, target: int):
+        if not candidates:
+            return []
+        result = []
+
+        def isvalid(path, value, target):
+            total = sum(path) + value
+            if total &amp;gt; target:
+                return False
+            return True
+
+        def backtrack(path, candidates):
+            if sum(path) == target:
+                path = sorted(path)
+                if path not in result:
+                    result.append(path)
+                return None
+
+            for value in candidates:
+                if not isvalid(path, value, target):
+                    continue
+                path.append(value)
+
+                backtrack(path, candidates)
+
+                path.pop()
+
+        backtrack([], candidates)
+        return result
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>40 组合总和 II</title>
+                <link>https://affectalways.github.io/posts/leetcode/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-ii/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-ii/</guid>
+                <pubDate>Thu, 02 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个数组** candidates **和一个目标数** target **，找出** candidates **中所有可以使数字和为** target **的组合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;candidates&lt;/strong&gt; 中的每个数字在每个组合中&lt;strong&gt;只能使用一次&lt;/strong&gt;。&lt;/p&gt;
+&lt;h5 id=&#34;说明&#34;&gt;说明：&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;所有数字（包括目标数）都是正整数。&lt;/li&gt;
+&lt;li&gt;解集不能包含重复的组合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: candidates = [10,1,2,7,6,1,5], target = 8,
+所求解集为:
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: candidates = [2,5,2,1,2], target = 5,
+所求解集为:
+[
+  [1,2,2],
+  [5]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;回溯法&#34;&gt;回溯法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def combinationSum2(self, candidates, target: int):
+        if not candidates:
+            return []
+
+        def isvalid(path, value):
+            if (sum(path) + value) &amp;gt; target:
+                return False
+            return True
+
+        def backtrack(path, rest):
+            if sum(path) == target:
+                path = sorted(path)
+                if path not in result:
+                    result.append(path)
+                return
+            for index, value in enumerate(rest):
+                if not isvalid(path, value):
+                    continue
+                path.append(value)
+                backtrack(path, rest[index + 1:])
+                path.pop()
+
+        result = []
+        backtrack([], candidates)
+        return result
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>22 括号生成</title>
+                <link>https://affectalways.github.io/posts/leetcode/22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
+例如，给出 n = 3，生成结果为：
+[
+  &amp;quot;((()))&amp;quot;,
+  &amp;quot;(()())&amp;quot;,
+  &amp;quot;(())()&amp;quot;,
+  &amp;quot;()(())&amp;quot;,
+  &amp;quot;()()()&amp;quot;
+]
+## 回溯算法
+
+from collections import Counter
+
+
+class Solution:
+    def generateParenthesis(self, n: int):
+        self.n = n
+        # 结果
+        result = []
+        # 每次运行的
+        track = []
+        tmp = []
+
+        def backtrack(path, options):
+            if len(path) == n * 2:
+                tmp.append(path)
+                result.append(&#39;&#39;.join(path))
+                return
+
+            for i in range(len(options)):
+                if not self.isvalid(path, options[i]):
+                    continue
+                path.append(options[i])
+
+                backtrack(path, options)
+
+                path.pop()
+
+        backtrack(track, [&#39;(&#39;, &#39;)&#39;])
+        return result
+
+    def isvalid(self, path, next):
+        if len(path) == 0 and next == &#39;)&#39;:
+            return False
+
+        count_dict = Counter(path)
+        left_value = count_dict[&#39;(&#39;]
+        right_value = count_dict[&#39;)&#39;]
+        if next == &#39;)&#39; and right_value + 1 &amp;gt; left_value:
+            return False
+
+        for key, value in count_dict.items():
+            if key == next and value == self.n:
+                return False
+
+        return True
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    result = solution.generateParenthesis(3)
+    print(result)
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>23 合并K个排序链表</title>
+                <link>https://affectalways.github.io/posts/leetcode/23-%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/23-%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。&lt;/p&gt;
+&lt;h4 id=&#34;示例&#34;&gt;示例:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;输入:
+[
+  1-&amp;gt;4-&amp;gt;5,
+  1-&amp;gt;3-&amp;gt;4,
+  2-&amp;gt;6
+]
+输出: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;暴力解法&#34;&gt;暴力解法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;遍历所有链表，将所有节点的值放到一个数组中。
+将这个数组排序，然后遍历所有元素得到正确顺序的值。
+用遍历得到的值，创建一个新的有序链表。
+# -*- coding: utf-8 -*-
+# @Time     : 2020/3/29 1:14
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 23.py
+# @Software : PyCharm 
+
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def mergeKLists(self, lists):
+        # head = ListNode(-1)
+        result = []
+        for cur in lists:
+            while cur:
+                result.append(cur.val)
+                cur = cur.next
+        head = ListNode(-1)
+        cur = head
+        result.sort()
+        for i in result:
+            cur.next = ListNode(i)
+            cur = cur.next
+
+        return head.next
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    head_1 = ListNode(1)
+    node_2 = ListNode(4)
+    node_4 = ListNode(5)
+    head_1.next = node_2
+    node_2.next = node_4
+
+    head_2 = ListNode(1)
+    node_3 = ListNode(3)
+    node_4_copy = ListNode(4)
+    head_2.next = node_3
+    node_3.next = node_4_copy
+
+    head_3 = ListNode(2)
+    node_6 = ListNode(6)
+    head_3.next = node_6
+
+    tmp = [head_1, head_2, head_3]
+    result = solution.mergeKLists(tmp)
+    while result:
+        print(result.val)
+        result = result.next
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>24 两两交换链表中的节点</title>
+                <link>https://affectalways.github.io/posts/leetcode/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+
+你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;示例&#34;&gt;示例:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;给定 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 你应该返回 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.
+# -*- coding: utf-8 -*-
+# @Time     : 2020/3/29 14:34
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 24.py
+# @Software : PyCharm 
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def swapPairs(self, head):
+        cur = head
+        if cur is None or cur.next is None:
+            return cur
+
+        tmp = list()
+        while cur:
+            tmp.append(cur)
+            cur = cur.next
+
+        pre = ListNode(None)
+        cur = pre
+        length = len(tmp)
+        final_node = None
+        if length % 2 == 1:
+            final_node = tmp[-1]
+        for node_index in range(1, length, 2):
+            cur.next = tmp[node_index]
+            cur = cur.next
+            cur.next = tmp[node_index - 1]
+            cur = cur.next
+        cur.next = final_node
+        return pre.next
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    head_1 = ListNode(1)
+    node_2 = ListNode(2)
+    node_3 = ListNode(3)
+    node_4 = ListNode(4)
+    head_1.next = node_2
+    node_2.next = node_3
+    node_3.next = node_4
+    result = solution.swapPairs(head_1)
+
+    while result:
+        print(result.val)
+        result = result.next
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>41 缺失的第一个正数</title>
+                <link>https://affectalways.github.io/posts/leetcode/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给你一个未排序的整数数组，请你找出其中没有出现的最小的正整数。&lt;/p&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: [1,2,0]
+输出: 3
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: [3,4,-1,1]
+输出: 2
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-3&#34;&gt;示例 3:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: [7,8,9,11,12]
+输出: 1
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;提示&#34;&gt;提示：&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;你的算法的时间复杂度应为O(n)，并且只能使用常数级别的额外空间。
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>48 旋转图像</title>
+                <link>https://affectalways.github.io/posts/leetcode/48-%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/48-%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个 n × n 的二维矩阵表示一个图像。&lt;/p&gt;
+&lt;p&gt;将图像顺时针旋转 90 度。&lt;/p&gt;
+&lt;h5 id=&#34;说明&#34;&gt;说明：&lt;/h5&gt;
+&lt;p&gt;你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。&lt;/p&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;给定 matrix = 
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+
+原地旋转输入矩阵，使其变为:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;给定 matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+], 
+
+原地旋转输入矩阵，使其变为:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>54 螺旋矩阵</title>
+                <link>https://affectalways.github.io/posts/leetcode/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</guid>
+                <pubDate>Wed, 01 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。&lt;/p&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入:
+[
+ [ 1, 2, 3 ],
+ [ 4, 5, 6 ],
+ [ 7, 8, 9 ]
+]
+输出: [1,2,3,6,9,8,7,4,5]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入:
+[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9,10,11,12]
+]
+输出: [1,2,3,4,8,12,11,10,9,5,6,7]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;解决方案&#34;&gt;解决方案&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;这里的方法不需要记录已经走过的路径，所以执行用时和内存消耗都相对较小
+
+首先设定上下左右边界
+其次向右移动到最右，此时第一行因为已经使用过了，可以将其从图中删去，体现在代码中就是重新定义上边界
+判断若重新定义后，上下边界交错，表明螺旋矩阵遍历结束，跳出循环，返回答案
+若上下边界不交错，则遍历还未结束，接着向下向左向上移动，操作过程与第一，二步同理
+不断循环以上步骤，直到某两条边界交错，跳出循环，返回答案
+class Solution:
+    def spiralOrder(self, matrix):
+        if not matrix:
+            return matrix
+        result = []
+        # 高
+        row_length = len(matrix)
+        # 几列
+        col_length = len(matrix[0])
+
+        # 上边界
+        up = 0
+        # 下边界
+        down = row_length
+        #         左边界
+        left = 0
+        #         右边界
+        right = col_length
+
+        # 上下游标
+        row_cur = 0
+        # 左右游标
+        col_cur = 0
+
+        while True:
+            # print(&amp;quot;left = {}, right = {}, up = {}, down = {}&amp;quot;.format(left, right, up, down))
+            for col_cur in range(left, right):
+                # print(&amp;quot;1 {}&amp;quot;.format(matrix[row_cur][col_cur]))
+                result.append(matrix[row_cur][col_cur])
+            # 更新上边界
+            up += 1
+            if up &amp;gt;= down:
+                break
+
+            for row_cur in range(up, down):
+                # print(&amp;quot;2 {}&amp;quot;.format(matrix[row_cur][col_cur]))
+                result.append(matrix[row_cur][col_cur])
+            # 更新右边界
+            right -= 1
+            if right &amp;lt;= left:
+                break
+
+            for col_cur in range(right - 1, left - 1, -1):
+                # print(&amp;quot;3 {}&amp;quot;.format(matrix[row_cur][col_cur]))
+                result.append(matrix[row_cur][col_cur])
+            # 更新下边界
+            down -= 1
+            if down &amp;lt;= up:
+                break
+
+            for row_cur in range(down - 1, up - 1, -1):
+                # print(&amp;quot;4 {}&amp;quot;.format(matrix[row_cur][col_cur]))
+                result.append(matrix[row_cur][col_cur])
+            # 更新左边界
+            left += 1
+            if left &amp;gt;= right:
+                break
+
+
+        return result
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+    matrix = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12]
+    ]
+    matrix = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12]
+    ]
+    result = solution.spiralOrder(matrix)
+    print(result)
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Werkzeug 源码解析(1)</title>
@@ -1558,6 +2499,477 @@ if __name__ == &#39;__main__&#39;:
     solution = Solution()
     # print(solution.longestCommonPrefix([&amp;quot;flower&amp;quot;, &amp;quot;flow&amp;quot;, &amp;quot;flight&amp;quot;]))
     print(solution.longestCommonPrefix([&amp;quot;&amp;quot;, &amp;quot;&amp;quot;]))
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>17 电话号码的字母组合</title>
+                <link>https://affectalways.github.io/posts/leetcode/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。
+
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/original_images/17_telephone_keypad.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;示例&#34;&gt;示例:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;输入：&amp;quot;23&amp;quot;
+输出：[&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
+方法：回溯
+回溯是一种通过穷举所有可能情况来找到所有解的算法。如果一个候选解最后被发现并不是可行解，回溯算法会舍弃它，并在前面的一些步骤做出一些修改，并重新尝试找到可行解。
+
+给出如下回溯函数 backtrack(combination, next_digits) ，它将一个目前已经产生的组合 combination 和接下来准备要输入的数字 next_digits 作为参数。
+
+如果没有更多的数字需要被输入，那意味着当前的组合已经产生好了。
+如果还有数字需要被输入：
+遍历下一个数字所对应的所有映射的字母。
+将当前的字母添加到组合最后，也就是 combination = combination + letter 。
+重复这个过程，输入剩下的数字： backtrack(combination + letter, next_digits[1:]) 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/38567dcbb6401d88946ca974aacffb5ab27cb1ad54056f02b59016c0cc68b40f-file_1562774451350?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;问题转化成了从根节点到空节点一共有多少条路径&#34;&gt;问题转化成了从根节点到空节点一共有多少条路径；&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def letterCombinations(self, digits: str):
+        if len(digits) == 0:
+            return []
+        number_al_dict = {
+            &#39;2&#39;: &#39;abc&#39;,
+            &#39;3&#39;: &#39;def&#39;,
+            &#39;4&#39;: &#39;ghi&#39;,
+            &#39;5&#39;: &#39;jkl&#39;,
+            &#39;6&#39;: &#39;mno&#39;,
+            &#39;7&#39;: &#39;pqrs&#39;,
+            &#39;8&#39;: &#39;tuv&#39;,
+            &#39;9&#39;: &#39;wxyz&#39;
+        }
+        if len(digits) == 1:
+            return [i for i in number_al_dict[digits[0]]]
+
+        tmp = []
+        output = []
+
+        def backtrack(path, next_numbers):
+            if len(next_numbers) == 0:
+                tmp.append(path)
+                output.append(&amp;quot;&amp;quot;.join(path))
+                return
+
+            for letter in number_al_dict[next_numbers[0]]:
+                # if letter in path:
+                #     continue
+                path.append(letter)
+                backtrack(path, next_numbers[1:])
+                path.pop()
+
+        backtrack([], digits)
+        return output
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>18 四数之和</title>
+                <link>https://affectalways.github.io/posts/leetcode/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+### 注意：
+
+答案中不可以包含重复的四元组。
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例&#34;&gt;示例：&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
+
+满足要求的四元组集合为：
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;解法1回溯法&#34;&gt;解法1：回溯法&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def fourSum(self, nums, target: int):
+        if len(nums) &amp;lt; 4:
+            return []
+
+        output = []
+
+        def backtrack(path, next):
+            if len(path) == 4:
+                output.append(sorted(path))
+                return
+
+            for index, element in enumerate(next):
+                path.append(element)
+                backtrack(path, next[index + 1:])
+                path.pop()
+
+        backtrack([], nums)
+
+        result = []
+        for element in output:
+            if sum(element) == target and element not in result:
+                result.append(element)
+
+        return result
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>21 合并两个有序列表</title>
+                <link>https://affectalways.github.io/posts/leetcode/21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。&lt;/p&gt;
+&lt;h4 id=&#34;示例&#34;&gt;示例：&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;输入：1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4
+输出：1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
+方法 2：迭代
+想法
+
+我们可以用迭代的方法来实现上述算法。我们假设 l1 元素严格比 l2元素少，我们可以将 l2 中的元素逐一插入 l1 中正确的位置。
+
+算法
+
+首先，我们设定一个哨兵节点 &amp;quot;prehead&amp;quot; ，这可以在最后让我们比较容易地返回合并后的链表。我们维护一个 prev 指针，我们需要做的是调整它的 next 指针。然后，我们重复以下过程，直到 l1 或者 l2 指向了 null ：如果 l1 当前位置的值小于等于 l2 ，我们就把 l1 的值接在 prev 节点的后面同时将 l1 指针往后移一个。否则，我们对 l2 做同样的操作。不管我们将哪一个元素接在了后面，我们都把 prev 向后移一个元素。
+
+在循环终止的时候， l1 和 l2 至多有一个是非空的。由于输入的两个链表都是有序的，所以不管哪个链表是非空的，它包含的所有元素都比前面已经合并链表中的所有元素都要大。这意味着我们只需要简单地将非空链表接在合并链表的后面，并返回合并链表。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/f6a8a3f573188706887808ef769ce3dc496e1bc3ef9b737e24498bd740442bb4-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/3/27 23:37
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 21_.py
+# @Software : PyCharm 
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode):
+        # head = ListNode(-1)
+        head = ListNode(-1)
+        cur = head
+
+        while l1 and l2:
+            if l1.val &amp;lt;= l2.val:
+                cur.next = l1
+                l1 = l1.next
+            else:
+                cur.next = l2
+                l2 = l2.next
+            cur = cur.next
+
+        cur.next = l1 if l2 is None else l2
+        return head.next
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    head_1 = ListNode(1)
+    node_2 = ListNode(2)
+    node_4 = ListNode(4)
+    head_1.next = node_2
+    node_2.next = node_4
+
+    head_2 = ListNode(1)
+    node_3 = ListNode(3)
+    node_4_copy = ListNode(4)
+    head_2.next = node_3
+    node_3.next = node_4_copy
+
+    result = solution.mergeTwoLists(head_1, head_2)
+    while result:
+        print(result.val)
+        result = result.next
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>31 下一个排列</title>
+                <link>https://affectalways.github.io/posts/leetcode/31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
+
+如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+
+必须原地修改，只允许使用额外常数空间。
+
+以下是一些例子，输入位于左侧列，其相应输出位于右侧列。
+1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1
+“下一个排列”的定义是：给定数字序列的字典序中下一个更大的排列。如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+
+我们可以将该问题形式化地描述为：给定若干个数字，将其组合为一个整数。如何将这些数字重新排列，以得到下一个更大的整数。如 123 下一个更大的数为 132。如果没有更大的整数，则输出最小的整数。
+
+以 1,2,3,4,5,6 为例，其排列依次为：
+123456
+123465
+123546
+...
+654321
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;算法推导&#34;&gt;算法推导&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;如何得到这样的排列顺序？这是本文的重点。我们可以这样来分析：
+
+1.我们希望下一个数比当前数大，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。
+2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：
+（1）在尽可能靠右的低位进行交换，需要从后向前查找
+（2）将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换
+（3）将「大数」换到前面后，需要将「大数」后面的所有数重置为升序，升序排列就是最小的排列。以 123465 为例：首先按照上一步，交换 5 和 4，得到 123564；然后需要将 5 之后的数重置为升序，得到 123546。显然 123546 比 123564 更小，123546 就是 123465 的下一个排列
+以上就是求“下一个排列”的分析过程。
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;算法过程&#34;&gt;算法过程&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;标准的“下一个排列”算法可以描述为：
+
+1.从后向前查找第一个**==相邻升序==**的元素对 (i,j)，满足 A[i] &amp;lt; A[j]。此时 [j,end) 必然是降序
+2.在 [j,end) 从后向前查找第一个满足 A[i] &amp;lt; A[k] 的 k。A[i]、A[k] 分别就是上文所说的「小数」、「大数」
+3.将 A[i] 与 A[k] 交换
+4.可以断定这时 [j,end) 必然是降序，逆置 [j,end)，使其升序
+5.如果在步骤 1 找不到符合的相邻元素对，说明当前 [begin,end) 为一个降序顺序，则直接跳到步骤 4
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;可视化&#34;&gt;可视化&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;以求 12385764 的下一个排列为例：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/6e8c9822771be77c6f34cd3086153984eec386fb8376e09e36132ac36bb9cd6f-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;首先从后向前查找第一个相邻升序的元素对 (i,j)。这里 i=4，j=5，对应的值为 5，7：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/d7acefea4f7d4e2f19fb5eaa269c448a3098eee53656926a0ab592c564dde150-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;然后在 [j,end) 从后向前查找第一个大于 A[i] 的值 A[k]。这里 A[i] 是 5，故 A[k] 是 6：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/061cf291c237e6f5bcd0554192f894cd0c3e361b4564aa542aabe96e644afbf1-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;将 A[i] 与 A[k] 交换。这里交换 5、6：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/eb1470fd9942da6d2ab4855d13dfadcb715b629b4ea9cba0edfe2d1298744186-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;这时 [j,end) 必然是降序，逆置 [j,end)，使其升序。这里逆置 [7,5,4]：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/9d627a4ffda635bbf0c4fcdb7b1359c557db8e1c300ab54383a0bc89f6763c18-image.png?ynotemdtimestamp=1593701291427&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;因此，12385764 的下一个排列就是 12386457。
+
+最后再可视化地对比一下这两个相邻的排列（橙色是蓝色的下一个排列）：
+class Solution:
+    def nextPermutation(self, nums) -&amp;gt; None:
+        &amp;quot;&amp;quot;&amp;quot;
+        Do not return anything, modify nums in-place instead.
+        &amp;quot;&amp;quot;&amp;quot;
+        length = len(nums)
+        guard = -1
+        guard_index = length + 1
+        index = length - 1
+        while (index - 1) &amp;gt;= 0:
+            if nums[index - 1] &amp;lt; nums[index]:
+                guard = nums[index - 1]
+                guard_index = index - 1
+                break
+            index = index - 1
+
+        # print(&amp;quot;guard_index = {}, guard = {}&amp;quot;.format(guard_index, guard))
+        if guard_index == (length + 1):
+            return nums.sort(reverse=False)
+
+        cur_index = length - 1
+        while cur_index &amp;gt; guard_index:
+            if nums[cur_index] &amp;gt; guard:
+                break
+            cur_index -= 1
+
+        if cur_index &amp;gt;= length:
+            cur_index = index
+        nums[cur_index], nums[guard_index] = nums[guard_index], nums[cur_index]
+
+        for i in range(guard_index + 1, length - 1):
+            for j in range(guard_index + 1, length - 1):
+                if nums[j] &amp;gt; nums[j + 1]:
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>55 跳跃游戏</title>
+                <link>https://affectalways.github.io/posts/leetcode/55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个非负整数数组，你最初位于数组的第一个位置。&lt;/p&gt;
+&lt;p&gt;数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
+&lt;p&gt;判断你是否能够到达最后一个位置。&lt;/p&gt;
+&lt;h5 id=&#34;示例-1&#34;&gt;示例 1:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: [2,3,1,1,4]
+输出: true
+解释: 我们可以先跳 1 步，从位置 0 到达 位置 1, 然后再从位置 1 跳 3 步到达最后一个位置。
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;示例-2&#34;&gt;示例 2:&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;输入: [3,2,1,0,4]
+输出: false
+解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;解题思路&#34;&gt;解题思路：&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;如果某一个作为 起跳点 的格子可以跳跃的距离是 3，那么表示后面 3 个格子都可以作为 起跳点。&lt;/li&gt;
+&lt;li&gt;可以对每一个能作为 起跳点 的格子都尝试跳一次，把 能跳到最远的距离 不断更新。&lt;/li&gt;
+&lt;li&gt;如果可以一直跳到最后，就成功了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def canJump(self, nums) -&amp;gt; bool:
+        length = len(nums)
+        k = 0
+        for i in range(length):
+            if i &amp;gt; k:
+                return False
+            k = max(k, k + nums[i])
+        return True
 &lt;/code&gt;&lt;/pre&gt;</description>
                 
                 

@@ -144,17 +144,13 @@ import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39;
 
         
             <script data-ad-client="ca-pub-9423081106169056" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-9423081106169056"
-     data-ad-slot="1696192728"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+        <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9423081106169056",
+        enable_page_level_ads: true
+    });
 </script>
+
 	
 	
 
@@ -314,228 +310,22 @@ import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39;
             
 
             <div class="post-body">
-              <h2 id="wsgi-是个什么东西"><a href="#wsgi-是个什么东西" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>WSGI 是个什么东西？</h2>
-<p style="text-indent:0"><span class="drop-cap">实</span>际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。</p>
-<p><code>WSGI（Web Server Gateway Interface）</code>即Web服务器网关接口，解耦了<code>服务器（Apache、Nginx等）</code>和<code>Python应用程序</code>，是Python开发者只需要关注Python应用程序的开发。</p>
-<blockquote>
-<p>Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：</p>
-<ol>
-<li>服务器，如Apache、Nginx等</li>
-<li>Python应用程序，负责处理业务逻辑</li>
-</ol>
-</blockquote>
-<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_framework.png?raw=true" alt="wsgi_framework.png"></p>
-<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgi_1_wsgi.png?raw=true" alt="wsgi.png"></p>
-<h2 id="http-server-实现"><a href="#http-server-实现" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>HTTP Server 实现</h2>
-<p><code>服务器</code>每接收到一个请求就调用一次<code>Python Application</code>。<code>服务器</code>作用如下</p>
-<ul>
-<li>接收HTTP请求</li>
-<li>提供<code>environ</code>和回调函数<code>start_response</code>，并传给<code>callable object</code></li>
-<li>调用<code>callable object</code></li>
-</ul>
-<p>以下是<a href="https://www.python.org/dev/peps/pep-3333/#the-application-framework-side" target="_blank" rel="noopener">PEP-3333</a>提供的示例</p>
-<pre><code>import os, sys
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;"
+	data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client=""
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-enc, esc = sys.getfilesystemencoding(), 'surrogateescape'
-
-def unicode_to_wsgi(u):
-    # Convert an environment variable to a WSGI &quot;bytes-as-unicode&quot; string
-    return u.encode(enc, esc).decode('iso-8859-1')
-
-def wsgi_to_bytes(s):
-    return s.encode('iso-8859-1')
-
-
-def run_with_cgi(application):
-	&quot;&quot;&quot;
-		application: 是Python Application中的callable object
-	&quot;&quot;&quot;
-    # 构造environ变量，dict类型，里面的内容是一次HTTP请求的环境变量
-    environ = {k: unicode_to_wsgi(v) for k,v in os.environ.items()}
-    environ['wsgi.input']        = sys.stdin.buffer
-    environ['wsgi.errors']       = sys.stderr
-    environ['wsgi.version']      = (1, 0)
-    environ['wsgi.multithread']  = False
-    environ['wsgi.multiprocess'] = True
-    environ['wsgi.run_once']     = True
-
-    if environ.get('HTTPS', 'off') in ('on', '1'):
-        environ['wsgi.url_scheme'] = 'https'
-    else:
-        environ['wsgi.url_scheme'] = 'http'
-
-    headers_set = []
-    headers_sent = []
-
-    # 把响应信息写到终端
-    def write(data):
-        out = sys.stdout.buffer
-
-        if not headers_set:
-             raise AssertionError(&quot;write() before start_response()&quot;)
-
-        elif not headers_sent:
-             # Before the first output, send the stored headers
-             status, response_headers = headers_sent[:] = headers_set
-             out.write(wsgi_to_bytes('Status: %s\r\n' % status))
-             for header in response_headers:
-                 out.write(wsgi_to_bytes('%s: %s\r\n' % header))
-             out.write(wsgi_to_bytes('\r\n'))
-
-        out.write(data)
-        out.flush()
-
-    # 定义start_response回调函数
-    def start_response(status, response_headers, exc_info=None):
-        if exc_info:
-            try:
-                if headers_sent:
-                    # Re-raise original exception if headers sent
-                    raise exc_info[1].with_traceback(exc_info[2])
-            finally:
-                exc_info = None     # avoid dangling circular ref
-        elif headers_set:
-            raise AssertionError(&quot;Headers already set!&quot;)
-
-        headers_set[:] = [status, response_headers]
-
-        # Note: error checking on the headers should happen here,
-        # *after* the headers are set.  That way, if an error
-        # occurs, start_response can only be re-called with
-        # exc_info set.
-
-        return write
-
-    result = application(environ, start_response)
-    try:
-        # 处理application返回的结果（可迭代）
-        for data in result:
-            if data:    # don't send headers until body appears
-                write(data)
-        if not headers_sent:
-            write('')   # send headers now if body was empty
-    finally:
-        if hasattr(result, 'close'):
-            result.close()
-</code></pre><h2 id="中间件middleware"><a href="#中间件middleware" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>中间件Middleware</h2>
-<p><code>Middlerware</code>是位于<code>Http Server</code>和<code>Python Application</code>之间的功能组件。</p>
-<p>对于<code>Http Server</code>而言，<code>Middlerware</code>就是应用程序；对于<code>Python Application</code>而言，<code>Middlerware</code>就是<code>Http Server</code>。<code>Middleware</code>对<code>Http Server</code>和<code>Python Application</code>是透明的，把从<code>Http Server</code>接收到的请求进行处理并向后传递，一直传递给<code>Python Application</code>，最后把<code>Python Application</code>的处理结果返回给<code>Http Server</code>。如下图：</p>
-<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/wsgi/wsgi_1/wsgiframeworkmiddleware.png?raw=true" alt="wsgi_middlerware.png"></p>
-<p><code>Middlerware</code>组件可执行以下功能：</p>
-<ul>
-<li>根据 url 把用户请求调度到不同的 Python Application 中。</li>
-<li>负载均衡，转发用户请求</li>
-<li>预处理 XSL 等相关数据</li>
-<li>限制请求速率，设置白名单</li>
-</ul>
-<blockquote>
-<p>PS：WSGI 的 middleware 体现了 unix 的哲学之一：do one thing and do it well。</p>
-</blockquote>
-<p>本例实现了一个关于异常处理的 middleware（<a href="https://lucumr.pocoo.org/2007/5/21/getting-started-with-wsgi/" target="_blank" rel="noopener">摘自</a>）：</p>
-<pre><code>from sys import exc_info
-from traceback import format_tb
-
-class ExceptionMiddleware(object):
-    &quot;&quot;&quot;The middleware we use.&quot;&quot;&quot;
-
-    def __init__(self, app):
-        self.app = app
-
-    def __call__(self, environ, start_response):
-        &quot;&quot;&quot;Call the application can catch exceptions.&quot;&quot;&quot;
-        appiter = None
-        # just call the application and send the output back
-        # unchanged but catch exceptions
-        try:
-            appiter = self.app(environ, start_response)
-            for item in appiter:
-                yield item
-        # if an exception occours we get the exception information
-        # and prepare a traceback we can render
-        except:
-            e_type, e_value, tb = exc_info()
-            traceback = ['Traceback (most recent call last):']
-            traceback += format_tb(tb)
-            traceback.append('%s: %s' % (e_type.__name__, e_value))
-            # we might have not a stated response by now. try
-            # to start one with the status code 500 or ignore an
-            # raised exception if the application already started one.
-            try:
-                start_response('500 INTERNAL SERVER ERROR', [
-                               ('Content-Type', 'text/plain')])
-            except:
-                pass
-            yield '\n'.join(traceback)
-
-        # wsgi applications might have a close function. If it exists
-        # it *must* be called.
-        if hasattr(appiter, 'close'):
-            appiter.close()
-</code></pre><h2 id="python-application"><a href="#python-application" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Python Application</h2>
-<p><code>Python Application</code>端必须定义一个 <code>callable object</code>，<code>callable object</code> 可以是以下三者之一：</p>
-<ul>
-<li><code>function/method</code></li>
-<li><code>class</code></li>
-<li><code>instance with a __call__ method</code></li>
-</ul>
-<p><code>callable object</code>必须满足以下两个条件：</p>
-<ul>
-<li>接收两个参数：environ（字典，WSGI的环境信息）、start_response（响应请求的函数, 返回HTTP status、headers给server）</li>
-<li>返回一个可迭代的值（iterable）</li>
-</ul>
-<blockquote>
-<p>重点内容：</p>
-<ol>
-<li><code>environ</code>和<code>start_response</code>由<code>http server</code>提供并实现</li>
-<li><code>environ</code>变量是包含环境变量的字典</li>
-<li><code>Python Application</code>内部在返回前调用<code>start_response</code></li>
-<li><code>start_response</code>也是一个callable，接收两个必要的参数，<code>status</code>和<code>response_headers</code></li>
-</ol>
-</blockquote>
-<h4 id="callable-object代码实现"><a href="#callable-object代码实现" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>callable object代码实现</h4>
-<h5 id="1functionmethod"><a href="#1functionmethod" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>1.function/method</h5>
-<pre><code>def application(environ, start_response):
-	# 调用服务器程序提供的 start_response，填入两个参数
-	start_response('200 OK', [('Content-Type', 'text/json')])
-	return []
-</code></pre><h5 id="2class"><a href="#2class" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>2.class</h5>
-<pre><code>class ApplicationClass(object):
-	def __init__(self, environ, start_response):
-		self.environ = environ
-		self.start_response = start_response
-	
-	def __iter__(self):
-		self.start_response('200 OK', [('Content-Type', 'text/json')])
-		yield &quot;随便&quot;
-</code></pre><blockquote>
-<p>使用方式</p>
-<pre><code>for result in ApplicationClass(environ, start_response):
-    do_somthing(result)
-</code></pre></blockquote>
-<h5 id="3instance-with-a-__call__-method"><a href="#3instance-with-a-__call__-method" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>3.instance with a <strong>call</strong> method</h5>
-<pre><code>class ApplicationClass(object):
-	def __init__(self):
-		pass
-		
-	def __call__(self, environ, start_response):
-		start_response('200 OK', [('Content-Type', 'text/json')])
-		yield &quot;anything&quot;
-</code></pre><blockquote>
-<p>使用方式</p>
-<pre><code>app = ApplicationClass()
-for result in app(environ, start_response):
-	do_something(result)
-</code></pre></blockquote>
-<h3 id="参考链接"><a href="#参考链接" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>参考链接</h3>
-<p><a href="https://www.python.org/dev/peps/pep-3333/#the-application-framework-side" target="_blank" rel="noopener">PEP-3333</a></p>
-<p><a href="https://lucumr.pocoo.org/2007/5/21/getting-started-with-wsgi/" target="_blank" rel="noopener">巨佬</a></p>
 
             </div>
 
         </article>
 
-        
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;"
 	data-ad-layout="in-article"
     data-ad-format="fluid"

@@ -134,17 +134,13 @@
 
         
             <script data-ad-client="ca-pub-9423081106169056" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-9423081106169056"
-     data-ad-slot="1696192728"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+        <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9423081106169056",
+        enable_page_level_ads: true
+    });
 </script>
+
 	
 	
 
@@ -305,72 +301,22 @@
             
 
             <div class="post-body">
-              <pre><code>给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
-说明：你不能倾斜容器，且 n 的值至少为 2。
-</code></pre><p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg?ynotemdtimestamp=1593701291427" alt="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg"></p>
-<pre><code>图中垂直线代表输入数组
-[1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
-</code></pre><h5 id="示例"><a href="#示例" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>示例:</h5>
-<pre><code>输入: [1,8,6,2,5,4,8,3,7]
-输出: 49
-class Solution:
-    def maxArea(self, height):
-        length = len(height)
-        max = 0
-        left_index = 0
-        right_index = length - 1
-        while left_index &lt; right_index:
-            area = min(height[left_index], height[right_index]) * (right_index - left_index)
-            if max &lt; area:
-                max = area
-            if height[left_index] &lt; height[right_index]:
-                while left_index &lt; right_index:
-                    if height[left_index] &lt; height[left_index + 1]:
-                        left_index = left_index + 1
-                        break
-                    else:
-                        left_index = left_index + 1
-            else:
-                right_index = right_index - 1
-                while right_index &lt; left_index:
-                    if height[right_index] &lt; height[right_index - 1]:
-                        right_index = right_index - 1
-                        break
-                    else:
-                        right_index -= 1
-        return max
-&quot;&quot;&quot;
-时间复杂度为O(n)， 空间复杂度为O(1)
-思路：left、right游标分别从列表左右两端向中间靠拢
-1、计算以left、right为左右游标的容量（取游标指向的值中较小的作为容器高度）
-2、比较left、right两个游标指向值的大小，较小的往下一个位置移动，
-否则随便选择一个游标下移，在本程序中固定选择右边的游标下移
-3、重复步骤1 的计算，直到程序结束
-&quot;&quot;&quot;
-class Solution:
-    def maxArea(self, height: list) -&gt; int:
-        max = 0
-        left = 0
-        right = len(height) - 1
-        while left &lt; right:
-            l = left  #暂存左边游标的位置
-            r = right  #暂存右边游标的位置
-            if height[left] &lt; height[right]:
-                h = height[left]
-                left += 1
-            else:
-                h = height[right]
-                right -= 1
-            tmp = h * (r - l)  #计算当前容器的容量
-            max = tmp if tmp &gt; max else max
-        return max
-</code></pre>
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;"
+	data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client=""
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
             </div>
 
         </article>
 
-        
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;"
 	data-ad-layout="in-article"
     data-ad-format="fluid"

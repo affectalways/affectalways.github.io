@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-07-07T22:20:04&#43;08:00</updated>
+    <updated>2020-07-07T22:46:18&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -991,7 +991,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</id>
-            <updated>2020-06-28T21:47:37&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1065,7 +1065,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(2)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</id>
-            <updated>2020-06-28T22:04:19&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1074,7 +1074,7 @@ if __name__ == &#39;__main__&#39;:
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">从哪开始呢？   熟悉目录层级
   参照Werkzeug官方文档给出的示例，重点关注Request,Response,run_simple
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &amp;#39;Hello %s!</summary>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  from werkzeug.</summary>
             
                 <content type="html">&lt;h1 id=&#34;从哪开始呢&#34;&gt;从哪开始呢？&lt;/h1&gt;
 &lt;ol&gt;
@@ -1238,7 +1238,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(3)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</id>
-            <updated>2020-06-28T22:34:45&#43;08:00</updated>
+            <updated>2020-07-01T23:12:13&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1246,7 +1246,7 @@ if __name__ == &#39;__main__&#39;:
                     <email>affectalways@gmail.com</email>
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">Werkzeug Request 源码解析 代码示例：
-from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;) response = Response(text, mimetype=&#39;text/plain&#39;) return response(environ, start_response) 请注意，之后Request和Response的相关源码都会围绕Werkzeug给出的以上代码讲解。
+from werkzeug.wrappers import Request, Responsedef application(environ, start_response):request = Request(environ)text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;)response = Response(text, mimetype=&#39;text/plain&#39;)return response(environ, start_response)请注意，之后Request和Response的相关源码都会围绕Werkzeug给出的以上代码讲解。
 Request 类 文件定位 src/werkzeug/wrappers/request.py
 作用 根据Request类的名称其实就可以知道，Request类是处理请求的，实际上，通过阅读相关代码，Request类的作用确实如此
 分析 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Request( BaseRequest, AcceptMixin, ETagRequestMixin, UserAgentMixin, AuthorizationMixin, CORSRequestMixin, CommonRequestDescriptorsMixin, ): &amp;#34;&amp;#34;&amp;#34;Full featured request object implementing the following mixins: - :class:`AcceptMixin` for accept header parsing - :class:`ETagRequestMixin` for etag and cache control handling - :class:`UserAgentMixin` for user agent introspection - :class:`AuthorizationMixin` for http auth handling - :class:`~werkzeug.</summary>
@@ -3087,6 +3087,93 @@ class Solution:
         </entry>
     
         <entry>
+            <title type="text">（2）两数相加</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
+            <updated>2020-07-07T22:41:34&#43;08:00</updated>
+            <published>2020-06-23T23:05:37&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，两数相加</summary>
+            
+                <content type="html">&lt;p&gt;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。&lt;/p&gt;
+&lt;p&gt;如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。&lt;/p&gt;
+&lt;p&gt;您可以假设除了数字 0 之外，这两个数都不会以 0 开头。&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+输出：7 -&amp;gt; 0 -&amp;gt; 8
+原因：342 + 465 = 807
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        list_1 = &amp;quot;&amp;quot;
+        list_2 = &amp;quot;&amp;quot;
+        if not l1 and not l2:
+            return 0
+
+        while l1:
+            list_1 += str(l1.val)
+            l1 = l1.next
+        num_1 = int(list_1[::-1]) if list_1 else 0
+        while l2:
+            list_2 += str(l2.val)
+            l2 = l2.next
+        num_2 = int(list_2[::-1]) if list_2 else 0
+        sum = list(str(num_1 + num_2)[::-1])
+        head = ListNode(sum[0])
+        cur = head
+        for i in range(1, len(sum)):
+            cur.next = ListNode(sum[i])
+            cur = cur.next
+        return head
+            
+        
+    
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">单例模式</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" />
             <id>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
@@ -3147,6 +3234,83 @@ class Solution:
                     <email>affectalways@gmail.com</email>
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">leetcode，01 两数之和相加</summary>
+            
+                <content type="html">&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
+&lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法一&#34;&gt;解法一&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def twoSum(self, nums, target):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        &amp;quot;&amp;quot;&amp;quot;
+        if not len(nums):
+            return []
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法二&#34;&gt;解法二&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;利用Python创建字典（即hash），同时有效避免了key相同的情况
+class Solution:
+    def twoSum(self, nums, target):
+        dic = {}
+        for i in range(len(nums)):
+            if str(target - nums[i]) in dic:
+                return [dic[str(target - nums[i])], i]
+            dic[str(nums[i])] = i
+
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">（1）两数之和相加</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</id>
+            <updated>2020-07-07T22:41:34&#43;08:00</updated>
+            <published>2020-06-22T21:51:44&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，两数之和相加</summary>
             
                 <content type="html">&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
 &lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;
@@ -3715,7 +3879,7 @@ WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服
  Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：
  服务器，如Apache、Nginx等 Python应用程序，负责处理业务逻辑   HTTP Server 实现 服务器每接收到一个请求就调用一次Python Application。服务器作用如下
  接收HTTP请求 提供environ和回调函数start_response，并传给callable object 调用callable object  以下是PEP-3333提供的示例
-import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.encode(enc, esc).decode(&#39;iso-8859-1&#39;) def wsgi_to_bytes(s): return s.encode(&#39;iso-8859-1&#39;) def run_with_cgi(application): &amp;quot;&amp;quot;&amp;quot; application: 是Python Application中的callable object &amp;quot;&amp;quot;&amp;quot; # 构造environ变量，dict类型，里面的内容是一次HTTP请求的环境变量 environ = {k: unicode_to_wsgi(v) for k,v in os.</summary>
+import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.</summary>
             
                 <content type="html">&lt;h2 id=&#34;wsgi-是个什么东西&#34;&gt;WSGI 是个什么东西？&lt;/h2&gt;
 &lt;p&gt;实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。&lt;/p&gt;

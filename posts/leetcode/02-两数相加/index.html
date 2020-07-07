@@ -17,10 +17,10 @@
 
     <title>02 两数相加 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d868deb872745422712b38ff2633a2e661d7dcaccadaf399bbe4f68844b1942b.css" integrity="sha256-2GjeuHJ0VCJxKzj/JjOi5mHX3KzK2vOZu&#43;T2iESxlCs=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -300,13 +300,62 @@
             
 
             <div class="post-body">
-              
+              <p style="text-indent:0"><span class="drop-cap">给</span>出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<p>示例：</p>
+<pre><code>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+输出：7 -&gt; 0 -&gt; 8
+原因：342 + 465 = 807
+</code></pre><p>代码</p>
+<pre><code># Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &quot;&quot;&quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &quot;&quot;&quot;
+        list_1 = &quot;&quot;
+        list_2 = &quot;&quot;
+        if not l1 and not l2:
+            return 0
+
+        while l1:
+            list_1 += str(l1.val)
+            l1 = l1.next
+        num_1 = int(list_1[::-1]) if list_1 else 0
+        while l2:
+            list_2 += str(l2.val)
+            l2 = l2.next
+        num_2 = int(list_2[::-1]) if list_2 else 0
+        sum = list(str(num_1 + num_2)[::-1])
+        head = ListNode(sum[0])
+        cur = head
+        for i in range(1, len(sum)):
+            cur.next = ListNode(sum[i])
+            cur = cur.next
+        return head
+            
+        
+    
+</code></pre>
             </div>
 
         </article>
 
-        
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-9423081106169056"
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
         
     

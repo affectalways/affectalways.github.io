@@ -17,10 +17,10 @@
 
     <title>affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d868deb872745422712b38ff2633a2e661d7dcaccadaf399bbe4f68844b1942b.css" integrity="sha256-2GjeuHJ0VCJxKzj/JjOi5mHX3KzK2vOZu&#43;T2iESxlCs=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "datePublished": "2020-06-13T09:23:13+00:00",
-        "dateModified": "2020-07-02T23:18:40+08:00",
+        "dateModified": "2020-07-07T22:41:34+08:00",
         "url": "https://affectalways.github.io/",
         "description": "affectalways.",
         "image": "https://affectalways.github.io/icons/apple-touch-icon.png",
@@ -275,7 +275,7 @@
 
                 
                 <summary class="summary">
-                    给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。示例：给你这个链表：1-&gt;2-&gt;3-&gt;4-&gt;5当 k = 2 时，应当返回: 2-&gt;1-&gt;4-&gt;3-&gt;5当 k = 3 时，应当返回: 3-&gt;2-&gt;1-&gt;4-&gt;5说明：你的算法只能使用常数的额外空间。你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。迭代 class Solution:def reverseKGroup(self, head, k):cur = headif cur is None or cur.next is None:return curtmp = list()while cur:tmp.append(cur)cur = cur.nextpre = ListNode(None)cur = prelength = len(tmp)final_node = Noneif length % k &lt; k and length % k !
+                    给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。示例：给你这个链表：1-&gt;2-&gt;3-&gt;4-&gt;5当 k = 2 时，应当返回: 2-&gt;1-&gt;4-&gt;3-&gt;5当 k = 3 时，应当返回: 3-&gt;2-&gt;1-&gt;4-&gt;5说明：你的算法只能使用常数的额外空间。你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。迭代 class Solution:def reverseKGroup(self, head, k):cur = headif cur is None or cur.next is None:return curtmp = list()while cur:tmp.
                 </summary>
                 
                     <div class="read-more-container">
@@ -467,7 +467,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
 
                 
                 <summary class="summary">
-                    给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。例如，给出 n = 3，生成结果为：[&quot;((()))&quot;,&quot;(()())&quot;,&quot;(())()&quot;,&quot;()(())&quot;,&quot;()()()&quot;]## 回溯算法from collections import Counterclass Solution:def generateParenthesis(self, n: int):self.n = n# 结果result = []# 每次运行的track = []tmp = []def backtrack(path, options):if len(path) == n * 2:tmp.append(path)result.append(''.join(path))returnfor i in range(len(options)):if not self.isvalid(path, options[i]):continuepath.append(options[i])backtrack(path, options)path.
+                    给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。例如，给出 n = 3，生成结果为：[&quot;((()))&quot;,&quot;(()())&quot;,&quot;(())()&quot;,&quot;()(())&quot;,&quot;()()()&quot;]## 回溯算法from collections import Counterclass Solution:def generateParenthesis(self, n: int):self.n = n# 结果result = []# 每次运行的track = []tmp = []def backtrack(path, options):if len(path) == n * 2:tmp.
                 </summary>
                 
                     <div class="read-more-container">
@@ -516,7 +516,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
                 
                 <summary class="summary">
                     合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
-示例: 输入:[1-&gt;4-&gt;5,1-&gt;3-&gt;4,2-&gt;6]输出: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6暴力解法 遍历所有链表，将所有节点的值放到一个数组中。将这个数组排序，然后遍历所有元素得到正确顺序的值。用遍历得到的值，创建一个新的有序链表。# -*- coding: utf-8 -*-# @Time : 2020/3/29 1:14# @Author : affectalways# @Site : # @Contact : affectalways@gmail.com# @File : 23.py# @Software : PyCharm # Definition for singly-linked list.class ListNode:def __init__(self, x):self.val = xself.next = Noneclass Solution:def mergeKLists(self, lists):# head = ListNode(-1)result = []for cur in lists:while cur:result.
+示例: 输入:[1-&gt;4-&gt;5,1-&gt;3-&gt;4,2-&gt;6]输出: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6暴力解法 遍历所有链表，将所有节点的值放到一个数组中。将这个数组排序，然后遍历所有元素得到正确顺序的值。用遍历得到的值，创建一个新的有序链表。# -*- coding: utf-8 -*-# @Time : 2020/3/29 1:14# @Author : affectalways# @Site : # @Contact : affectalways@gmail.com# @File : 23.py# @Software : PyCharm # Definition for singly-linked list.
                 </summary>
                 
                     <div class="read-more-container">
@@ -564,7 +564,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
 
                 
                 <summary class="summary">
-                    给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。示例: 给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3.# -*- coding: utf-8 -*-# @Time : 2020/3/29 14:34# @Author : affectalways# @Site : # @Contact : affectalways@gmail.com# @File : 24.py# @Software : PyCharm class ListNode:def __init__(self, x):self.val = xself.next = Noneclass Solution:def swapPairs(self, head):cur = headif cur is None or cur.next is None:return curtmp = list()while cur:tmp.
+                    给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。示例: 给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3.# -*- coding: utf-8 -*-# @Time : 2020/3/29 14:34# @Author : affectalways# @Site : # @Contact : affectalways@gmail.com# @File : 24.py# @Software : PyCharm class ListNode:def __init__(self, x):self.val = xself.
                 </summary>
                 
                     <div class="read-more-container">
@@ -728,7 +728,7 @@ candidates 中的每个数字在每个组合中只能使用一次。
     
     
         
-        <time datetime="2020-06-28T21:47:37&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.6.28</time>
+        <time datetime="2020-07-01T23:12:13&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.7.1</time>
     
     
     

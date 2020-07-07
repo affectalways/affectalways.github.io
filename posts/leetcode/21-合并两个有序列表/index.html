@@ -17,10 +17,10 @@
 
     <title>21 合并两个有序列表 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d868deb872745422712b38ff2633a2e661d7dcaccadaf399bbe4f68844b1942b.css" integrity="sha256-2GjeuHJ0VCJxKzj/JjOi5mHX3KzK2vOZu&#43;T2iESxlCs=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -301,13 +301,85 @@
             
 
             <div class="post-body">
-              
+              <p style="text-indent:0"><span class="drop-cap">将</span>两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
+<h4 id="示例"><a href="#示例" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>示例：</h4>
+<pre><code>输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4
+输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+方法 2：迭代
+想法
 
+我们可以用迭代的方法来实现上述算法。我们假设 l1 元素严格比 l2元素少，我们可以将 l2 中的元素逐一插入 l1 中正确的位置。
+
+算法
+
+首先，我们设定一个哨兵节点 &quot;prehead&quot; ，这可以在最后让我们比较容易地返回合并后的链表。我们维护一个 prev 指针，我们需要做的是调整它的 next 指针。然后，我们重复以下过程，直到 l1 或者 l2 指向了 null ：如果 l1 当前位置的值小于等于 l2 ，我们就把 l1 的值接在 prev 节点的后面同时将 l1 指针往后移一个。否则，我们对 l2 做同样的操作。不管我们将哪一个元素接在了后面，我们都把 prev 向后移一个元素。
+
+在循环终止的时候， l1 和 l2 至多有一个是非空的。由于输入的两个链表都是有序的，所以不管哪个链表是非空的，它包含的所有元素都比前面已经合并链表中的所有元素都要大。这意味着我们只需要简单地将非空链表接在合并链表的后面，并返回合并链表。
+</code></pre><p><img src="https://pic.leetcode-cn.com/f6a8a3f573188706887808ef769ce3dc496e1bc3ef9b737e24498bd740442bb4-image.png?ynotemdtimestamp=1593701291427" alt="image"></p>
+<pre><code># -*- coding: utf-8 -*-
+# @Time     : 2020/3/27 23:37
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 21_.py
+# @Software : PyCharm 
+
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode):
+        # head = ListNode(-1)
+        head = ListNode(-1)
+        cur = head
+
+        while l1 and l2:
+            if l1.val &lt;= l2.val:
+                cur.next = l1
+                l1 = l1.next
+            else:
+                cur.next = l2
+                l2 = l2.next
+            cur = cur.next
+
+        cur.next = l1 if l2 is None else l2
+        return head.next
+
+
+if __name__ == '__main__':
+    solution = Solution()
+    head_1 = ListNode(1)
+    node_2 = ListNode(2)
+    node_4 = ListNode(4)
+    head_1.next = node_2
+    node_2.next = node_4
+
+    head_2 = ListNode(1)
+    node_3 = ListNode(3)
+    node_4_copy = ListNode(4)
+    head_2.next = node_3
+    node_3.next = node_4_copy
+
+    result = solution.mergeTwoLists(head_1, head_2)
+    while result:
+        print(result.val)
+        result = result.next
+</code></pre>
             </div>
 
         </article>
 
-        
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-9423081106169056"
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
         
     

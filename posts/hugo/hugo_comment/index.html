@@ -17,10 +17,10 @@
 
     <title>Hugo 添加评论功能 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d868deb872745422712b38ff2633a2e661d7dcaccadaf399bbe4f68844b1942b.css" integrity="sha256-2GjeuHJ0VCJxKzj/JjOi5mHX3KzK2vOZu&#43;T2iESxlCs=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -301,13 +301,164 @@
             
 
             <div class="post-body">
-              
+              <h1 id="不能评论"><a href="#不能评论" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>不能评论!</h1>
+<p><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 是一个强大的静态网页生成器，使用 go 开发，速度贼快。不过 Hugo 还比较年轻，没有像 <a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a> 那样功能强大，成熟稳定的主题。所以很多东西需要自己动手撸。</p>
+<p style="text-indent:0"><span class="drop-cap">比</span>如评论系统。</p>
+<blockquote>
+<p>评论系统排名</p>
+</blockquote>
+<blockquote>
+<p>valine &gt; gitalk &gt; gitment &gt; livere &gt; 畅言</p>
+</blockquote>
+<h2 id="关于valine"><a href="#关于valine" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>关于Valine</h2>
+<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/valine.png?raw=true" alt="valine.png"></p>
+<ul>
+<li>
+<p>官方网址： &laquo;<a href="https://valine.js.org/%3E%3E" target="_blank" rel="noopener">https://valine.js.org/&gt;&gt;</a></p>
+</li>
+<li>
+<p>其特性不一一赘述，官方网址有介绍</p>
+</li>
+</ul>
+<h2 id="添加评论区"><a href="#添加评论区" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>添加评论区</h2>
+<p>目前博客使用的主题是meme</p>
+<p>不同的主题可能有所区别，但原理大都类似</p>
+<blockquote>
+<h3 id="原理"><a href="#原理" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>原理？</h3>
+<p>Hugo 会将 <strong>Markdown 文档</strong> 按照 <strong>主题 (包括 HTML 模板、CSS、JavaScript 等)</strong> 编译成静态网页</p>
+<p>那么我们只需要将 <code>Valine</code>作为一个 <code>&lt;div&gt;</code> 插入到 HTML 模板中，然后在 <code>config.toml</code> 中添加相关配置，就可以添加<code>评论区</code>了</p>
+</blockquote>
+<h2 id="leancloud相关配置"><a href="#leancloud相关配置" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Leancloud相关配置</h2>
+<p>评论系统依赖于<code>leancloud</code>，所以需要先在<code>leancloud</code>中进行相关的准备工作。</p>
+<ol>
+<li>
+<p><a href="https://leancloud.cn/dashboard/login.html#/signin" target="_blank" rel="noopener">登录</a> 或 <a href="https://leancloud.cn/dashboard/login.html#/signup" target="_blank" rel="noopener">注册</a> LeanCloud</p>
+</li>
+<li>
+<p>登录成功后，进入后台点击左上角的创建应用：</p>
+<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud.png?raw=true" alt="leancloud.png"></p>
+</li>
+<li>
+<p>创建好应用，进入应用，左边栏找到 <strong>设置</strong> ，然后点击 <strong>应用Key</strong>，此时记录出现的 <strong>App ID</strong> 和 <strong>App Key</strong>，后面配置文件中会用到：</p>
+<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_key.png?raw=true" alt="lc_key.png"></p>
+</li>
+<li>
+<p>因为评论和文章阅读数统计依赖于存储，所以还需要建立两个新的存储 <code>Class</code>，左边栏找到并点击 <strong>存储</strong>，点击 <strong>创建Class</strong>:</p>
+<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_class.png?raw=true" alt="lc_class.png"></p>
+</li>
+<li>
+<p>创建两个存储Class，分别命名为: <code>Counter</code> 和 <code>Comment</code>;</p>
+</li>
+<li>
+<p>还需要为应用添加安全域名，左边栏点击 <strong>设置</strong>，找到 <strong>安全中心</strong>，点击后会看到 <strong>安全域名</strong> 设置框，输入博客使用的域名，点击保存即可：</p>
+</li>
+</ol>
+<p><img src="https://github.com/affectalways/affectalways.github.io/blob/master/images/hugo/hugo_comment/leancloud_safe.png?raw=true" alt="lc_safe.png"></p>
+<h3 id="configtoml开启comment"><a href="#configtoml开启comment" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>config.toml开启comment</h3>
+<ol>
+<li>将<code>enableComments = false</code>设置为<code>enableComments = true</code></li>
+<li>将<code>enableValine = false</code>设置为<code>enableValine = true</code></li>
+</ol>
+<blockquote>
+<p>添加 <strong>Valine</strong> 参数项：</p>
+</blockquote>
+<pre><code>## Valine
+    enableValine = true
+    valineAppId = &quot;************&quot;
+    valineAppKey = &quot;*****************&quot;
+    valinePlaceholder = &quot;Just go go&quot;
+    valinePath = &quot;&quot;
+    valineAvatar = &quot;mm&quot;
+    valineMeta = [&quot;nick&quot;, &quot;mail&quot;, &quot;link&quot;]
+    valinePageSize = 10
+    valineLang = &quot;zh-cn&quot;
+    valineVisitor = false
+    valineHighlight = true
+    valineAvatarForce = false
+    valineRecordIP = false
+    valineServerURLs = &quot;&quot;
+    valineEmojiCDN = &quot;&quot;
+    valineEmojiMaps = {}
+    valineEnableQQ = false
+    valineRequiredFields = []
+</code></pre><p>上面几项内容的含义，这里简单一说，具体还是要看 <a href="https://valine.js.org/configuration.html" target="_blank" rel="noopener">Valine官网中配置相关的内容</a>：</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable</td>
+<td>这是用于主题中配置的，不是官方Valine的参数，<strong>true</strong>时控制开启此评论系统</td>
+</tr>
+<tr>
+<td>appId</td>
+<td>这是在 <a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a> 后台应用中获取的，也就是上面提到的 <strong>App ID</strong></td>
+</tr>
+<tr>
+<td>appKey</td>
+<td>这是在 <a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a> 后台应用中获取的，也就是上面提到的 <strong>App Key</strong></td>
+</tr>
+<tr>
+<td>notify</td>
+<td>用于控制是否开启邮件通知功能，具体参考<a href="https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE" target="_blank" rel="noopener">邮件提醒配置</a></td>
+</tr>
+<tr>
+<td>verify</td>
+<td>用于控制是否开启评论验证码功能</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>用于配置评论项中用户头像样式，有多种选择：mm, identicon, monsterid, wavatar, retro, hide。详细参考：<a href="https://valine.js.org/avatar.html" target="_blank" rel="noopener">头像配置</a></td>
+</tr>
+<tr>
+<td>placehoder</td>
+<td>评论框的提示符</td>
+</tr>
+<tr>
+<td>visitor</td>
+<td>控制是否开启文章阅读数的统计功能i, 详情阅读<a href="https://valine.js.org/visitor.html" target="_blank" rel="noopener">文章阅读数统计</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="修改主题文件"><a href="#修改主题文件" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>修改主题文件</h3>
+<p>主要是修改主题中评论相关的布局文件 <code>themes\meme\layouts\partials\components\comments.html</code>，按照 <a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">Valine快速开始</a> 添加 <strong>Valine</strong> 相关代码，找到以下位置</p>
+<pre><code>{{ if .Site.Params.enableValine }}
+{{- end }}
+</code></pre><p>添加的 <strong>Valine</strong> 评论的代码如下：</p>
+<pre><code>{{ if .Site.Params.enableValine }}
+            &lt;div id=&quot;vcomments&quot;&gt;&lt;/div&gt;
+			&lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;
+			  &lt;script src='//unpkg.com/valine/dist/Valine.min.js'&gt;&lt;/script&gt;
+			  &lt;script type=&quot;text/javascript&quot;&gt;
+				new Valine({
+					el: '#vcomments' ,
+					appId: '{{ .Site.Params.valineAppId }}',
+					appKey: '{{ .Site.Params.valineAppKey }}',
+					notify: '{{ .Site.Params.valineNotify }}', 
+					verify: '{{ .Site.Params.valineVerify }}', 
+					avatar:'{{ .Site.Params.valineAvatar }}', 
+					placeholder: '{{ .Site.Params.valinePlaceholder }}',
+					visitor: '{{ .Site.Params.valineVisitor }}'
+				});
+			  &lt;/script&gt;
+        {{ end }}
+</code></pre><p>可以看到上述代码中引用了配置文件中的相关参数，这样以后修改配置就不用修改代码了，只需要改配置文件 <code>config.toml</code>。</p>
 
             </div>
 
         </article>
 
-        
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-9423081106169056"
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
         
     

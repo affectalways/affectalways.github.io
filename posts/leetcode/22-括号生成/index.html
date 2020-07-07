@@ -17,10 +17,10 @@
 
     <title>22 括号生成 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.d868deb872745422712b38ff2633a2e661d7dcaccadaf399bbe4f68844b1942b.css" integrity="sha256-2GjeuHJ0VCJxKzj/JjOi5mHX3KzK2vOZu&#43;T2iESxlCs=" />
+    <link rel="stylesheet" href="/css/meme.min.eb9e7783c33be52c48c14176a9deda8f13cd206ed1ed096fa720c843884d4f88.css" integrity="sha256-6553g8M75SxIwUF2qd7ajxPNIG7R7QlvpyDIQ4hNT4g=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -300,13 +300,80 @@
             
 
             <div class="post-body">
-              
+              <pre><code>给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
+例如，给出 n = 3，生成结果为：
+[
+  &quot;((()))&quot;,
+  &quot;(()())&quot;,
+  &quot;(())()&quot;,
+  &quot;()(())&quot;,
+  &quot;()()()&quot;
+]
+## 回溯算法
 
+from collections import Counter
+
+
+class Solution:
+    def generateParenthesis(self, n: int):
+        self.n = n
+        # 结果
+        result = []
+        # 每次运行的
+        track = []
+        tmp = []
+
+        def backtrack(path, options):
+            if len(path) == n * 2:
+                tmp.append(path)
+                result.append(''.join(path))
+                return
+
+            for i in range(len(options)):
+                if not self.isvalid(path, options[i]):
+                    continue
+                path.append(options[i])
+
+                backtrack(path, options)
+
+                path.pop()
+
+        backtrack(track, ['(', ')'])
+        return result
+
+    def isvalid(self, path, next):
+        if len(path) == 0 and next == ')':
+            return False
+
+        count_dict = Counter(path)
+        left_value = count_dict['(']
+        right_value = count_dict[')']
+        if next == ')' and right_value + 1 &gt; left_value:
+            return False
+
+        for key, value in count_dict.items():
+            if key == next and value == self.n:
+                return False
+
+        return True
+
+
+if __name__ == '__main__':
+    solution = Solution()
+    result = solution.generateParenthesis(3)
+    print(result)
+</code></pre>
             </div>
 
         </article>
 
-        
+        <ins class="adsbygoogle" style="display:block; text-align:center;"
+    data-ad-client="ca-pub-9423081106169056"
+    data-ad-slot=""></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
         
     

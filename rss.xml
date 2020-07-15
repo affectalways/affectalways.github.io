@@ -23,10 +23,180 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 08 Jul 2020 23:22:18 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jul 2020 21:24:33 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>02.02. 返回倒数第 k 个节点</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+                <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;面试题-0202-返回倒数第-k-个节点httpsleetcode-cncomproblemskth-node-from-end-of-list-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci/&#34;&gt;面试题 02.02. 返回倒数第 k 个节点&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;实现一种算法找出单向链表中倒数第-k-个节点返回该节点的值&#34;&gt;实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。&lt;/h4&gt;
+&lt;p&gt;注意：本题相对原题稍作改动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入： 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 和 k = 2
+输出： 4
+说明：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给定的 k 保证是有效的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;经典的快慢指针问题&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+反向思考，既然是寻找倒数第K个，那么计算机只能循环后移，不如我们先将位置确定，让其同步后移到链尾。
+设置前后指针都先指向头结点，后指针先移动到第K个结点，那么前后指针此时相距K个位置。同步后移，当后指针指向链尾时，前指针就自然指向倒数第K个结点
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def kthToLast(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        if head is None:
+            return None
+
+        left = head
+        right = head
+        count = 0
+        while count &amp;lt; k:
+            right = right.next
+            count += 1
+        while right:
+            left = left.next
+            right = right.next
+        return left.val
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>02.03. 删除中间节点</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</guid>
+                <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;面试题-0203-删除中间节点httpsleetcode-cncomproblemsdelete-middle-node-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/delete-middle-node-lcci/&#34;&gt;面试题 02.03. 删除中间节点&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;实现一种算法，删除单向链表中间的某个节点（即不是第一个或最后一个节点），假定你只能访问该节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：单向链表a-&amp;gt;b-&amp;gt;c-&amp;gt;d-&amp;gt;e-&amp;gt;f中的节点c
+结果：不返回任何数据，但该链表变为a-&amp;gt;b-&amp;gt;d-&amp;gt;e-&amp;gt;f
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def deleteNode(self, node):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        &amp;quot;&amp;quot;&amp;quot;
+        node.val = node.next.val
+        node.next = node.next.next
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;解题思路&#34;&gt;解题思路&lt;/h3&gt;
+&lt;p&gt;删除当前节点 必须知道prev节点， 这里只能访问当前节点，就只能先将next节点的值赋值给当前结点, 再把next节点干掉&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>0206 回文链表</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</guid>
+                <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;面试题-0206-回文链表httpsleetcode-cncomproblemspalindrome-linked-list-lcci&#34;&gt;面试题 02.06. 回文链表](&lt;a href=&#34;https://leetcode-cn.com/problems/palindrome-linked-list-lcci/&#34;&gt;https://leetcode-cn.com/problems/palindrome-linked-list-lcci/&lt;/a&gt;)&lt;/h4&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>16.11 跳水板</title>
@@ -82,6 +252,57 @@ if __name__ == &#39;__main__&#39;:
     result = solution.divingBoard(1, 3, 3)
     print(result)
 
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>938 二叉搜索树的范围和</title>
+                <link>https://affectalways.github.io/posts/leetcode/938-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/938-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/</guid>
+                <pubDate>Wed, 08 Jul 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定二叉搜索树的根结点 &lt;code&gt;root&lt;/code&gt;，返回 &lt;code&gt;L&lt;/code&gt; 和 &lt;code&gt;R&lt;/code&gt;（含）之间的所有结点的值的和。&lt;/p&gt;
+&lt;p&gt;二叉搜索树保证具有唯一的值。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [10,5,15,3,7,null,18], L = 7, R = 15
+输出：32
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
+输出：23
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;树中的结点数量最多为 10000 个。
+最终的答案保证小于 2^31。
 &lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
@@ -4568,6 +4789,777 @@ git push （若是第一次发布，需要用到--set-upstream）
                                     <category domain="https://affectalways.github.io/tags/hugo/">hugo</category>
                                 
                             
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;面试题-0202-返回倒数第-k-个节点httpsleetcode-cncomproblemskth-node-from-end-of-list-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci/&#34;&gt;面试题 02.02. 返回倒数第 k 个节点&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;实现一种算法找出单向链表中倒数第-k-个节点返回该节点的值&#34;&gt;实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。&lt;/h4&gt;
+&lt;p&gt;注意：本题相对原题稍作改动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入： 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 和 k = 2
+输出： 4
+说明：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给定的 k 保证是有效的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;经典的快慢指针问题&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+反向思考，既然是寻找倒数第K个，那么计算机只能循环后移，不如我们先将位置确定，让其同步后移到链尾。
+设置前后指针都先指向头结点，后指针先移动到第K个结点，那么前后指针此时相距K个位置。同步后移，当后指针指向链尾时，前指针就自然指向倒数第K个结点
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def kthToLast(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        if head is None:
+            return None
+
+        left = head
+        right = head
+        count = 0
+        while count &amp;lt; k:
+            right = right.next
+            count += 1
+        while right:
+            left = left.next
+            right = right.next
+        return left.val
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1108-ip%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1108-ip%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1108-ip-地址无效化httpsleetcode-cncomproblemsdefanging-an-ip-address&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/defanging-an-ip-address/&#34;&gt;1108. IP 地址无效化&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个有效的 &lt;a href=&#34;https://baike.baidu.com/item/IPv4&#34;&gt;IPv4&lt;/a&gt; 地址 &lt;code&gt;address&lt;/code&gt;，返回这个 IP 地址的无效化版本。&lt;/p&gt;
+&lt;p&gt;所谓无效化 IP 地址，其实就是用 &lt;code&gt;&amp;quot;[.]&amp;quot;&lt;/code&gt; 代替了每个 &lt;code&gt;&amp;quot;.&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：address = &amp;quot;1.1.1.1&amp;quot;
+输出：&amp;quot;1[.]1[.]1[.]1&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：address = &amp;quot;255.100.50.0&amp;quot;
+输出：&amp;quot;255[.]100[.]50[.]0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给出的 &lt;code&gt;address&lt;/code&gt; 是一个有效的 IPv4 地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def defangIPaddr(self, address):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type address: str
+        :rtype: str
+        &amp;quot;&amp;quot;&amp;quot;
+        return address.replace(&#39;.&#39;, &#39;[.]&#39;)
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1252-%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1252-%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1252-奇数值单元格的数目httpsleetcode-cncomproblemscells-with-odd-values-in-a-matrix&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix/&#34;&gt;1252. 奇数值单元格的数目&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个&lt;code&gt;n&lt;/code&gt;行&lt;code&gt;m&lt;/code&gt;列的矩阵，最开始的时候，每个单元格中的值都是&lt;code&gt; 0&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;另有一个索引数组&lt;code&gt; indices&lt;/code&gt;，&lt;code&gt;indices[i] = [ri, ci]&lt;/code&gt; 中的 &lt;code&gt;ri&lt;/code&gt; 和 &lt;code&gt;ci&lt;/code&gt; 分别表示指定的行和列（从 &lt;code&gt;0&lt;/code&gt; 开始编号）。&lt;/p&gt;
+&lt;p&gt;你需要将每对 &lt;code&gt;[ri, ci]&lt;/code&gt; 指定的行和列上的所有单元格的值加 &lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;请你在执行完所有 &lt;code&gt;indices&lt;/code&gt; 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/06/e1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：n = 2, m = 3, indices = [[0,1],[1,1]]
+输出：6
+解释：最开始的矩阵是 [[0,0,0],[0,0,0]]。
+第一次增量操作后得到 [[1,2,1],[0,1,0]]。
+最后的矩阵是 [[1,3,1],[1,3,1]]，里面有 6 个奇数。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/11/06/e2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：n = 2, m = 2, indices = [[1,1],[0,0]]
+输出：0
+解释：最后的矩阵是 [[2,2],[2,2]]，里面没有奇数。
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;提示：
+
+1 &amp;lt;= n &amp;lt;= 50
+1 &amp;lt;= m &amp;lt;= 50
+1 &amp;lt;= indices.length &amp;lt;= 100
+0 &amp;lt;= indices[i][0] &amp;lt; n
+0 &amp;lt;= indices[i][1] &amp;lt; m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def oddCells(self, n, m, indices):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type n: int
+        :type m: int
+        :type indices: List[List[int]]
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        recy = [[0 for i in range(m)] for j in range(n)]
+
+        for item in indices:
+            for x in range(n):
+                recy[x][item[1]] += 1
+
+            for y in range(m):
+                recy[item[0]][y] += 1
+
+        count = 0
+        for i in range(n):
+            for j in range(m):
+                if recy[i][j] % 2 == 1:
+                    count += 1
+
+        return count
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1281-%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1281-%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1281-整数的各位积和之差httpsleetcode-cncomproblemssubtract-the-product-and-sum-of-digits-of-an-integer&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/&#34;&gt;1281. 整数的各位积和之差&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个整数 &lt;code&gt;n&lt;/code&gt;，请你帮忙计算并返回该整数「各位数字之积」与「各位数字之和」的差。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：n = 234
+输出：15 
+解释：
+各位数之积 = 2 * 3 * 4 = 24 
+各位数之和 = 2 + 3 + 4 = 9 
+结果 = 24 - 9 = 15
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：n = 4421
+输出：21
+解释： 
+各位数之积 = 4 * 4 * 2 * 1 = 32 
+各位数之和 = 4 + 4 + 2 + 1 = 11 
+结果 = 32 - 11 = 21
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;提示：
+
+1 &amp;lt;= n &amp;lt;= 10^5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def subtractProductAndSum(self, n):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type n: int
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        mul = 1
+        ad = 0
+        while n &amp;gt; 0:
+            tmp = n % 10
+            mul *= tmp
+            ad += tmp
+            n //= 10
+        return mul - ad
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1323-6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1323-6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1323-6-和-9-组成的最大数字httpsleetcode-cncomproblemsmaximum-69-number&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-69-number/&#34;&gt;1323. 6 和 9 组成的最大数字&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个仅由数字 6 和 9 组成的正整数 num。&lt;/p&gt;
+&lt;p&gt;你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。&lt;/p&gt;
+&lt;p&gt;请返回你可以得到的最大数字。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：num = 9669
+输出：9969
+解释：
+改变第一位数字可以得到 6669 。
+改变第二位数字可以得到 9969 。
+改变第三位数字可以得到 9699 。
+改变第四位数字可以得到 9666 。
+其中最大的数字是 9969 。
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：num = 9996
+输出：9999
+解释：将最后一位从 6 变到 9，其结果 9999 是最大的数。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：num = 9999
+输出：9999
+解释：无需改变就已经是最大的数字了。
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;提示：
+
+1 &amp;lt;= num &amp;lt;= 10^4
+num 每一位上的数字都是 6 或者 9 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def maximum69Number(self, num):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type num: int
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        return int(str(num).replace(&#39;6&#39;, &#39;9&#39;, 1))
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1431-%E6%8B%A5%E6%9C%89%E6%9C%80%E5%A4%9A%E7%B3%96%E6%9E%9C%E7%9A%84%E5%AD%A9%E5%AD%90/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1431-%E6%8B%A5%E6%9C%89%E6%9C%80%E5%A4%9A%E7%B3%96%E6%9E%9C%E7%9A%84%E5%AD%A9%E5%AD%90/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1431-拥有最多糖果的孩子httpsleetcode-cncomproblemskids-with-the-greatest-number-of-candies&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies/&#34;&gt;1431. 拥有最多糖果的孩子&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。&lt;/p&gt;
+&lt;p&gt;对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。注意，允许有多个孩子同时拥有 最多 的糖果数目。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：candies = [2,3,5,1,3], extraCandies = 3
+输出：[true,true,true,false,true] 
+解释：
+孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。
+孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。
+孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。
+孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。
+孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：candies = [4,2,1,1,2], extraCandies = 1
+输出：[true,false,false,false,false] 
+解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：candies = [12,1,12], extraCandies = 10
+输出：[true,false,true]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2 &amp;lt;= candies.length &amp;lt;= 100
+1 &amp;lt;= candies[i] &amp;lt;= 100
+1 &amp;lt;= extraCandies &amp;lt;= 50
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type candies: List[int]
+        :type extraCandies: int
+        :rtype: List[bool]
+        &amp;quot;&amp;quot;&amp;quot;
+        max_val = max(candies)
+        result = [False] * len(candies)
+        for index, item in enumerate(candies):
+            if (item + extraCandies) &amp;gt;= max_val:
+                result[index] = True
+        return result
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/1480-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%92%8C/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/1480-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%92%8C/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1480-一维数组的动态和httpsleetcode-cncomproblemsrunning-sum-of-1d-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/running-sum-of-1d-array/&#34;&gt;1480. 一维数组的动态和&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个数组 &lt;code&gt;nums &lt;/code&gt;。数组&lt;code&gt;「动态和」&lt;/code&gt;的计算公式为：&lt;code&gt;runningSum[i] = sum(nums[0]…nums[i]) &lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;请返回 &lt;code&gt;nums&lt;/code&gt; 的&lt;code&gt;动态和&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,2,3,4]
+输出：[1,3,6,10]
+解释：动态和计算过程为 [1, 1+2, 1+2+3, 1+2+3+4] 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,1,1,1,1]
+输出：[1,2,3,4,5]
+解释：动态和计算过程为 [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1] 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [3,1,2,10,1]
+输出：[3,4,6,16,17]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;提示：
+
+1 &amp;lt;= nums.length &amp;lt;= 1000
+-10^6 &amp;lt;= nums[i] &amp;lt;= 10^6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def runningSum(self, nums):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type nums: List[int]
+        :rtype: List[int]
+        &amp;quot;&amp;quot;&amp;quot;
+        if not nums:
+            return []
+        result = list()
+        result.append(nums[0])
+        for ind in range(1, len(nums)):
+            result.append(result[ind - 1] + nums[ind])
+        return result
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/58offer-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/58offer-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;剑指-offer-58---ii-左旋转字符串httpsleetcode-cncomproblemszuo-xuan-zhuan-zi-fu-chuan-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/&#34;&gt;剑指 Offer 58 - II. 左旋转字符串&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串&amp;quot;abcdefg&amp;quot;和数字2，该函数将返回左旋转两位得到的结果&amp;quot;cdefgab&amp;rdquo;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: s = &amp;quot;abcdefg&amp;quot;, k = 2
+输出: &amp;quot;cdefgab&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: s = &amp;quot;lrloseumgh&amp;quot;, k = 6
+输出: &amp;quot;umghlrlose&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;限制：
+
+1 &amp;lt;= k &amp;lt; s.length &amp;lt;= 10000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def reverseLeftWords(self, s, n):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type s: str
+        :type n: int
+        :rtype: str
+        &amp;quot;&amp;quot;&amp;quot;
+        return s[n:] + s[:n]
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    result = solution.reverseLeftWords(s=&amp;quot;abcdefg&amp;quot;, n=2)
+    print(result)
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;lcp-01-猜数字httpsleetcode-cncomproblemsguess-numbers&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/guess-numbers/&#34;&gt;LCP 01. 猜数字&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;小A 和 小B 在玩猜数字。小B 每次从 1, 2, 3 中随机选择一个，小A 每次也从 1, 2, 3 中选择一个猜。他们一共进行三次这个游戏，请返回 小A 猜对了几次？&lt;/p&gt;
+&lt;p&gt;输入的&lt;code&gt;guess&lt;/code&gt;数组为 小A 每次的猜测，&lt;code&gt;answer&lt;/code&gt;数组为 小B 每次的选择。&lt;code&gt;guess&lt;/code&gt;和&lt;code&gt;answer&lt;/code&gt;的长度都等于3。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：guess = [1,2,3], answer = [1,2,3]
+输出：3
+解释：小A 每次都猜对了。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：guess = [2,2,3], answer = [3,2,1]
+输出：1
+解释：小A 只猜对了第二次。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;guess的长度 = 3
+answer的长度 = 3
+guess的元素取值为 {1, 2, 3} 之一。
+answer的元素取值为 {1, 2, 3} 之一。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def game(self, guess, answer):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type guess: List[int]
+        :type answer: List[int]
+        :rtype: int
+        &amp;quot;&amp;quot;&amp;quot;
+        count = 0
+        for index in range(len(guess)):
+            if guess[index] == answer[index]:
+                count += 1
+
+        return count
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;title: &amp;quot;0207 链表相交&amp;quot;
+date: 2020-07-15T21:20:33+08:00
+tags: [&amp;quot;leetcode&amp;quot;]
+keywords: 
+- leetcode
+- blog
+- 博客
+- 领扣
+- 0207 链表相交
+- 算法
+description: &amp;quot;leetcode，0207 链表相交&amp;quot;
+categories: [&amp;quot;leetcode&amp;quot;]
+draft: false
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;面试题-0207-链表相交httpsleetcode-cncomproblemsintersection-of-two-linked-lists-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/&#34;&gt;面试题 02.07. 链表相交&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;我竟然没读懂题！！！！！！！！！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定两个（单向）链表，判定它们是否相交并返回交点。请注意相交的定义基于节点的引用，而不是基于节点的值。换句话说，如果一个链表的第k个节点与另一个链表的第j个节点是同一节点（引用完全相同），则这两个链表相交。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+输出：Reference of the node with value = 8
+输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+输出：Reference of the node with value = 2
+输入解释：相交节点的值为 2 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [0,9,1,2,4]，链表 B 为 [3,2,4]。在 A 中，相交节点前有 3 个节点；在 B 中，相交节点前有 1 个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+输出：null
+输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。
+解释：这两个链表不相交，因此返回 null。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1.如果两个链表没有交点，返回 null 。
+ 2.在返回结果后，两个链表仍须保持原有的结构。
+ 3.可假定整个链表结构中没有循环。
+ 4.程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;双指针什么的，技巧性有点强。最朴素的做法是求长度
+
+1.第一次遍历两个链表，记录长度
+2.根据两个链表的长度，得出长度差n,让长的链表的指针先走n步
+3.然后两个指针一起移动，判断两者是否相等（指向同一个内存地址）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -&amp;gt; ListNode:
+        len_a = 0
+        len_b = 0
+        cur_a = headA
+        cur_b = headB
+        
+        # 1.第一次遍历两个链表，记录长度
+        while cur_a:
+            len_a += 1
+            cur_a = cur_a.next
+
+        while cur_b:
+            len_b += 1
+            cur_b = cur_b.next
+            
+		# 2.根据两个链表的长度，得出长度差n,让长的链表的指针先走n步
+        cur_a = headA
+        cur_b = headB
+        while len_b &amp;gt; len_a:
+            cur_b = cur_b.next
+            len_b -= 1
+        while len_a &amp;gt; len_b:
+            cur_a = cur_a.next
+            len_a -= 1
+		# 3.然后两个指针一起移动，判断两者是否相等（指向同一个内存地址）
+        while cur_a:
+            if cur_a == cur_b:
+                return cur_a
+
+            cur_a = cur_a.next
+            cur_b = cur_b.next
+
+        return None
+
+def create_list(sequence):
+    headA = None
+    cur = None
+    for i in sequence:
+        node = ListNode(i)
+        if headA is None:
+            headA = cur = node
+            continue
+        cur.next = node
+        cur = cur.next
+    return headA
+
+
+if __name__ == &#39;__main__&#39;:
+    intersectVal = 8
+    listA = [4, 1, 8, 4, 5]
+    headA = create_list(listA)
+    listB = [5, 0, 1, 8, 4, 5]
+    headB = create_list(listB)
+    skipA = 2
+    skipB = 3
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;title: &amp;quot;Offer 06. 从尾到头打印链表&amp;quot;
+date: 2020-07-15T21:20:33+08:00
+tags: [&amp;quot;leetcode&amp;quot;]
+keywords: 
+- leetcode
+- blog
+- 博客
+- 领扣
+- Offer 06. 从尾到头打印链表
+- 算法
+description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;
+categories: [&amp;quot;leetcode&amp;quot;]
+draft: false
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/&#34;&gt;剑指 Offer 06. 从尾到头打印链表&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [1,3,2]
+输出：[2,3,1]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0 &amp;lt;= 链表长度 &amp;lt;= 10000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 方法一：栈
+栈的特点是后进先出，即最后压入栈的元素最先弹出。考虑到栈的这一特点，使用栈将链表元素顺序倒置。从链表的头节点开始，依次将每个节点压入栈内，然后依次弹出栈内的元素并存储到数组中。
+
+创建一个栈，用于存储链表的节点
+创建一个指针，初始时指向链表的头节点
+当指针指向的元素非空时，重复下列操作：
+将指针指向的节点压入栈内
+将指针移到当前节点的下一个节点
+获得栈的大小 size，创建一个数组 print，其大小为 size
+创建下标并初始化 index = 0
+重复 size 次下列操作：
+从栈内弹出一个节点，将该节点的值存到 print[index]
+将 index 的值加 1
+返回 print
+
+
+## 复杂性分析
+
+时间复杂度：O(n)O(n)。正向遍历一遍链表，然后从栈弹出全部节点，等于又反向遍历一遍链表。
+空间复杂度：O(n)O(n)。额外使用一个栈存储链表中的每个节点。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def reversePrint(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: List[int]
+        &amp;quot;&amp;quot;&amp;quot;
+        if head is None:
+            return []
+        stack = []
+        while head:
+            stack.append(head.val)
+            head = head.next
+
+        stack.reverse()
+        return stack
+        # result = None
+        # cur = None
+        # for node in stack:
+        #     if result is None:
+        #         result = node
+        #         cur = result
+        #         continue
+        #     cur.next = node
+        #     cur = cur.next
+        # return result
+
+
+def create_list(sequence):
+    headA = None
+    cur = None
+    for i in sequence:
+        node = ListNode(i)
+        if headA is None:
+            headA = cur = node
+            continue
+        cur.next = node
+        cur = cur.next
+    return headA
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    head = create_list([1, 3, 2])
+    result = solution.reversePrint(head)
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
                         
                     
                 

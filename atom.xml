@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-07-15T23:55:02&#43;08:00</updated>
+    <updated>2020-07-16T22:45:42&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,226 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+        <entry>
+            <title type="text">0201 移除重复节点</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</id>
+            <updated>2020-07-16T22:45:15&#43;08:00</updated>
+            <published>2020-07-16T22:42:51&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，0201 移除重复节点</summary>
+            
+                <content type="html">&lt;h4 id=&#34;面试题-0201-移除重复节点httpsleetcode-cncomproblemsremove-duplicate-node-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/remove-duplicate-node-lcci/&#34;&gt;面试题 02.01. 移除重复节点&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;编写代码，移除未排序链表中的重复节点。保留最开始出现的节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 输入：[1, 2, 3, 3, 2, 1]
+ 输出：[1, 2, 3]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 输入：[1, 1, 1, 1, 2]
+ 输出：[1, 2]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;链表长度在[0, 20000]范围内。&lt;/li&gt;
+&lt;li&gt;链表元素在[0, 20000]范围内。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果不得使用临时缓冲区，该怎么解决？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;哈希-on&#34;&gt;哈希 O(n)&lt;/h4&gt;
+&lt;p&gt;哈希表存储出现过的元素，如果当前节点出现过，就删掉&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;双指针&#34;&gt;双指针&lt;/h4&gt;
+&lt;p&gt;固定p指针，右侧q指针扫描，然后移动p，指针q再次扫描
+时间复杂度 O(n^2)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def removeDuplicateNodes(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        p = head
+        while p:
+            q = p
+            while q.next:
+                if q.next.val == p.val:
+                    q.next = q.next.next
+                else:
+                    q = q.next
+            p = p.next
+
+        return head
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 3, 2, 1])
+    # traversal_link(head)
+    solution = Solution()
+    result = solution.removeDuplicateNodes(head)
+    traversal_link(result)
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Offer24 反转链表</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
+            <updated>2020-07-16T22:26:27&#43;08:00</updated>
+            <published>2020-07-16T22:24:25&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，Offer24 反转链表</summary>
+            
+                <content type="html">&lt;h4 id=&#34;剑指-offer-24-反转链表httpsleetcode-cncomproblemsfan-zhuan-lian-biao-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/&#34;&gt;剑指 Offer 24. 反转链表&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
+输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0 &amp;lt;= 节点个数 &amp;lt;= 5000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def reverseList(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        cur = head
+        pre = None
+        while cur:
+            after = cur.next
+            cur.next = pre
+            pre = cur
+            cur = after
+        return pre
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 4, 5])
+    # traversal_link(head)
+    solution = Solution()
+    cur = solution.reverseList(head)
+    traversal_link(cur)
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">1290 二进制链表转整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/" />
@@ -5724,7 +5944,7 @@ answer的元素取值为 {1, 2, 3} 之一。
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</id>
-            <updated>2020-07-15T21:21:41&#43;08:00</updated>
+            <updated>2020-07-16T22:07:46&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -5749,7 +5969,6 @@ keywords:
 description: &amp;quot;leetcode，0207 链表相交&amp;quot;
 categories: [&amp;quot;leetcode&amp;quot;]
 draft: false
-
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;面试题-0207-链表相交httpsleetcode-cncomproblemsintersection-of-two-linked-lists-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/&#34;&gt;面试题 02.07. 链表相交&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;我竟然没读懂题！！！！！！！！！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给定两个（单向）链表，判定它们是否相交并返回交点。请注意相交的定义基于节点的引用，而不是基于节点的值。换句话说，如果一个链表的第k个节点与另一个链表的第j个节点是同一节点（引用完全相同），则这两个链表相交。&lt;/p&gt;

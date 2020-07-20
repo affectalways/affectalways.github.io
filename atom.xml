@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-07-16T23:32:23&#43;08:00</updated>
+    <updated>2020-07-20T22:53:11&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,137 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+        <entry>
+            <title type="text">Offer18删除链表的节点</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</id>
+            <updated>2020-07-20T22:53:01&#43;08:00</updated>
+            <published>2020-07-20T22:49:28&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，Offer18删除链表的节点</summary>
+            
+                <content type="html">&lt;h4 id=&#34;剑指-offer-18-删除链表的节点httpsleetcode-cncomproblemsshan-chu-lian-biao-de-jie-dian-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/&#34;&gt;剑指 Offer 18. 删除链表的节点&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。&lt;/p&gt;
+&lt;p&gt;返回删除后的链表的头节点。&lt;/p&gt;
+&lt;p&gt;**注意：**此题对比原题有改动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: head = [4,5,1,9], val = 5
+输出: [4,1,9]
+解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&amp;gt; 1 -&amp;gt; 9.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: head = [4,5,1,9], val = 1
+输出: [4,5,9]
+解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&amp;gt; 5 -&amp;gt; 9.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;题目保证链表中节点的值互不相同&lt;/li&gt;
+&lt;li&gt;若使用 C 或 C++ 语言，你不需要 &lt;code&gt;free&lt;/code&gt; 或 &lt;code&gt;delete&lt;/code&gt; 被删除的节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;思路&#34;&gt;思路：&lt;/h4&gt;
+&lt;p&gt;删除值为 val 的节点可分为两步：定位节点、修改引用。&lt;/p&gt;
+&lt;p&gt;定位节点： 遍历链表，直到 head.val == val 时跳出，即可定位目标节点。
+修改引用： 设节点 cur 的前驱节点为 pre ，后继节点为 cur.next ；则执行 pre.next = cur.next ，即可实现删除 cur 节点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/0091d27673ec013c5557c7f9e7c731d3437f0ce655439269a6e24ce501235e4b-Picture0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;算法流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.特例处理： 当应删除头节点 head 时，直接返回 head.next 即可。
+2.初始化： pre = head , cur = head.next 。
+3.定位节点： 当 cur 为空 或 cur 节点值等于 val 时跳出。
+4.保存当前节点索引，即 pre = cur 。
+5.遍历下一节点，即 cur = cur.next 。
+6.删除节点： 若 cur 指向某节点，则执行 pre.next = cur.next 。（若 cur 指向 nullnull ，代表链表中不包含值为 val 的节点。
+7.返回值： 返回链表头部节点 head 即可。
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/7/18 23:44
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : offer18.py
+# @Software : PyCharm 
+
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def deleteNode(self, head, val):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type val: int
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        if head.val == val:
+            return head.next
+        pre, cur = head, head.next
+        while cur and cur.val != val:
+            pre, cur = cur, cur.next
+        if cur:
+            pre.next = cur.next
+        return head
+
+
+def create_link(tmp):
+    cur = head = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([4, 5, 1, 9])
+    traversal_link(head)
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">876 链表的中间结点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/" />

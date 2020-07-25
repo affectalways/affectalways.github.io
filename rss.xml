@@ -10,7 +10,7 @@
         <title>affectalways</title>
         <link>https://affectalways.github.io/</link>
         <description>affectalways.</description>
-        <generator>Hugo 0.72.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.74.3 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,10 +23,369 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Tue, 21 Jul 2020 22:47:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 25 Jul 2020 23:47:58 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Goland 2020版破解</title>
+                <link>https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/</guid>
+                <pubDate>Sat, 25 Jul 2020 21:26:36 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;&lt;strong&gt;GoLand 2020版破解教程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本教程适用于GoLand 2020 1.4版本，其他版本理论上是一致的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GoLand下载地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/go/download/#section=windows&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;激活步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载GoLand&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载破解补丁文件，&lt;a href=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/repository/jetbrains-agent-latest.zip&#34;&gt;jetbrains-agent-latest.zip破解补丁下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装GoLand，正常安装即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;激活界面&lt;/code&gt;，选择&lt;code&gt;免费试用（Evaluate for free）&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用GoLand随便打开一个已存在的项目（或者创建一个）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拖入&lt;code&gt;zip文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland01.png&#34; alt=&#34;破解补丁&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按箭头操作即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;查看是否激活成功&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;点击Help --&amp;gt; About
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/golang/">golang</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/go/">go</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>1051 高度检查器</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</guid>
+                <pubDate>Fri, 24 Jul 2020 23:12:17 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1051-高度检查器httpsleetcode-cncomproblemsheight-checker&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/height-checker/&#34;&gt;1051. 高度检查器&lt;/a&gt;&lt;/h4&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Offer22 链表中倒数第K个节点</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+                <pubDate>Wed, 22 Jul 2020 23:15:30 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;剑指-offer-22-链表中倒数第k个节点httpsleetcode-cncomproblemslian-biao-zhong-dao-shu-di-kge-jie-dian-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/&#34;&gt;剑指 Offer 22. 链表中倒数第k个节点&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节点。例如，一个链表有6个节点，从头节点开始，它们的值依次是1、2、3、4、5、6。这个链表的倒数第3个节点是值为4的节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;给定一个链表: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 和 k = 2.
+
+返回链表 4-&amp;gt;5.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.快指针和慢指针相差k
+2.快指针到达链尾，慢指针所指方向就是倒数第k个链表
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def getKthFromEnd(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        fast = head
+        for i in range(k):
+            fast = fast.next
+
+        cur = head
+        while fast:
+            cur = cur.next
+            fast = fast.next
+            
+        return cur
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.获取链表长度
+2.开始遍历（链表长度-k）次数
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def getKthFromEnd(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        length = 0
+        cur = head
+        while cur:
+            length += 1
+            cur = cur.next
+
+        cur = head
+        index = length - k
+        for i in range(index):
+            cur = cur.next
+
+        return cur
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>141环形链表</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+                <pubDate>Wed, 22 Jul 2020 22:13:40 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;141-环形链表httpsleetcode-cncomproblemslinked-list-cycle&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/linked-list-cycle/&#34;&gt;141. 环形链表&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个链表，判断链表中是否有环。&lt;/p&gt;
+&lt;p&gt;为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [1,2], pos = 0
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你能用 &lt;em&gt;O(1)&lt;/em&gt;（即，常量）内存解决此问题吗？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;当一个链表有环时，快慢指针都会陷入环中进行无限次移动，然后变成了追及问题。想象一下在操场跑步的场景，只要一直跑下去，快的总会追上慢的。当两个指针都进入环后，每轮移动使得慢指针到快指针的距离增加一，同时快指针到慢指针的距离也减少一，只要一直移动下去，快指针总会追上慢指针。
+根据上述表述得出，如果一个链表存在环，那么快慢指针必然会相遇。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/d1ac82780e5189d7d58406504c3b7b56c35165997bfbb4c325677af92ee2d483.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/7/22 22:19
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 141.py
+# @Software : PyCharm 
+
+# -*- coding: utf-8 -*-
+# @Time     : 2020/7/16 22:27
+# @Author   : affectalways
+# @Site     :
+# @Contact  : affectalways@gmail.com
+# @File     : 0201.py
+# @Software : PyCharm
+
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def hasCycle(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: bool
+        &amp;quot;&amp;quot;&amp;quot;
+        if not head:
+            return False
+        fast = head.next
+        slow = head
+        while fast != slow:
+            if fast is None or fast.next is None:
+                return False
+            slow = slow.next
+            fast = fast.next.next
+        return True
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 3, 2, 1])
+    # traversal_link(head)
+    solution = Solution()
+    result = solution.hasCycle(head)
+    traversal_link(result)
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Instagram在PyCon2017的演讲摘要</title>
@@ -395,6 +754,12 @@ if __name__ == &#39;__main__&#39;:
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
                                 
                             
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
                         
                     
                         
@@ -521,6 +886,12 @@ if __name__ == &#39;__main__&#39;:
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
                                 
                             
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
                         
                     
                         
@@ -564,7 +935,72 @@ if __name__ == &#39;__main__&#39;:
 &lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;哈希-on&#34;&gt;哈希 O(n)&lt;/h4&gt;
 &lt;p&gt;哈希表存储出现过的元素，如果当前节点出现过，就删掉&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;p&gt;我们从链表的头节点&lt;code&gt;head&lt;/code&gt; 开始进行遍历，遍历的指针记为&lt;code&gt;cur&lt;/code&gt;。由于头节点一定不会被删除，因此我们可以枚举待移除节点的前驱节点&lt;code&gt;pre&lt;/code&gt;，减少编写代码的复杂度。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/7/16 22:27
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 0201.py
+# @Software : PyCharm 
+
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def removeDuplicateNodes(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        if not head:
+            return head
+        tmp = {head.val}
+        pre = head
+        cur = pre.next
+        while cur:
+            if cur.val in tmp:
+                pre.next = cur.next
+                cur = cur.next
+            else:
+                tmp.add(cur.val)
+                pre = pre.next
+                cur = cur.next
+        return head
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 3, 2, 1])
+    # traversal_link(head)
+    solution = Solution()
+    result = solution.removeDuplicateNodes(head)
+    traversal_link(result)
+
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;双指针&#34;&gt;双指针&lt;/h4&gt;
 &lt;p&gt;固定p指针，右侧q指针扫描，然后移动p，指针q再次扫描
 时间复杂度 O(n^2)&lt;/p&gt;
@@ -637,6 +1073,12 @@ if __name__ == &#39;__main__&#39;:
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
                                 
                             
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
                         
                     
                         
@@ -654,8 +1096,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>Offer24 反转链表</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
                 <pubDate>Thu, 16 Jul 2020 22:24:25 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -733,6 +1175,12 @@ if __name__ == &#39;__main__&#39;:
                                 
                                 
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
                                 
                             
                         
@@ -814,6 +1262,12 @@ if __name__ == &#39;__main__&#39;:
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
                                 
                             
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
                         
                     
                         
@@ -887,6 +1341,12 @@ if __name__ == &#39;__main__&#39;:
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
                                 
                             
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
+                                
+                            
                         
                     
                         
@@ -941,6 +1401,12 @@ if __name__ == &#39;__main__&#39;:
                                 
                                 
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
                                 
                             
                         
@@ -1078,6 +1544,12 @@ if __name__ == &#39;__main__&#39;:
                                 
                                 
                                     <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/">链表</category>
                                 
                             
                         
@@ -4203,6 +4675,90 @@ class Solution:
             </item>
         
             <item>
+                <title>（2）两数相加</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
+                <pubDate>Tue, 23 Jun 2020 23:05:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。&lt;/p&gt;
+&lt;p&gt;如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。&lt;/p&gt;
+&lt;p&gt;您可以假设除了数字 0 之外，这两个数都不会以 0 开头。&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+输出：7 -&amp;gt; 0 -&amp;gt; 8
+原因：342 + 465 = 807
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        list_1 = &amp;quot;&amp;quot;
+        list_2 = &amp;quot;&amp;quot;
+        if not l1 and not l2:
+            return 0
+
+        while l1:
+            list_1 += str(l1.val)
+            l1 = l1.next
+        num_1 = int(list_1[::-1]) if list_1 else 0
+        while l2:
+            list_2 += str(l2.val)
+            l2 = l2.next
+        num_2 = int(list_2[::-1]) if list_2 else 0
+        sum = list(str(num_1 + num_2)[::-1])
+        head = ListNode(sum[0])
+        cur = head
+        for i in range(1, len(sum)):
+            cur.next = ListNode(sum[i])
+            cur = cur.next
+        return head
+            
+        
+    
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
                 <title>单例模式</title>
                 <link>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
@@ -4252,6 +4808,80 @@ class Solution:
                 <title>01 两数之和相加</title>
                 <link>https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</link>
                 <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</guid>
+                <pubDate>Mon, 22 Jun 2020 21:51:44 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
+&lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法一&#34;&gt;解法一&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def twoSum(self, nums, target):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        &amp;quot;&amp;quot;&amp;quot;
+        if not len(nums):
+            return []
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法二&#34;&gt;解法二&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;利用Python创建字典（即hash），同时有效避免了key相同的情况
+class Solution:
+    def twoSum(self, nums, target):
+        dic = {}
+        for i in range(len(nums)):
+            if str(target - nums[i]) in dic:
+                return [dic[str(target - nums[i])], i]
+            dic[str(nums[i])] = i
+
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>（1）两数之和相加</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</guid>
                 <pubDate>Mon, 22 Jun 2020 21:51:44 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -6233,8 +6863,9 @@ keywords:
 - 领扣
 - 0207 链表相交
 - 算法
+- 链表
 description: &amp;quot;leetcode，0207 链表相交&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
 draft: false
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;面试题-0207-链表相交httpsleetcode-cncomproblemsintersection-of-two-linked-lists-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/&#34;&gt;面试题 02.07. 链表相交&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;我竟然没读懂题！！！！！！！！！！！&lt;/strong&gt;&lt;/p&gt;
@@ -6362,8 +6993,9 @@ keywords:
 - 领扣
 - Offer 06. 从尾到头打印链表
 - 算法
+- 链表
 description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
 draft: false
 
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/&#34;&gt;剑指 Offer 06. 从尾到头打印链表&lt;/a&gt;&lt;/h4&gt;

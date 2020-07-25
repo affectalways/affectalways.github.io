@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-07-21T22:47:11&#43;08:00</updated>
+    <updated>2020-07-25T23:47:58&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -15,12 +15,396 @@
                 <email>affectalways@gmail.com</email>
             </author>
     <rights>@2020 affectalways</rights>
-    <generator uri="https://gohugo.io/" version="0.72.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
+        <entry>
+            <title type="text">Goland 2020版破解</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/" />
+            <id>https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/</id>
+            <updated>2020-07-25T23:29:37&#43;08:00</updated>
+            <published>2020-07-25T21:26:36&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">GoLand 2020版破解教程
+本教程适用于GoLand 2020 1.4版本，其他版本理论上是一致的。
+GoLand下载地址
+下载地址
+激活步骤
+  下载GoLand
+  下载破解补丁文件，jetbrains-agent-latest.zip破解补丁下载地址
+  安装GoLand，正常安装即可
+  进入激活界面，选择免费试用（Evaluate for free）
+  用GoLand随便打开一个已存在的项目（或者创建一个）
+  拖入zip文件
+  按箭头操作即可
+  查看是否激活成功
+点击Help --&amp;gt; About</summary>
+            
+                <content type="html">&lt;p&gt;&lt;strong&gt;GoLand 2020版破解教程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本教程适用于GoLand 2020 1.4版本，其他版本理论上是一致的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GoLand下载地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jetbrains.com/go/download/#section=windows&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;激活步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载GoLand&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载破解补丁文件，&lt;a href=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/repository/jetbrains-agent-latest.zip&#34;&gt;jetbrains-agent-latest.zip破解补丁下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装GoLand，正常安装即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;激活界面&lt;/code&gt;，选择&lt;code&gt;免费试用（Evaluate for free）&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用GoLand随便打开一个已存在的项目（或者创建一个）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拖入&lt;code&gt;zip文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland01.png&#34; alt=&#34;破解补丁&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按箭头操作即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;查看是否激活成功&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;点击Help --&amp;gt; About
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/golang/" term="golang" label="golang" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/go/" term="go" label="go" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">1051 高度检查器</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</id>
+            <updated>2020-07-25T23:27:22&#43;08:00</updated>
+            <published>2020-07-24T23:12:17&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，1051 高度检查器</summary>
+            
+                <content type="html">&lt;h4 id=&#34;1051-高度检查器httpsleetcode-cncomproblemsheight-checker&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/height-checker/&#34;&gt;1051. 高度检查器&lt;/a&gt;&lt;/h4&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">Offer22 链表中倒数第K个节点</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
+            <updated>2020-07-25T23:04:32&#43;08:00</updated>
+            <published>2020-07-22T23:15:30&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，Offer22 链表中倒数第K个节点</summary>
+            
+                <content type="html">&lt;h4 id=&#34;剑指-offer-22-链表中倒数第k个节点httpsleetcode-cncomproblemslian-biao-zhong-dao-shu-di-kge-jie-dian-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/&#34;&gt;剑指 Offer 22. 链表中倒数第k个节点&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节点。例如，一个链表有6个节点，从头节点开始，它们的值依次是1、2、3、4、5、6。这个链表的倒数第3个节点是值为4的节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;给定一个链表: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, 和 k = 2.
+
+返回链表 4-&amp;gt;5.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.快指针和慢指针相差k
+2.快指针到达链尾，慢指针所指方向就是倒数第k个链表
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def getKthFromEnd(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        fast = head
+        for i in range(k):
+            fast = fast.next
+
+        cur = head
+        while fast:
+            cur = cur.next
+            fast = fast.next
+            
+        return cur
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.获取链表长度
+2.开始遍历（链表长度-k）次数
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def getKthFromEnd(self, head, k):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        length = 0
+        cur = head
+        while cur:
+            length += 1
+            cur = cur.next
+
+        cur = head
+        index = length - k
+        for i in range(index):
+            cur = cur.next
+
+        return cur
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">141环形链表</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</id>
+            <updated>2020-07-25T23:04:45&#43;08:00</updated>
+            <published>2020-07-22T22:13:40&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，141 环形链表</summary>
+            
+                <content type="html">&lt;h4 id=&#34;141-环形链表httpsleetcode-cncomproblemslinked-list-cycle&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/linked-list-cycle/&#34;&gt;141. 环形链表&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个链表，判断链表中是否有环。&lt;/p&gt;
+&lt;p&gt;为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [1,2], pos = 0
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你能用 &lt;em&gt;O(1)&lt;/em&gt;（即，常量）内存解决此问题吗？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;当一个链表有环时，快慢指针都会陷入环中进行无限次移动，然后变成了追及问题。想象一下在操场跑步的场景，只要一直跑下去，快的总会追上慢的。当两个指针都进入环后，每轮移动使得慢指针到快指针的距离增加一，同时快指针到慢指针的距离也减少一，只要一直移动下去，快指针总会追上慢指针。
+根据上述表述得出，如果一个链表存在环，那么快慢指针必然会相遇。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/d1ac82780e5189d7d58406504c3b7b56c35165997bfbb4c325677af92ee2d483.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/7/22 22:19
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 141.py
+# @Software : PyCharm 
+
+# -*- coding: utf-8 -*-
+# @Time     : 2020/7/16 22:27
+# @Author   : affectalways
+# @Site     :
+# @Contact  : affectalways@gmail.com
+# @File     : 0201.py
+# @Software : PyCharm
+
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def hasCycle(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: bool
+        &amp;quot;&amp;quot;&amp;quot;
+        if not head:
+            return False
+        fast = head.next
+        slow = head
+        while fast != slow:
+            if fast is None or fast.next is None:
+                return False
+            slow = slow.next
+            fast = fast.next.next
+        return True
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 3, 2, 1])
+    # traversal_link(head)
+    solution = Solution()
+    result = solution.hasCycle(head)
+    traversal_link(result)
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Instagram在PyCon2017的演讲摘要</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/python/instagram%E5%9C%A8pycon2017%E7%9A%84%E6%BC%94%E8%AE%B2%E6%91%98%E8%A6%81/" />
             <id>https://affectalways.github.io/posts/python/instagram%E5%9C%A8pycon2017%E7%9A%84%E6%BC%94%E8%AE%B2%E6%91%98%E8%A6%81/</id>
-            <updated>2020-07-21T22:44:28&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-21T22:38:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -277,7 +661,7 @@ while any(not build.done() for build in builds):
             <title type="text">Offer18删除链表的节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-20T22:53:01&#43;08:00</updated>
+            <updated>2020-07-25T23:04:28&#43;08:00</updated>
             <published>2020-07-20T22:49:28&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -389,6 +773,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -408,7 +798,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">876 链表的中间结点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</id>
-            <updated>2020-07-16T23:32:05&#43;08:00</updated>
+            <updated>2020-07-25T23:04:16&#43;08:00</updated>
             <published>2020-07-16T22:55:17&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -518,6 +908,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -537,7 +933,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">0201 移除重复节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-16T22:55:32&#43;08:00</updated>
+            <updated>2020-07-25T23:03:43&#43;08:00</updated>
             <published>2020-07-16T22:42:51&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -564,7 +960,72 @@ if __name__ == &#39;__main__&#39;:
 &lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;哈希-on&#34;&gt;哈希 O(n)&lt;/h4&gt;
 &lt;p&gt;哈希表存储出现过的元素，如果当前节点出现过，就删掉&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;p&gt;我们从链表的头节点&lt;code&gt;head&lt;/code&gt; 开始进行遍历，遍历的指针记为&lt;code&gt;cur&lt;/code&gt;。由于头节点一定不会被删除，因此我们可以枚举待移除节点的前驱节点&lt;code&gt;pre&lt;/code&gt;，减少编写代码的复杂度。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# -*- coding: utf-8 -*-
+# @Time     : 2020/7/16 22:27
+# @Author   : affectalways
+# @Site     : 
+# @Contact  : affectalways@gmail.com
+# @File     : 0201.py
+# @Software : PyCharm 
+
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution(object):
+    def removeDuplicateNodes(self, head):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type head: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        if not head:
+            return head
+        tmp = {head.val}
+        pre = head
+        cur = pre.next
+        while cur:
+            if cur.val in tmp:
+                pre.next = cur.next
+                cur = cur.next
+            else:
+                tmp.add(cur.val)
+                pre = pre.next
+                cur = cur.next
+        return head
+
+
+def create_link(tmp):
+    head = None
+    cur = None
+    for i in tmp:
+        node = ListNode(i)
+        if head is None:
+            head = node
+            cur = head
+        else:
+            cur.next = node
+            cur = cur.next
+    return head
+
+
+def traversal_link(head):
+    cur = head
+    while cur:
+        print(cur.val)
+        cur = cur.next
+
+
+if __name__ == &#39;__main__&#39;:
+    head = create_link([1, 2, 3, 3, 2, 1])
+    # traversal_link(head)
+    solution = Solution()
+    result = solution.removeDuplicateNodes(head)
+    traversal_link(result)
+
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;双指针&#34;&gt;双指针&lt;/h4&gt;
 &lt;p&gt;固定p指针，右侧q指针扫描，然后移动p，指针q再次扫描
 时间复杂度 O(n^2)&lt;/p&gt;
@@ -637,6 +1098,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -654,9 +1121,9 @@ if __name__ == &#39;__main__&#39;:
     
         <entry>
             <title type="text">Offer24 反转链表</title>
-            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" />
-            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer-24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-16T22:26:27&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
+            <updated>2020-07-25T23:04:36&#43;08:00</updated>
             <published>2020-07-16T22:24:25&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -738,6 +1205,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -757,7 +1230,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">1290 二进制链表转整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-07-15T23:54:47&#43;08:00</updated>
+            <updated>2020-07-25T23:04:20&#43;08:00</updated>
             <published>2020-07-15T23:44:39&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -820,6 +1293,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -839,7 +1318,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">02.02. 返回倒数第 k 个节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-15T21:23:33&#43;08:00</updated>
+            <updated>2020-07-25T23:04:00&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -896,6 +1375,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -915,7 +1400,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">02.03. 删除中间节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-15T21:23:54&#43;08:00</updated>
+            <updated>2020-07-25T23:04:05&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -955,6 +1440,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -974,7 +1465,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">0206 回文链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-15T23:12:30&#43;08:00</updated>
+            <updated>2020-07-25T23:04:09&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1095,6 +1586,12 @@ if __name__ == &#39;__main__&#39;:
                                 <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
                             
                         
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" term="链表" label="链表" />
+                            
+                        
                     
                 
                     
@@ -1114,7 +1611,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">16.11 跳水板</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/16.11-%E8%B7%B3%E6%B0%B4%E6%9D%BF/" />
             <id>https://affectalways.github.io/posts/leetcode/16.11-%E8%B7%B3%E6%B0%B4%E6%9D%BF/</id>
-            <updated>2020-07-08T23:21:14&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-08T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1201,7 +1698,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">938 二叉搜索树的范围和</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/938-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/" />
             <id>https://affectalways.github.io/posts/leetcode/938-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E8%8C%83%E5%9B%B4%E5%92%8C/</id>
-            <updated>2020-07-08T23:27:04&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-08T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1255,7 +1752,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">25 K 个一组翻转链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/25-k-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/25-k-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-02T23:16:30&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-02T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1338,7 +1835,7 @@ k 是一个正整数，它的值小于或等于链表的长度。
             <title type="text">33 搜索旋转排序数组</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" />
             <id>https://affectalways.github.io/posts/leetcode/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/</id>
-            <updated>2020-07-02T23:15:38&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-02T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1437,7 +1934,7 @@ k 是一个正整数，它的值小于或等于链表的长度。
             <title type="text">39 组合综合</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/39-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88/" />
             <id>https://affectalways.github.io/posts/leetcode/39-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88/</id>
-            <updated>2020-07-02T23:15:17&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-02T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1533,7 +2030,7 @@ k 是一个正整数，它的值小于或等于链表的长度。
             <title type="text">40 组合总和 II</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-ii/" />
             <id>https://affectalways.github.io/posts/leetcode/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-ii/</id>
-            <updated>2020-07-02T23:14:41&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-02T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1626,7 +2123,7 @@ k 是一个正整数，它的值小于或等于链表的长度。
             <title type="text">22 括号生成</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90/" />
             <id>https://affectalways.github.io/posts/leetcode/22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90/</id>
-            <updated>2020-07-02T23:18:18&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1731,7 +2228,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">23 合并K个排序链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/23-%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/23-%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-02T23:18:40&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1844,7 +2341,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">24 两两交换链表中的节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-02T23:16:47&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1946,7 +2443,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">41 缺失的第一个正数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/</id>
-            <updated>2020-07-02T23:14:22&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2001,7 +2498,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">48 旋转图像</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/48-%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/" />
             <id>https://affectalways.github.io/posts/leetcode/48-%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/</id>
-            <updated>2020-07-02T23:14:05&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2078,7 +2575,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">54 螺旋矩阵</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" />
             <id>https://affectalways.github.io/posts/leetcode/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</id>
-            <updated>2020-07-02T23:13:47&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-07-01T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2226,7 +2723,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(1)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_1/</id>
-            <updated>2020-07-01T23:12:13&#43;08:00</updated>
+            <updated>2020-07-23T00:20:21&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2300,7 +2797,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(2)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_2/</id>
-            <updated>2020-07-01T23:12:13&#43;08:00</updated>
+            <updated>2020-07-23T00:20:21&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2473,7 +2970,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Werkzeug 源码解析(3)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_3/</id>
-            <updated>2020-07-01T23:12:13&#43;08:00</updated>
+            <updated>2020-07-23T00:20:21&#43;08:00</updated>
             <published>2020-06-23T23:08:16&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2481,7 +2978,7 @@ if __name__ == &#39;__main__&#39;:
                     <email>affectalways@gmail.com</email>
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">Werkzeug Request 源码解析 代码示例：
-from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;) response = Response(text, mimetype=&#39;text/plain&#39;) return response(environ, start_response) 请注意，之后Request和Response的相关源码都会围绕Werkzeug给出的以上代码讲解。
+from werkzeug.wrappers import Request, Responsedef application(environ, start_response):request = Request(environ)text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;)response = Response(text, mimetype=&#39;text/plain&#39;)return response(environ, start_response)请注意，之后Request和Response的相关源码都会围绕Werkzeug给出的以上代码讲解。
 Request 类 文件定位 src/werkzeug/wrappers/request.py
 作用 根据Request类的名称其实就可以知道，Request类是处理请求的，实际上，通过阅读相关代码，Request类的作用确实如此
 分析 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Request( BaseRequest, AcceptMixin, ETagRequestMixin, UserAgentMixin, AuthorizationMixin, CORSRequestMixin, CommonRequestDescriptorsMixin, ): &amp;#34;&amp;#34;&amp;#34;Full featured request object implementing the following mixins: - :class:`AcceptMixin` for accept header parsing - :class:`ETagRequestMixin` for etag and cache control handling - :class:`UserAgentMixin` for user agent introspection - :class:`AuthorizationMixin` for http auth handling - :class:`~werkzeug.</summary>
@@ -2622,7 +3119,7 @@ def application(environ, start_response):
             <title type="text">02 两数相加</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/02-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" />
             <id>https://affectalways.github.io/posts/leetcode/02-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
-            <updated>2020-07-02T23:01:13&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2709,7 +3206,7 @@ class Solution(object):
             <title type="text">03 无重复字符的最长子串</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/03-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" />
             <id>https://affectalways.github.io/posts/leetcode/03-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</id>
-            <updated>2020-07-02T22:57:52&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2794,7 +3291,7 @@ class Solution(object):
             <title type="text">04 寻找两个有序数组的中位数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/04-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/04-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/</id>
-            <updated>2020-07-02T22:58:06&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2867,7 +3364,7 @@ class Solution(object):
             <title type="text">05 马拉车算法</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" />
             <id>https://affectalways.github.io/posts/leetcode/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/</id>
-            <updated>2020-07-02T22:58:18&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3079,7 +3576,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">06 Z 字形变换</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/06-z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/" />
             <id>https://affectalways.github.io/posts/leetcode/06-z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/</id>
-            <updated>2020-07-02T22:58:32&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3180,7 +3677,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">07 整数反转</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/07-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/" />
             <id>https://affectalways.github.io/posts/leetcode/07-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</id>
-            <updated>2020-07-02T22:58:51&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3252,7 +3749,7 @@ class Solution:
             <title type="text">08 字符串转换整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/08-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/08-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-07-02T22:59:26&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3355,7 +3852,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">09 回文数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/09-%E5%9B%9E%E6%96%87%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/09-%E5%9B%9E%E6%96%87%E6%95%B0/</id>
-            <updated>2020-07-02T22:59:40&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3423,7 +3920,7 @@ class Solution:
             <title type="text">11 盛最多水的容器</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</id>
-            <updated>2020-07-02T22:59:53&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3525,7 +4022,7 @@ class Solution:
             <title type="text">12 整数转罗马数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0/</id>
-            <updated>2020-07-02T23:00:09&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3621,7 +4118,7 @@ class Solution:
             <title type="text">13 罗马数转整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/13-%E7%BD%97%E9%A9%AC%E6%95%B0%E8%BD%AC%E6%95%B4%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/13-%E7%BD%97%E9%A9%AC%E6%95%B0%E8%BD%AC%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-07-02T23:00:20&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3737,7 +4234,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">14 最长公共前缀</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/14-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/" />
             <id>https://affectalways.github.io/posts/leetcode/14-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/</id>
-            <updated>2020-07-02T23:00:30&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3839,7 +4336,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">17 电话号码的字母组合</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/" />
             <id>https://affectalways.github.io/posts/leetcode/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/</id>
-            <updated>2020-07-02T23:17:10&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3936,7 +4433,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">18 四数之和</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" />
             <id>https://affectalways.github.io/posts/leetcode/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
-            <updated>2020-07-02T23:17:22&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4018,7 +4515,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">21 合并两个有序列表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8/</id>
-            <updated>2020-07-02T23:17:32&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4128,7 +4625,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">31 下一个排列</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/" />
             <id>https://affectalways.github.io/posts/leetcode/31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</id>
-            <updated>2020-07-02T23:16:04&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4256,7 +4753,7 @@ class Solution:
             <title type="text">55 跳跃游戏</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" />
             <id>https://affectalways.github.io/posts/leetcode/55-%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</id>
-            <updated>2020-07-02T23:13:25&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-23T23:05:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4322,10 +4819,97 @@ class Solution:
         </entry>
     
         <entry>
+            <title type="text">（2）两数相加</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
+            <published>2020-06-23T23:05:37&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，两数相加</summary>
+            
+                <content type="html">&lt;p&gt;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。&lt;/p&gt;
+&lt;p&gt;如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。&lt;/p&gt;
+&lt;p&gt;您可以假设除了数字 0 之外，这两个数都不会以 0 开头。&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+输出：7 -&amp;gt; 0 -&amp;gt; 8
+原因：342 + 465 = 807
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &amp;quot;&amp;quot;&amp;quot;
+        list_1 = &amp;quot;&amp;quot;
+        list_2 = &amp;quot;&amp;quot;
+        if not l1 and not l2:
+            return 0
+
+        while l1:
+            list_1 += str(l1.val)
+            l1 = l1.next
+        num_1 = int(list_1[::-1]) if list_1 else 0
+        while l2:
+            list_2 += str(l2.val)
+            l2 = l2.next
+        num_2 = int(list_2[::-1]) if list_2 else 0
+        sum = list(str(num_1 + num_2)[::-1])
+        head = ListNode(sum[0])
+        cur = head
+        for i in range(1, len(sum)):
+            cur.next = ListNode(sum[i])
+            cur = cur.next
+        return head
+            
+        
+    
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">单例模式</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" />
             <id>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
-            <updated>2020-06-22T22:29:56&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-22T22:28:03&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4374,7 +4958,7 @@ class Solution:
             <title type="text">01 两数之和相加</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/" />
             <id>https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</id>
-            <updated>2020-07-02T23:00:43&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>2020-06-22T21:51:44&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -4382,6 +4966,83 @@ class Solution:
                     <email>affectalways@gmail.com</email>
                     </author>
             <rights>@2020 affectalways</rights><summary type="html">leetcode，01 两数之和相加</summary>
+            
+                <content type="html">&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
+&lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法一&#34;&gt;解法一&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;class Solution(object):
+    def twoSum(self, nums, target):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        &amp;quot;&amp;quot;&amp;quot;
+        if not len(nums):
+            return []
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;解法二&#34;&gt;解法二&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;利用Python创建字典（即hash），同时有效避免了key相同的情况
+class Solution:
+    def twoSum(self, nums, target):
+        dic = {}
+        for i in range(len(nums)):
+            if str(target - nums[i]) in dic:
+                return [dic[str(target - nums[i])], i]
+            dic[str(nums[i])] = i
+
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">（1）两数之和相加</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</id>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
+            <published>2020-06-22T21:51:44&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">leetcode，两数之和相加</summary>
             
                 <content type="html">&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
 &lt;p&gt;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。&lt;/p&gt;
@@ -4950,7 +5611,7 @@ WSGI（Web Server Gateway Interface）即Web服务器网关接口，解耦了服
  Web Server：即HTTP Server，接收用户的请求并返回响应信息；分为以下两部分：
  服务器，如Apache、Nginx等 Python应用程序，负责处理业务逻辑   HTTP Server 实现 服务器每接收到一个请求就调用一次Python Application。服务器作用如下
  接收HTTP请求 提供environ和回调函数start_response，并传给callable object 调用callable object  以下是PEP-3333提供的示例
-import os, sys enc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39; def unicode_to_wsgi(u): # Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; string return u.</summary>
+import os, sysenc, esc = sys.getfilesystemencoding(), &#39;surrogateescape&#39;def unicode_to_wsgi(u):# Convert an environment variable to a WSGI &amp;quot;bytes-as-unicode&amp;quot; stringreturn u.</summary>
             
                 <content type="html">&lt;h2 id=&#34;wsgi-是个什么东西&#34;&gt;WSGI 是个什么东西？&lt;/h2&gt;
 &lt;p&gt;实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是http server（之后以服务器代称）怎么把接收到的请求传递给Python应用程序？这就是WSGI做的事情。&lt;/p&gt;
@@ -5873,7 +6534,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-15T21:23:14&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -5938,7 +6599,7 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1108-ip%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96/" />
             <id>https://affectalways.github.io/posts/leetcode/1108-ip%E5%9C%B0%E5%9D%80%E6%97%A0%E6%95%88%E5%8C%96/</id>
-            <updated>2020-07-12T00:37:32&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -5993,7 +6654,7 @@ class Solution(object):def defangIPaddr(self, address):&amp;quot;&amp;quot;&am
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1252-%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE/" />
             <id>https://affectalways.github.io/posts/leetcode/1252-%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE/</id>
-            <updated>2020-07-10T22:59:40&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6076,7 +6737,7 @@ class Solution(object):def defangIPaddr(self, address):&amp;quot;&amp;quot;&am
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1281-%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE/" />
             <id>https://affectalways.github.io/posts/leetcode/1281-%E6%95%B4%E6%95%B0%E7%9A%84%E5%90%84%E4%BD%8D%E7%A7%AF%E5%92%8C%E4%B9%8B%E5%B7%AE/</id>
-            <updated>2020-07-11T20:03:33&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6143,7 +6804,7 @@ class Solution(object):def defangIPaddr(self, address):&amp;quot;&amp;quot;&am
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1323-6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/" />
             <id>https://affectalways.github.io/posts/leetcode/1323-6%E5%92%8C9%E7%BB%84%E6%88%90%E7%9A%84%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97/</id>
-            <updated>2020-07-11T14:45:15&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6210,7 +6871,7 @@ num 每一位上的数字都是 6 或者 9 。
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1431-%E6%8B%A5%E6%9C%89%E6%9C%80%E5%A4%9A%E7%B3%96%E6%9E%9C%E7%9A%84%E5%AD%A9%E5%AD%90/" />
             <id>https://affectalways.github.io/posts/leetcode/1431-%E6%8B%A5%E6%9C%89%E6%9C%80%E5%A4%9A%E7%B3%96%E6%9E%9C%E7%9A%84%E5%AD%A9%E5%AD%90/</id>
-            <updated>2020-07-11T19:44:49&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6278,7 +6939,7 @@ num 每一位上的数字都是 6 或者 9 。
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/1480-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%92%8C/" />
             <id>https://affectalways.github.io/posts/leetcode/1480-%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%92%8C/</id>
-            <updated>2020-07-11T19:44:50&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6342,7 +7003,7 @@ num 每一位上的数字都是 6 或者 9 。
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/58offer-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/" />
             <id>https://affectalways.github.io/posts/leetcode/58offer-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
-            <updated>2020-07-11T19:44:53&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6400,7 +7061,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/" />
             <id>https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/</id>
-            <updated>2020-07-11T19:50:34&#43;08:00</updated>
+            <updated>2020-07-23T00:36:44&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
@@ -6461,14 +7122,14 @@ answer的元素取值为 {1, 2, 3} 之一。
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</id>
-            <updated>2020-07-16T22:07:46&#43;08:00</updated>
+            <updated>2020-07-25T23:04:13&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;0207 链表相交&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- 0207 链表相交- 算法description: &amp;quot;leetcode，0207 链表相交&amp;quot;categories: [&amp;quot;leetcode&amp;quot;]draft: false面试题 02.07. 链表相交 我竟然没读懂题！！！！！！！！！！！
+            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;0207 链表相交&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- 0207 链表相交- 算法- 链表description: &amp;quot;leetcode，0207 链表相交&amp;quot;categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]draft: false面试题 02.07. 链表相交 我竟然没读懂题！！！！！！！！！！！
 给定两个（单向）链表，判定它们是否相交并返回交点。请注意相交的定义基于节点的引用，而不是基于节点的值。换句话说，如果一个链表的第k个节点与另一个链表的第j个节点是同一节点（引用完全相同），则这两个链表相交。
 示例 1：
 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3输出：Reference of the node with value = 8输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。示例 2：</summary>
@@ -6483,8 +7144,9 @@ keywords:
 - 领扣
 - 0207 链表相交
 - 算法
+- 链表
 description: &amp;quot;leetcode，0207 链表相交&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
 draft: false
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;面试题-0207-链表相交httpsleetcode-cncomproblemsintersection-of-two-linked-lists-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/&#34;&gt;面试题 02.07. 链表相交&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;我竟然没读懂题！！！！！！！！！！！&lt;/strong&gt;&lt;/p&gt;
@@ -6596,14 +7258,14 @@ if __name__ == &#39;__main__&#39;:
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-15T21:22:21&#43;08:00</updated>
+            <updated>2020-07-25T23:04:25&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;Offer 06. 从尾到头打印链表&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- Offer 06. 从尾到头打印链表- 算法description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;categories: [&amp;quot;leetcode&amp;quot;]draft: false剑指 Offer 06. 从尾到头打印链表 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;Offer 06. 从尾到头打印链表&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- Offer 06. 从尾到头打印链表- 算法- 链表description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]draft: false剑指 Offer 06. 从尾到头打印链表 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 示例 1：
 输入：head = [1,3,2]输出：[2,3,1]限制：</summary>
             
@@ -6617,8 +7279,9 @@ keywords:
 - 领扣
 - Offer 06. 从尾到头打印链表
 - 算法
+- 链表
 description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
 draft: false
 
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/&#34;&gt;剑指 Offer 06. 从尾到头打印链表&lt;/a&gt;&lt;/h4&gt;

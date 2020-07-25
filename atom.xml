@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-07-25T23:47:58&#43;08:00</updated>
+    <updated>2020-07-26T00:10:25&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Goland 2020版破解</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/" />
             <id>https://affectalways.github.io/posts/golang/goland2020%E7%89%88%E7%A0%B4%E8%A7%A3/</id>
-            <updated>2020-07-25T23:29:37&#43;08:00</updated>
+            <updated>2020-07-26T00:10:14&#43;08:00</updated>
             <published>2020-07-25T21:26:36&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -65,18 +65,18 @@ GoLand下载地址
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;拖入&lt;code&gt;zip文件&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland01.png&#34; alt=&#34;破解补丁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland01.png?raw=true&#34; alt=&#34;破解补丁&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;按箭头操作即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland02.png?raw=true&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland03.png?raw=true&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland04.png?raw=true&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;查看是否激活成功&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;点击Help --&amp;gt; About
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/go/goland05.png?raw=true&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
             
             

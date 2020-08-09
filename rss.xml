@@ -23,10 +23,1087 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sun, 26 Jul 2020 17:14:50 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 09 Aug 2020 13:10:05 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Werkzeug 源码解析(4)</title>
+                <link>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_4/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/werkzeug/werkzeug_sc_4/</guid>
+                <pubDate>Wed, 05 Aug 2020 22:46:55 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h3 id=&#34;wsgipy开讲&#34;&gt;wsgi.py开讲&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;wsgi.py&lt;/code&gt;封装了一系列方法，现在讲几个自认为是常用的方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;get_current_url方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）作用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;获取当前请求的URL
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）使用案例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	&amp;gt;&amp;gt;&amp;gt; from werkzeug.test import create_environ
+    &amp;gt;&amp;gt;&amp;gt; env = create_environ(&amp;quot;/?param=foo&amp;quot;, &amp;quot;http://localhost/script&amp;quot;)
+    &amp;gt;&amp;gt;&amp;gt; get_current_url(env)
+    &#39;http://localhost/script/?param=foo&#39;
+    
+    &amp;gt;&amp;gt;&amp;gt; get_current_url(env, root_only=True)
+    &#39;http://localhost/script/&#39;
+    
+    &amp;gt;&amp;gt;&amp;gt; get_current_url(env, host_only=True)
+    &#39;http://localhost/&#39;
+    
+    &amp;gt;&amp;gt;&amp;gt; get_current_url(env, strip_querystring=True)
+    &#39;http://localhost/script/&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（3）代码（&lt;strong&gt;感觉没有什么内容可说&lt;/strong&gt;）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_current_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;root_only&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;strip_querystring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;host_only&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;trusted_hosts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    
+    &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;wsgi.url_scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;://&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_hosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)]&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# tmp.append， tmp是list类型，list.append方法，cat指向tmp.append&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;host_only&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri_to_iri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{&amp;#39;&amp;#39;.join(tmp)}/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        
+    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url_quote&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SCRIPT_NAME&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latin1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rstrip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;root_only&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url_quote&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;PATH_INFO&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latin1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lstrip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strip_querystring&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;qs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_query_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;?{qs}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# uri_to_iri是把URI地址转换成IRI格式（IRI包含Unicode字符，URI是ASCII字符编码）&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri_to_iri&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;host_is_trusted方法&lt;/strong&gt;
+（1）作用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;检查主机是否可行
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）使用案例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wsgi.py get_host方法159行有用到
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（3）代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;host_is_trusted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+
+	&lt;span class=&#34;c1&#34;&gt;# str -&amp;gt; list&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;isinstance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;trusted_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;trusted_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;trusted_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;_normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    	&lt;span class=&#34;c1&#34;&gt;# 把port去除，只获取host&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsplit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_encode_idna&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;UnicodeError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+        
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;suffix_match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;suffix_match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+            
+        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_normalize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;UnicodeError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+            
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+            
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;suffix_match&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;get_host方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）作用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;返回运行环境主机
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）使用案例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pass
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（3）代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_hosts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;HTTP_HOST&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# HTTP_HOST 在environ&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HTTP_HOST&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;wsgi.url_scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;:80&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# 获取除:80端口的主机号&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;wsgi.url_scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;:443&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# 获取除:443端口的主机号&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SERVER_NAME&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;wsgi.url_scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SERVER_PORT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;443&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;80&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# 获取主机+端口&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;:{environ[&amp;#39;SERVER_PORT&amp;#39;]}&amp;#34;&lt;/span&gt;
+    
+    &lt;span class=&#34;c1&#34;&gt;# 判断是否可信&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_hosts&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# 用到了host_is_trusted方法了&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;host_is_trusted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trusted_hosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;.exceptions&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SecurityError&lt;/span&gt;
+
+            &lt;span class=&#34;k&#34;&gt;raise&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SecurityError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Host &amp;#34;{rv}&amp;#34; is not trusted&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rv&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;get_content_length方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）作用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;获取来自WSGI环境的内容长度
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）使用案例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pass
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（3）代码，&lt;strong&gt;实在没什么好讲的&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_content_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+   	&lt;span class=&#34;c1&#34;&gt;# 块读取，直接返回None&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HTTP_TRANSFER_ENCODING&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;chunked&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;content_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;CONTENT_LENGTH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;content_length&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;content_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;except&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;ValueError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;TypeError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;get_query_string方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）作用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;获取对应的URL字段
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（2）使用案例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pass
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（3）代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_query_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# 获取environ中的QUERY_STRING对应的值，并以latin1格式进行编码&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;qs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;QUERY_STRING&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latin1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# QUERY_STRING really should be ascii safe but some browsers&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# will send us some unicode stuff (I am looking at you IE).&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# In that case we want to urllib quote it badly.&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url_quote&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;qs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;safe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;:&amp;amp;%=+$!*&amp;#39;(),&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/flask/">flask</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/werkzeug/">werkzeug</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>643子数组最大平均数</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/</guid>
+                <pubDate>Wed, 05 Aug 2020 22:04:50 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;643-子数组最大平均数-ihttpsleetcode-cncomproblemsmaximum-average-subarray-i&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-average-subarray-i/&#34;&gt;643. 子数组最大平均数 I&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [1,12,-5,-6,50,3], k = 4
+输出: 12.75
+解释: 最大平均数 (12-5-6+50)/4 = 51/4 = 12.75
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= k &amp;lt;= n &amp;lt;= 30,000。
+所给数据范围 [-10,000，10,000]。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;滑动窗口
+1、维护一个长度为k的窗口，和窗口当前的和sum
+2、遍历nums，每碰到一个新元素时，都要相应的从sum中减去退出窗口的值，加上新加入窗口的值
+3、看看当然的sum是不是比以往的都大，是的话，记录到max里面去
+4、最后返回max/k就好了
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func findMaxAverage(nums []int, k int) float64 {
+	var sum, max int
+	for i := 0; i &amp;lt; k; i++ {
+		sum += nums[i]
+	}
+	max = sum
+	for i := k; i &amp;lt; len(nums); i++ {
+		sum += nums[i] - nums[i-k]
+		if sum &amp;gt; max {
+			max = sum
+		}
+	}
+	return float64(max) / float64(k)
+}
+
+func main() {
+	nums := []int{1, 12, -5, -6, 50, 3}
+	k := 4
+	result := findMaxAverage(nums, k)
+	fmt.Print(result)
+}
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>1346检查整数及其两倍数是否存在</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</guid>
+                <pubDate>Mon, 03 Aug 2020 23:28:47 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1346-检查整数及其两倍数是否存在httpsleetcode-cncomproblemscheck-if-n-and-its-double-exist&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/check-if-n-and-its-double-exist/&#34;&gt;1346. 检查整数及其两倍数是否存在&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个整数数组 arr，请你检查是否存在两个整数 N 和 M，满足 N 是 M 的两倍（即，N = 2 * M）。&lt;/p&gt;
+&lt;p&gt;更正式地，检查是否存在两个下标 i 和 j 满足：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;i != j
+0 &amp;lt;= i, j &amp;lt; arr.length
+arr[i] == 2 * arr[j]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [10,2,5,3]
+输出：true
+解释：N = 10 是 M = 5 的两倍，即 10 = 2 * 5 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [7,1,14,11]
+输出：true
+解释：N = 14 是 M = 7 的两倍，即 14 = 2 * 7 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [3,1,7,11]
+输出：false
+解释：在该情况下不存在 N 和 M 满足 N = 2 * M 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2 &amp;lt;= arr.length &amp;lt;= 500
+-10^3 &amp;lt;= arr[i] &amp;lt;= 10^3
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>605种花问题</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</guid>
+                <pubDate>Mon, 03 Aug 2020 23:23:52 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;605-种花问题httpsleetcode-cncomproblemscan-place-flowers&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/can-place-flowers/&#34;&gt;605. 种花问题&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;假设你有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花卉不能种植在相邻的地块上，它们会争夺水源，两者都会死去。&lt;/p&gt;
+&lt;p&gt;给定一个花坛（表示为一个数组包含0和1，其中0表示没种植花，1表示种植了花），和一个数 n 。能否在不打破种植规则的情况下种入 n 朵花？能则返回True，不能则返回False。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: flowerbed = [1,0,0,0,1], n = 1
+输出: True
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: flowerbed = [1,0,0,0,1], n = 2
+输出: False
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;数组内已种好的花不会违反种植规则。
+输入的数组长度范围为 [1, 20000]。
+n 是非负整数，且不会超过输入数组的大小。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;遍历数组：
+（1）对第一个元素，本身是0右边是0即可种花
+（2）对于中间元素，本身是0，左右两边都是0，可以种花
+（3）对于最后一个元素，本身是0，左边是0，可以种花
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func canPlaceFlowers(flowerbed []int, n int) bool {
+	length := len(flowerbed)
+	var count int
+	for i, value := range flowerbed {
+		if value == 0 &amp;amp;&amp;amp; (i == 0 || flowerbed[i-1] == 0) &amp;amp;&amp;amp; (i == length-1 || flowerbed[i+1] == 0) {
+			flowerbed[i] = 1
+			count += 1
+		}
+	}
+	return count &amp;gt;= n
+}
+
+func main() {
+	flowerbed := []int{1, 0, 0, 0, 1}
+	n := 1
+	result := canPlaceFlowers(flowerbed, n)
+	fmt.Print(result)
+}
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>167两数之和2</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</guid>
+                <pubDate>Mon, 03 Aug 2020 23:06:59 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;167-两数之和-ii---输入有序数组httpsleetcode-cncomproblemstwo-sum-ii-input-array-is-sorted&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/&#34;&gt;167. 两数之和 II - 输入有序数组&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。&lt;/p&gt;
+&lt;p&gt;函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;返回的下标值（index1 和 index2）不是从零开始的。
+你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: numbers = [2, 7, 11, 15], target = 9
+输出: [1,2]
+解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;双指针
+
+初始时两个指针分别指向第一个元素位置和最后一个元素的位置。每次计算两个指针指向的两个元素之和，并和目标值比较。如果两个元素之和等于目标值，则发现了唯一解。如果两个元素之和小于目标值，则将左侧指针右移一位。如果两个元素之和大于目标值，则将右侧指针左移一位。移动指针之后，重复上述操作，直到找到答案。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func twoSum(numbers []int, target int) []int {
+	length := len(numbers)
+	var right int = length - 1
+	var left int = 0
+	for left &amp;lt; right {
+		sum := numbers[left] + numbers[right]
+		if sum == target {
+			break
+		} else if sum &amp;lt; target {
+			left += 1
+		} else {
+			right -= 1
+		}
+	}
+	return []int{left + 1, right + 1}
+}
+
+func main() {
+	numbers := []int{2, 7, 11, 15}
+	target := 9
+	result := twoSum(numbers, target)
+	fmt.Print(result)
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>118杨辉三角</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
+                <pubDate>Wed, 29 Jul 2020 22:53:20 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;118-杨辉三角httpsleetcode-cncomproblemspascals-triangle&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/pascals-triangle/&#34;&gt;118. 杨辉三角&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个非负整数 *numRows，*生成杨辉三角的前 &lt;em&gt;numRows&lt;/em&gt; 行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在杨辉三角中，每个数是它左上方和右上方的数的和。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: 5
+输出:
+[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.杨辉三角每层的i的值都是上层决定的m[i]+m[i+1]的和
+2 第一个元素需要特殊处理一下，我们可以在每层头部增加一个数字是0的元素
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>1160拼写单词</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</guid>
+                <pubDate>Tue, 28 Jul 2020 23:42:32 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;1160-拼写单词httpsleetcode-cncomproblemsfind-words-that-can-be-formed-by-characters&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters/&#34;&gt;1160. 拼写单词&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。&lt;/p&gt;
+&lt;p&gt;假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』（字符串），那么我们就认为你掌握了这个单词。&lt;/p&gt;
+&lt;p&gt;注意：每次拼写（指拼写词汇表中的一个单词）时，chars 中的每个字母都只能用一次。&lt;/p&gt;
+&lt;p&gt;返回词汇表 words 中你掌握的所有单词的 长度之和。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：words = [&amp;quot;cat&amp;quot;,&amp;quot;bt&amp;quot;,&amp;quot;hat&amp;quot;,&amp;quot;tree&amp;quot;], chars = &amp;quot;atach&amp;quot;
+输出：6
+解释： 
+可以形成字符串 &amp;quot;cat&amp;quot; 和 &amp;quot;hat&amp;quot;，所以答案是 3 + 3 = 6。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：words = [&amp;quot;hello&amp;quot;,&amp;quot;world&amp;quot;,&amp;quot;leetcode&amp;quot;], chars = &amp;quot;welldonehoneyr&amp;quot;
+输出：10
+解释：
+可以形成字符串 &amp;quot;hello&amp;quot; 和 &amp;quot;world&amp;quot;，所以答案是 5 + 5 = 10。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= words.length &amp;lt;= 1000
+1 &amp;lt;= words[i].length, chars.length &amp;lt;= 100
+所有字符串中都仅包含小写英文字母
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;对于一个单词 word，只要其中的每个字母的数量都不大于 chars 中对应的字母的数量，那么就可以用 chars 中的字母拼写出 word。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func countCharacters(words []string, chars string) int {
+	count := 0
+	for _, word := range words {
+		flag := true
+		for _, value := range word {
+			if flag &amp;amp;&amp;amp; strings.Count(word, string(value)) &amp;gt; strings.Count(chars, string(value)) {
+				flag = false
+			}
+		}
+		if flag {
+			count += len(word)
+		}
+	}
+
+	return count
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>674最长连续递增序列</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</guid>
+                <pubDate>Tue, 28 Jul 2020 23:31:15 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;674-最长连续递增序列httpsleetcode-cncomproblemslongest-continuous-increasing-subsequence&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/&#34;&gt;674. 最长连续递增序列&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个未经排序的整数数组，找到最长且连续的的递增序列，并返回该序列的长度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [1,3,5,4,7]
+输出: 3
+解释: 最长连续递增序列是 [1,3,5], 长度为3。
+尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为5和7在原数组里被4隔开。 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [2,2,2,2,2]
+输出: 1
+解释: 最长连续递增序列是 [2], 长度为1。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：数组长度不会超过10000。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;滑动窗口...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func findLengthOfLCIS(nums []int) int {
+	length := len(nums)
+	if length &amp;lt;= 1 {
+		return length
+	}
+	var count int = 1
+	var max_length int = 1
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if value &amp;gt; nums[index-1] {
+			count += 1
+		} else {
+			index += 1
+			count = 1
+		}
+		if max_length &amp;lt; count {
+			max_length = count
+		}
+	}
+	return max_length
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Offer53 0~n-1中缺失的数字</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+                <pubDate>Tue, 28 Jul 2020 22:48:06 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;剑指-offer-53---ii-0n-1中缺失的数字httpsleetcode-cncomproblemsque-shi-de-shu-zi-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/&#34;&gt;剑指 Offer 53 - II. 0～n-1中缺失的数字&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [0,1,3]
+输出: 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [0,1,2,3,4,5,6,7,9]
+输出: 8
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;限制：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= 数组长度 &amp;lt;= 10000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;
+&lt;strong&gt;思路一：依次遍历&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(1) 从头开始依次遍历数组每一位元素。
+(2) 找到第一位值不等于索引的元素，则缺失值为当前索引。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func missingNumber(nums []int) int {
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if (value - nums[index-1]) &amp;gt; 1 {
+			return value - 1
+		}
+
+	}
+	return 0
+}
+
+func main() {
+	nums := []int{0, 1, 3}
+	number := missingNumber(nums)
+	fmt.Println(number)
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路二：二分查找&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(1) 根据二分查找找到第一个元素值不等于索引的索引就是缺失值。
+(2) 元素值都和索引相等则缺失值等于数组长度。
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;class Solution {
+    public int missingNumber(int[] nums) {
+        // 定义左右指针分别指向数组元素值的边界。
+        int left = 0, right = nums.length;
+        while (left &amp;lt; right) {
+            // 找到中间值。
+            int mid = left + (right - left) / 2;
+            if (nums[mid] &amp;gt; mid) {
+                // 数组索引值与索引不对应，则缺失值在左侧。
+                right = mid;
+            } else {
+                // 数组索引值等于索引，则缺失值在右侧。
+                left = mid + 1;
+            }
+        }
+        return right;
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>桶排序</title>
+                <link>https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/</guid>
+                <pubDate>Sun, 26 Jul 2020 21:10:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;桶排序（Bucket sort）&lt;/strong&gt;，是一个&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&#34;&gt;排序算法&lt;/a&gt;，工作的原理是将&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%99%A3%E5%88%97&#34;&gt;数组&lt;/a&gt;分到&lt;code&gt;有限数量&lt;/code&gt;的桶里。每个桶再个别排序（有可能再使用别的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&#34;&gt;排序算法&lt;/a&gt;或是以递归方式继续使用桶排序进行排序）。&lt;/p&gt;
+&lt;p&gt;桶排序并不是&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E6%AF%94%E8%BE%83%E6%8E%92%E5%BA%8F&#34;&gt;比较排序&lt;/a&gt;，他不受到&lt;img src=&#34;https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1&#34; alt=&#34;{\displaystyle O(n\log n)}&#34;&gt;下限的影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;桶排序以下列程序进行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.设置一个定量的数组当作空桶子。
+2.寻访序列，并且把项目一个一个放到对应的桶子去。
+3.对每个不是空的桶子进行排序。
+4.从不是空的桶子里把项目再放回原来的序列中。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设有些整数，范围在1-100之间。现在有n=10的序列要进行排序&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Original array
+
++-------------------------------------------------+
+|  6 | 28 | 96 | 14 | 74 | 37 |  9 | 71 | 91 | 36 |
++-------------------------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create&lt;/strong&gt;：创建一定数量的空桶，这里我们建立与原始数组长度相等的空桶（10个）。每个空桶对应区间为0~9、10~19、20~29、30~39、40~49、50~59、60~69、70~79、80~89、90-99的区间&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Bucket array
+   
++-------------------------------------------------+
+|    |    |    |    |    |    |    |    |    |    |
++-------------------------------------------------+
+  ^    ^
+  |    |
+  |    |
+  |    holds values in range 11 to 20
+  holds values in range 1 to 10
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scout&lt;/strong&gt;：将原始序列中的元素，放入到对应的桶里&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Bucket array
+   
+  6,9  14   28   37,36               74,71     96,91
+  |    |    |    |                   |         |
++-v----v----v----v-------------------v---------v--+
+|    |    |    |    |    |    |    |    |    |    |
++-------------------------------------------------+
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sort&lt;/strong&gt;：排序所有&lt;code&gt;非空&lt;/code&gt;桶中的元素，桶内排序可以采用任意排序算法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Bucket array
+   
+  sort sort sort sort                sort      sort
+  ---  --   --   -----               -----     -----
+  6,9  14   28   36,37               71,74     91,96
+  |    |    |    |                   |         |
++-v----v----v----v-------------------v---------v--+
+|    |    |    |    |    |    |    |    |    |    |
++-------------------------------------------------+
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Gather&lt;/strong&gt;：排序完成后，再把所有桶中元素依序放回原始序列&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Original array
++-------------------------------------------------+
+|  6 |  9 | 14 | 28 | 36 | 37 | 71 | 74 | 91 | 96 |
++-------------------------------------------------+
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E7%AE%97%E6%B3%95/">算法</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%A1%B6%E6%8E%92%E5%BA%8F/">桶排序</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/%E7%AE%97%E6%B3%95/">算法</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Goland 2020版破解</title>
@@ -104,9 +1181,9 @@
             </item>
         
             <item>
-                <title>1051 高度检查器</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051-%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</guid>
+                <title>1051高度检查器</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</guid>
                 <pubDate>Fri, 24 Jul 2020 23:12:17 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -114,7 +1191,66 @@
                 <copyright>@2020 affectalways</copyright>
                 
                     <description>&lt;h4 id=&#34;1051-高度检查器httpsleetcode-cncomproblemsheight-checker&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/height-checker/&#34;&gt;1051. 高度检查器&lt;/a&gt;&lt;/h4&gt;
-</description>
+&lt;p&gt;学校在拍年度纪念照时，一般要求学生按照 非递减 的高度顺序排列。&lt;/p&gt;
+&lt;p&gt;请你返回能让所有学生以 非递减 高度排列的最小必要移动人数。&lt;/p&gt;
+&lt;p&gt;注意，当一组学生被选中时，他们之间可以以任何可能的方式重新排序，而未被选中的学生应该保持不动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：heights = [1,1,4,2,1,3]
+输出：3 
+解释：
+当前数组：[1,1,4,2,1,3]
+目标数组：[1,1,1,2,3,4]
+在下标 2 处（从 0 开始计数）出现 4 vs 1 ，所以我们必须移动这名学生。
+在下标 4 处（从 0 开始计数）出现 1 vs 3 ，所以我们必须移动这名学生。
+在下标 5 处（从 0 开始计数）出现 3 vs 4 ，所以我们必须移动这名学生。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;示例 2：**&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：heights = [5,1,2,3,4]
+输出：5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：heights = [1,2,3,4,5]
+输出：0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= heights.length &amp;lt;= 100
+1 &amp;lt;= heights[i] &amp;lt;= 100
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;首先我们其实并不关心排序后得到的结果，我们想知道的只是在该位置上，与最小的值是否一致
+1.先排序
+2.然后遍历，比较对应下标的元素是否相同，不同加1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;sort&amp;quot;
+)
+
+func heightChecker(heights []int) int {
+	length := len(heights)
+	// todo: 切片和数组的本质区别是什么
+	// todo: 有上述疑问，是因为 var copy_heights []int 会报错！！
+	var copy_heights = make([]int, length)
+
+	copy(copy_heights, heights)
+	sort.Ints(heights)
+
+	var count int
+
+	for index, value := range heights {
+		if copy_heights[index] != value {
+			count += 1
+		}
+	}
+
+	return count
+}
+
+func main() {
+	var heights = []int{5, 1, 2, 3, 4}
+	count := heightChecker(heights)
+	fmt.Println(count)
+}
+
+&lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
                 
@@ -152,8 +1288,8 @@
         
             <item>
                 <title>Offer22 链表中倒数第K个节点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
                 <pubDate>Wed, 22 Jul 2020 23:15:30 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -248,8 +1384,8 @@
         
             <item>
                 <title>141环形链表</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
                 <pubDate>Wed, 22 Jul 2020 22:13:40 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -643,8 +1779,8 @@ while any(not build.done() for build in builds):
         
             <item>
                 <title>Offer18删除链表的节点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
                 <pubDate>Mon, 20 Jul 2020 22:49:28 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -777,8 +1913,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>876 链表的中间结点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
                 <pubDate>Thu, 16 Jul 2020 22:55:17 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -909,8 +2045,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>0201 移除重复节点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
                 <pubDate>Thu, 16 Jul 2020 22:42:51 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -1096,8 +2232,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>Offer24 反转链表</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
                 <pubDate>Thu, 16 Jul 2020 22:24:25 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -1200,8 +2336,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>1290 二进制链表转整数</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290-%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</guid>
                 <pubDate>Wed, 15 Jul 2020 23:44:39 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -1285,8 +2421,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>02.02. 返回倒数第 k 个节点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202-%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
                 <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -1364,8 +2500,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>02.03. 删除中间节点</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203-%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</guid>
                 <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -1426,8 +2562,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title>0206 回文链表</title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</guid>
                 <pubDate>Wed, 15 Jul 2020 21:20:33 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -4806,8 +5942,8 @@ class Solution(object):
         
             <item>
                 <title>01 两数之和相加</title>
-                <link>https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/01%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/01%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E7%9B%B8%E5%8A%A0/</guid>
                 <pubDate>Mon, 22 Jun 2020 21:51:44 &#43;0800</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -6791,8 +7927,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title></title>
-                <link>https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/lcp-01-%E7%8C%9C%E6%95%B0%E5%AD%97/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/lcp01%E7%8C%9C%E6%95%B0%E5%AD%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/lcp01%E7%8C%9C%E6%95%B0%E5%AD%97/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -6845,8 +7981,113 @@ answer的元素取值为 {1, 2, 3} 之一。
         
             <item>
                 <title></title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;pre&gt;&lt;code&gt;title: &amp;quot;665非递减数列&amp;quot;
+date: 2020-07-28T22:55:18+08:00
+keywords: 
+- leetcode
+- 数组
+- hugo
+- blog
+categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;数组&amp;quot;]
+draft: false
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;665-非递减数列httpsleetcode-cncomproblemsnon-decreasing-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/non-decreasing-array/&#34;&gt;665. 非递减数列&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&lt;/p&gt;
+&lt;p&gt;我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,3]
+输出: true
+解释: 你可以通过把第一个4变成1来使得它成为一个非递减数列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,1]
+输出: false
+解释: 你不能在只改变一个元素的情况下将其变为非递减数列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= n &amp;lt;= 10 ^ 4
+- 10 ^ 5 &amp;lt;= nums[i] &amp;lt;= 10 ^ 5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;遍历数组，初始count = 0，如果当前元素值比它下一个元素值大，则count += 1，当count &amp;gt; 1时，直接返回false。
+另外，在遍历数组的过程中，如果遇到 “特殊情况”，可以直接返回false；当循环正常结束则返回true
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
+	if len(nums) == 1 {
+		return true
+	}
+	var count int = 0
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if value &amp;lt; nums[index-1] {
+			count += 1
+		}
+		if count &amp;gt; 1 {
+			return false
+		}
+	}
+
+	return true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;但是！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;提交后，运行过程
+
+输入:
+[3,4,2,3]
+输出
+true
+预期结果
+false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;所以要考虑特殊情况&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;现在就需要nums[i-2] &amp;lt;= nums[i-1] &amp;gt; nums[i] &amp;lt;= nums[i+1]这个条件了
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;最终代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
+	if len(nums) &amp;lt;= 2 {
+		return true
+	}
+	var count int = 0
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if value &amp;lt; nums[index-1] {
+			count += 1
+			if nums[index-1] &amp;gt; nums[index+1] &amp;amp;&amp;amp; nums[index-2] &amp;gt; value {
+				return false
+			}
+		}
+		if count &amp;gt; 1 {
+			return false
+		}
+	}
+
+	return true
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>
@@ -6975,8 +8216,8 @@ if __name__ == &#39;__main__&#39;:
         
             <item>
                 <title></title>
-                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</link>
-                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</guid>
+                <link>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</guid>
                 <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
                 
                     <author>affectalways@gmail.com (affectalways)</author>

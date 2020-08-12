@@ -17,10 +17,10 @@
 
     <title>674最长连续递增序列 | affectalways</title>
 
-    <link rel="stylesheet" href="/css/meme.min.0ce097ffca9eee975305e541212cb9e137221875d9ec9fbb745c1c6d1c4fd6b7.css" integrity="" />
+    <link rel="stylesheet" href="/css/meme.min.0ce097ffca9eee975305e541212cb9e137221875d9ec9fbb745c1c6d1c4fd6b7.css" integrity="sha256-DOCX/8qe7pdTBeVBISy54TciGHXZ7J&#43;7dFwcbRxP1rc=" />
 
     
-    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.95dd7c378260cdb8542d4595657a32f3da10098bfbf792604ea1dae00b46b7e5.js" integrity="sha256-ld18N4JgzbhULUWVZXoy89oQCYv795JgTqHa4AtGt&#43;U="></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js" defer></script><script src="/js/meme.min.6acdb3cf6b76104feb8174e5d74330df27b6789d370d4259fc528c62faa0a564.js" integrity="sha256-as2zz2t2EE/rgXTl10Mw3ye2eJ03DUJZ/FKMYvqgpWQ="></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +61,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-07-28T23:31:15+08:00",
-        "dateModified": "2020-07-28T23:40:09+08:00",
+        "dateModified": "2020-08-12T23:23:28+08:00",
         "url": "https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/",
         "headline": "674最长连续递增序列",
         "description": "674. 最长连续递增序列 给定一个未经排序的整数数组，找到最长且连续的的递增序列，并返回该序列的长度。\n示例 1:\n输入: [1,3,5,4,7]\r输出: 3\r解释: 最长连续递增序列是 [1,3,5], 长度为3。\r尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为5和7在原数组里被4隔开。 示例 2:\n输入: [2,2,2,2,2]\r输出: 1\r解释: 最长连续递增序列是 [2], 长度为1。\r注意：数组长度不会超过10000。\n思路\n滑动窗口...\r代码\nfunc findLengthOfLCIS(nums []int) int {\rlength := len(nums)\rif length \u003c= 1 {\rreturn length\r}\rvar count int = 1\rvar max_length int = 1\rfor index, value := range nums {\rif index == 0 {\rcontinue\r}\rif value \u003e nums[index-1] {\rcount += 1\r} else {\rindex += 1\rcount = 1\r}\rif max_length \u003c count {\rmax_length = count\r}\r}\rreturn max_length\r}\r",
@@ -120,7 +120,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://affectalways.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-28T23:31:15&#43;08:00" />
-    <meta property="article:modified_time" content="2020-07-28T23:40:09&#43;08:00" />
+    <meta property="article:modified_time" content="2020-08-12T23:23:28&#43;08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -278,7 +278,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
     
     
         
-        <time datetime="2020-07-28T23:40:09&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.7.28</time>
+        <time datetime="2020-08-12T23:23:28&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.12</time>
     
     
     
@@ -381,9 +381,9 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2020-07-28 23:40:09 CST" style="cursor:help">
+        <span title="Updated @ 2020-08-12 23:23:28 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-07-28</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-07-28</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-12</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-12</text></g></svg>
         </span></div>
 
 
@@ -400,14 +400,14 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/&amp;text=674%e6%9c%80%e9%95%bf%e8%bf%9e%e7%bb%ad%e9%80%92%e5%a2%9e%e5%ba%8f%e5%88%97&amp;hashtags=&amp;via=affectalways" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/&amp;text=674%e6%9c%80%e9%95%bf%e8%bf%9e%e7%bb%ad%e9%80%92%e5%a2%9e%e5%ba%8f%e5%88%97&amp;hashtags=leetcode,&amp;via=affectalways" title="Share on Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item facebook">
                     
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/&amp;hashtag=%23" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/&amp;hashtag=%23leetcode" title="Share on Facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                 </div>
             
 
@@ -486,6 +486,10 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
             <ul class="related-list">
                 
                     <li class="related-item">
+                        <a href="/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/" class="related-link">219存在重复元素2</a>
+                    </li>
+                
+                    <li class="related-item">
                         <a href="/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/" class="related-link">643子数组最大平均数</a>
                     </li>
                 
@@ -505,10 +509,6 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
                         <a href="/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" class="related-link">118杨辉三角</a>
                     </li>
                 
-                    <li class="related-item">
-                        <a href="/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/" class="related-link">1160拼写单词</a>
-                    </li>
-                
             </ul>
         </div>
     
@@ -516,6 +516,18 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
 
 
         
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/leetcode/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>leetcode</a>
+                
+            
+        </div>
     
 
 

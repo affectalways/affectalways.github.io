@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-08-09T23:38:57&#43;08:00</updated>
+    <updated>2020-08-12T23:25:23&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,225 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
+        <entry>
+            <title type="text">AMQP介绍</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/amqp/amqp%E4%BB%8B%E7%BB%8D/" />
+            <id>https://affectalways.github.io/posts/amqp/amqp%E4%BB%8B%E7%BB%8D/</id>
+            <updated>2020-08-12T23:21:23&#43;08:00</updated>
+            <published>2020-08-12T22:14:37&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">AMQP是什么？ Advanced Message Queuing Protocol (AMQP) 是一种开放标准协议，面向消息的应用层协议。
+AMQP是一种应用层协议，可以让客户端应用程序和消息中间件之间进行通信。
+AMQP AMQP：应用层协议，专注于进程间的通信，是二进制协议，因此被认为是紧凑协议，这意味着通过AMQP发送的所有数据都是二进制数据。二进制协议可避免通过网络发送无用的数据。
+总体而言，AMQP的目标是通过TCP/IP连接进行消息传递，并保证消息的可靠性，安全性。
+AMQP模型 通常，消息由生产者（producer）产生，并发送给消息代理（broker）【broker包含exchange和queue】，然后交换机（Exchange）根据消息中提供的交换类型和路由键（routing key）将消息发送到队列（queue），最终被消费者（subscriber）使用。AMQP组成部分 生产者（Producer）
+产生消息消费者
+使用消息消息队列（QUEUE） 消息队列（QUEUE）充当缓冲区，用于存储稍后使用的消息。在创建时，消息队列（QUEUE）可以使用很多属性进行定义。例如，可以将消息队列（QUEUE）标记为持久，自动删除或者互斥，此处互斥是指同一时间只能由一个连接使用该队列，并且在该连接关闭时删除此队列。交换机（Exchange）
+交换机（Exchange）是用来发送消息的AMQP实体。交换机（Exchange）拿到一个消息后会将消息给一个或多个消息队列（Queue）。AMQP定义了消息代理（broker）需要提供四种交换机类型（Direct exchange（直连交换机）、Fanout exchange（扇型交换机）、Topic exchange（主题交换机）、Headers exchange（头交换机））交换机（Exchange）有两个状态：持久状态和暂存状态。1.持久状态的交换机（Exchange）会在消息代理（broker）重启后依然存在2.暂停状态的交换机（Exchange）不会在消息代理（broker）重启后存在绑定（Binding）
+绑定（Binding）是交换机（Exchange）把消息（Message）传给消费队列（QUEUE）遵循的规则如果要指示交换机“E”把消息交给消息队列“Q”，那么“Q”就需要与“E”进行绑定。绑定操作是由消息中定义的路由键（Routing key）决定交换机（Exchange）绑定到哪个消息队列（QUEUE）。路由键（Routing key）的意义在于从发送给交换机的众多消息中选择出某些消息，将其路由给绑定的队列。连接（Connection）</summary>
+            
+                <content type="html">&lt;h3 id=&#34;amqp是什么&#34;&gt;AMQP是什么？&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Advanced Message Queuing Protocol (AMQP) &lt;/code&gt;是一种开放标准协议，面向消息的&lt;code&gt;应用层&lt;/code&gt;协议。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AMQP&lt;/code&gt;是一种&lt;code&gt;应用层&lt;/code&gt;协议，可以让客户端应用程序和消息中间件之间进行通信。&lt;/p&gt;
+&lt;h3 id=&#34;amqp&#34;&gt;AMQP&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;AMQP&lt;/strong&gt;：应用层协议，专注于进程间的通信，是&lt;a href=&#34;https://en.wikipedia.org/wiki/Binary_protocol&#34;&gt;二进制协议&lt;/a&gt;，因此被认为是紧凑协议，这意味着通过AMQP发送的所有数据都是二进制数据。二进制协议可避免通过网络发送无用的数据。&lt;/p&gt;
+&lt;p&gt;总体而言，AMQP的目标是通过TCP/IP连接进行消息传递，并保证消息的可靠性，安全性。&lt;/p&gt;
+&lt;h3 id=&#34;amqp模型&#34;&gt;AMQP模型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/amqp/amqp-model.png?raw=true&#34; alt=&#34;amqp.png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;通常，消息由生产者（producer）产生，并发送给消息代理（broker）【broker包含exchange和queue】，然后交换机（Exchange）根据消息中提供的交换类型和路由键（routing key）将消息发送到队列（queue），最终被消费者（subscriber）使用。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;amqp组成部分&#34;&gt;AMQP组成部分&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;生产者（Producer）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;产生消息
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;消费者&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用消息
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;消息队列queue&#34;&gt;消息队列（QUEUE）&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;消息队列（QUEUE）充当缓冲区，用于存储稍后使用的消息。
+在创建时，消息队列（QUEUE）可以使用很多属性进行定义。例如，可以将消息队列（QUEUE）标记为持久，自动删除或者互斥，此处互斥是指同一时间只能由一个连接使用该队列，并且在该连接关闭时删除此队列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html&#34;&gt;&lt;strong&gt;交换机（Exchange）&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;交换机（Exchange）是用来发送消息的AMQP实体。交换机（Exchange）拿到一个消息后会将消息给一个或多个消息队列（Queue）。
+
+AMQP定义了消息代理（broker）需要提供四种交换机类型（
+	Direct exchange（直连交换机）、
+	Fanout exchange（扇型交换机）、
+	Topic exchange（主题交换机）、
+	Headers exchange（头交换机）
+）
+
+交换机（Exchange）有两个状态：持久状态和暂存状态。
+	1.持久状态的交换机（Exchange）会在消息代理（broker）重启后依然存在
+	2.暂停状态的交换机（Exchange）不会在消息代理（broker）重启后存在
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;绑定（Binding）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;绑定（Binding）是交换机（Exchange）把消息（Message）传给消费队列（QUEUE）遵循的规则
+
+如果要指示交换机“E”把消息交给消息队列“Q”，那么“Q”就需要与“E”进行绑定。绑定操作是由消息中定义的路由键（Routing key）决定交换机（Exchange）绑定到哪个消息队列（QUEUE）。
+
+路由键（Routing key）的意义在于从发送给交换机的众多消息中选择出某些消息，将其路由给绑定的队列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;连接（Connection）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AMQP中的连接（Connection）是应用程序和AMQP代理（broker）之间的网络连接，例如TCP/IP套接字连接。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;通道（Channels）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;有些应用需要与AMQP代理建立多个连接。无论怎样，同时开启多个TCP连接都是不合适的，因为这样做会消耗掉过多的系统资源并且使得防火墙的配置更加困难。AMQP 0-9-1提供了通道（channels）来处理多连接，可以把通道理解成共享一个TCP连接的多个轻量化连接。
+
+在涉及多线程/进程的应用中，为每个线程/进程开启一个通道（channel）是很常见的，并且这些通道不能被线程/进程共享。
+
+一个特定通道上的通讯与其他通道上的通讯是完全隔离的，因此每个AMQP方法都需要携带一个通道号，这样客户端就可以指定此方法是为哪个通道准备的。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;虚拟主机（vhost）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;虚拟主机（vhost）提供了一种在代理（broker）中隔离应用程序的方法。
+不同的用户可以对不同的虚拟主机具有不同的访问权限。当连接被建立的时候，AMQP客户端来指定使用哪个虚拟主机。
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/amqp/" term="AMQP" label="AMQP" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/amqp/" term="AMQP" label="AMQP" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">219存在重复元素2</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</id>
+            <updated>2020-08-12T23:23:09&#43;08:00</updated>
+            <published>2020-08-10T22:56:18&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">219. 存在重复元素 II 给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums [j]，并且 i 和 j 的差的 绝对值 至多为 k。
+示例 1:
+输入: nums = [1,2,3,1], k = 3输出: true示例 2:
+输入: nums = [1,0,1,1], k = 1输出: true示例 3:</summary>
+            
+                <content type="html">&lt;h4 id=&#34;219-存在重复元素-iihttpsleetcode-cncomproblemscontains-duplicate-ii&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/contains-duplicate-ii/&#34;&gt;219. 存在重复元素 II&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 &lt;strong&gt;i&lt;/strong&gt; 和 &lt;strong&gt;j&lt;/strong&gt;，使得 &lt;strong&gt;nums [i] = nums [j]&lt;/strong&gt;，并且 &lt;strong&gt;i 和 j 的差的 绝对值&lt;/strong&gt; 至多为 &lt;strong&gt;k&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,2,3,1], k = 3
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,0,1,1], k = 1
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,2,3,1,2,3], k = 2
+输出: false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.贪心&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.哈希表&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、维护一个哈希表m，存储每个数字上次出现的位置
+2、遍历nums
+3、如果nums[i]这个数字，上次出现过，且，出现的位置和现在距离小于k，可以直接返回true
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;exists&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;exists&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Werkzeug 源码解析(4)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_4/" />
@@ -380,14 +599,19 @@ get_current_url方法
             <title type="text">643子数组最大平均数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/</id>
-            <updated>2020-08-09T13:02:29&#43;08:00</updated>
+            <updated>2020-08-12T23:23:19&#43;08:00</updated>
             <published>2020-08-05T22:04:50&#43;08:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">leetcode，643子数组最大平均数</summary>
+            <rights>@2020 affectalways</rights><summary type="html">643. 子数组最大平均数 I 给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。
+示例 1:
+输入: [1,12,-5,-6,50,3], k = 4输出: 12.75解释: 最大平均数 (12-5-6+50)/4 = 51/4 = 12.75注意:
+1 &amp;lt;= k &amp;lt;= n &amp;lt;= 30,000。所给数据范围 [-10,000，10,000]。思路
+滑动窗口1、维护一个长度为k的窗口，和窗口当前的和sum2、遍历nums，每碰到一个新元素时，都要相应的从sum中减去退出窗口的值，加上新加入窗口的值3、看看当然的sum是不是比以往的都大，是的话，记录到max里面去4、最后返回max/k就好了代码
+package mainimport &amp;quot;fmt&amp;quot;func findMaxAverage(nums []int, k int) float64 {var sum, max intfor i := 0; i &amp;lt; k; i++ {sum += nums[i]}max = sumfor i := k; i &amp;lt; len(nums); i++ {sum += nums[i] - nums[i-k]if sum &amp;gt; max {max = sum}}return float64(max) / float64(k)}func main() {nums := []int{1, 12, -5, -6, 50, 3}k := 4result := findMaxAverage(nums, k)fmt.</summary>
             
                 <content type="html">&lt;h4 id=&#34;643-子数组最大平均数-ihttpsleetcode-cncomproblemsmaximum-average-subarray-i&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/maximum-average-subarray-i/&#34;&gt;643. 子数组最大平均数 I&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。&lt;/p&gt;
@@ -471,7 +695,7 @@ func main() {
             <title type="text">1346检查整数及其两倍数是否存在</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</id>
-            <updated>2020-08-09T13:02:46&#43;08:00</updated>
+            <updated>2020-08-12T23:23:38&#43;08:00</updated>
             <published>2020-08-03T23:28:47&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -528,6 +752,14 @@ arr[i] == 2 * arr[j]
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -536,7 +768,7 @@ arr[i] == 2 * arr[j]
             <title type="text">605种花问题</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-08-05T21:43:11&#43;08:00</updated>
+            <updated>2020-08-12T23:23:13&#43;08:00</updated>
             <published>2020-08-03T23:23:52&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -617,6 +849,14 @@ func main() {
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -625,7 +865,7 @@ func main() {
             <title type="text">167两数之和2</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</id>
-            <updated>2020-08-03T23:08:49&#43;08:00</updated>
+            <updated>2020-08-12T23:22:55&#43;08:00</updated>
             <published>2020-08-03T23:06:59&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -706,6 +946,14 @@ func main() {
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -714,7 +962,7 @@ func main() {
             <title type="text">118杨辉三角</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</id>
-            <updated>2020-07-29T23:38:42&#43;08:00</updated>
+            <updated>2020-08-12T23:22:50&#43;08:00</updated>
             <published>2020-07-29T22:53:20&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -768,6 +1016,63 @@ func main() {
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">1491去掉最低工资和最高工资后的工资平均值</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/</id>
+            <updated>2020-08-12T23:23:47&#43;08:00</updated>
+            <published>2020-07-29T22:38:21&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -776,7 +1081,7 @@ func main() {
             <title type="text">1160拼写单词</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</id>
-            <updated>2020-07-29T22:32:15&#43;08:00</updated>
+            <updated>2020-08-12T23:23:35&#43;08:00</updated>
             <published>2020-07-28T23:42:32&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -853,6 +1158,14 @@ func main() {
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -861,7 +1174,7 @@ func main() {
             <title type="text">674最长连续递增序列</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</id>
-            <updated>2020-07-28T23:40:09&#43;08:00</updated>
+            <updated>2020-08-12T23:23:28&#43;08:00</updated>
             <published>2020-07-28T23:31:15&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -938,6 +1251,14 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &amp;lt;= 
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -946,7 +1267,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &amp;lt;= 
             <title type="text">Offer53 0~n-1中缺失的数字</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</id>
-            <updated>2020-07-28T22:55:30&#43;08:00</updated>
+            <updated>2020-08-12T23:23:51&#43;08:00</updated>
             <published>2020-07-28T22:48:06&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1045,6 +1366,14 @@ func main() {
                     
                 
                     
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
                 
             
         </entry>
@@ -1053,7 +1382,7 @@ func main() {
             <title type="text">桶排序</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/" />
             <id>https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/</id>
-            <updated>2020-07-26T21:42:20&#43;08:00</updated>
+            <updated>2020-08-12T23:25:09&#43;08:00</updated>
             <published>2020-07-26T21:10:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1266,14 +1595,18 @@ GoLand下载地址
             <title type="text">1051高度检查器</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</id>
-            <updated>2020-08-09T13:02:07&#43;08:00</updated>
+            <updated>2020-08-12T23:23:32&#43;08:00</updated>
             <published>2020-07-24T23:12:17&#43;08:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">leetcode，1051 高度检查器</summary>
+            <rights>@2020 affectalways</rights><summary type="html">1051. 高度检查器 学校在拍年度纪念照时，一般要求学生按照 非递减 的高度顺序排列。
+请你返回能让所有学生以 非递减 高度排列的最小必要移动人数。
+注意，当一组学生被选中时，他们之间可以以任何可能的方式重新排序，而未被选中的学生应该保持不动。
+示例：
+输入：heights = [1,1,4,2,1,3]输出：3 解释：当前数组：[1,1,4,2,1,3]目标数组：[1,1,1,2,3,4]在下标 2 处（从 0 开始计数）出现 4 vs 1 ，所以我们必须移动这名学生。在下标 4 处（从 0 开始计数）出现 1 vs 3 ，所以我们必须移动这名学生。在下标 5 处（从 0 开始计数）出现 3 vs 4 ，所以我们必须移动这名学生。示例 2：**</summary>
             
                 <content type="html">&lt;h4 id=&#34;1051-高度检查器httpsleetcode-cncomproblemsheight-checker&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/height-checker/&#34;&gt;1051. 高度检查器&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;学校在拍年度纪念照时，一般要求学生按照 非递减 的高度顺序排列。&lt;/p&gt;
@@ -2012,7 +2345,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">876 链表的中间结点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</id>
-            <updated>2020-07-25T23:04:16&#43;08:00</updated>
+            <updated>2020-08-12T23:24:23&#43;08:00</updated>
             <published>2020-07-16T22:55:17&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2444,7 +2777,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">1290 二进制链表转整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-07-25T23:04:20&#43;08:00</updated>
+            <updated>2020-08-12T23:24:19&#43;08:00</updated>
             <published>2020-07-15T23:44:39&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3313,12 +3646,6 @@ def application(environ, start_response):
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/server/" term="server" label="server" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/gunicorn/" term="gunicorn" label="gunicorn" />
                             
                         
@@ -3347,6 +3674,20 @@ def application(environ, start_response):
             
             
                 
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/celery/" term="celery" label="celery" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                            
+                        
                     
                 
                     
@@ -4692,19 +5033,19 @@ git push （若是第一次发布，需要用到--set-upstream）
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/</id>
-            <updated>2020-08-09T13:01:58&#43;08:00</updated>
+            <updated>2020-08-12T23:23:24&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;665非递减数列&amp;quot;date: 2020-07-28T22:55:18+08:00keywords: - leetcode- 数组- hugo- blogcategories: [&amp;quot;leetcode&amp;quot;, &amp;quot;数组&amp;quot;]draft: false665. 非递减数列 给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。
-我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。
-示例 1:</summary>
+            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;665非递减数列&amp;quot;date: 2020-07-28T22:55:18+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- 数组- hugo- blogcategories: [&amp;quot;leetcode&amp;quot;, &amp;quot;数组&amp;quot;]draft: false665. 非递减数列 给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。
+我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。</summary>
             
                 <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;665非递减数列&amp;quot;
 date: 2020-07-28T22:55:18+08:00
+tags: [&amp;quot;leetcode&amp;quot;]
 keywords: 
 - leetcode
 - 数组

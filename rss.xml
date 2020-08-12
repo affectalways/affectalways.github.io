@@ -23,10 +23,212 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Sun, 09 Aug 2020 23:38:57 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 12 Aug 2020 23:25:23 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>AMQP介绍</title>
+                <link>https://affectalways.github.io/posts/amqp/amqp%E4%BB%8B%E7%BB%8D/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/amqp/amqp%E4%BB%8B%E7%BB%8D/</guid>
+                <pubDate>Wed, 12 Aug 2020 22:14:37 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h3 id=&#34;amqp是什么&#34;&gt;AMQP是什么？&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Advanced Message Queuing Protocol (AMQP) &lt;/code&gt;是一种开放标准协议，面向消息的&lt;code&gt;应用层&lt;/code&gt;协议。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AMQP&lt;/code&gt;是一种&lt;code&gt;应用层&lt;/code&gt;协议，可以让客户端应用程序和消息中间件之间进行通信。&lt;/p&gt;
+&lt;h3 id=&#34;amqp&#34;&gt;AMQP&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;AMQP&lt;/strong&gt;：应用层协议，专注于进程间的通信，是&lt;a href=&#34;https://en.wikipedia.org/wiki/Binary_protocol&#34;&gt;二进制协议&lt;/a&gt;，因此被认为是紧凑协议，这意味着通过AMQP发送的所有数据都是二进制数据。二进制协议可避免通过网络发送无用的数据。&lt;/p&gt;
+&lt;p&gt;总体而言，AMQP的目标是通过TCP/IP连接进行消息传递，并保证消息的可靠性，安全性。&lt;/p&gt;
+&lt;h3 id=&#34;amqp模型&#34;&gt;AMQP模型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/affectalways/affectalways.github.io/blob/master/images/amqp/amqp-model.png?raw=true&#34; alt=&#34;amqp.png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;通常，消息由生产者（producer）产生，并发送给消息代理（broker）【broker包含exchange和queue】，然后交换机（Exchange）根据消息中提供的交换类型和路由键（routing key）将消息发送到队列（queue），最终被消费者（subscriber）使用。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;amqp组成部分&#34;&gt;AMQP组成部分&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;生产者（Producer）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;产生消息
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;消费者&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用消息
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;消息队列queue&#34;&gt;消息队列（QUEUE）&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;消息队列（QUEUE）充当缓冲区，用于存储稍后使用的消息。
+在创建时，消息队列（QUEUE）可以使用很多属性进行定义。例如，可以将消息队列（QUEUE）标记为持久，自动删除或者互斥，此处互斥是指同一时间只能由一个连接使用该队列，并且在该连接关闭时删除此队列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html&#34;&gt;&lt;strong&gt;交换机（Exchange）&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;交换机（Exchange）是用来发送消息的AMQP实体。交换机（Exchange）拿到一个消息后会将消息给一个或多个消息队列（Queue）。
+
+AMQP定义了消息代理（broker）需要提供四种交换机类型（
+	Direct exchange（直连交换机）、
+	Fanout exchange（扇型交换机）、
+	Topic exchange（主题交换机）、
+	Headers exchange（头交换机）
+）
+
+交换机（Exchange）有两个状态：持久状态和暂存状态。
+	1.持久状态的交换机（Exchange）会在消息代理（broker）重启后依然存在
+	2.暂停状态的交换机（Exchange）不会在消息代理（broker）重启后存在
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;绑定（Binding）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;绑定（Binding）是交换机（Exchange）把消息（Message）传给消费队列（QUEUE）遵循的规则
+
+如果要指示交换机“E”把消息交给消息队列“Q”，那么“Q”就需要与“E”进行绑定。绑定操作是由消息中定义的路由键（Routing key）决定交换机（Exchange）绑定到哪个消息队列（QUEUE）。
+
+路由键（Routing key）的意义在于从发送给交换机的众多消息中选择出某些消息，将其路由给绑定的队列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;连接（Connection）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AMQP中的连接（Connection）是应用程序和AMQP代理（broker）之间的网络连接，例如TCP/IP套接字连接。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;通道（Channels）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;有些应用需要与AMQP代理建立多个连接。无论怎样，同时开启多个TCP连接都是不合适的，因为这样做会消耗掉过多的系统资源并且使得防火墙的配置更加困难。AMQP 0-9-1提供了通道（channels）来处理多连接，可以把通道理解成共享一个TCP连接的多个轻量化连接。
+
+在涉及多线程/进程的应用中，为每个线程/进程开启一个通道（channel）是很常见的，并且这些通道不能被线程/进程共享。
+
+一个特定通道上的通讯与其他通道上的通讯是完全隔离的，因此每个AMQP方法都需要携带一个通道号，这样客户端就可以指定此方法是为哪个通道准备的。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;虚拟主机（vhost）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;虚拟主机（vhost）提供了一种在代理（broker）中隔离应用程序的方法。
+不同的用户可以对不同的虚拟主机具有不同的访问权限。当连接被建立的时候，AMQP客户端来指定使用哪个虚拟主机。
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>219存在重复元素2</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</guid>
+                <pubDate>Mon, 10 Aug 2020 22:56:18 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h4 id=&#34;219-存在重复元素-iihttpsleetcode-cncomproblemscontains-duplicate-ii&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/contains-duplicate-ii/&#34;&gt;219. 存在重复元素 II&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 &lt;strong&gt;i&lt;/strong&gt; 和 &lt;strong&gt;j&lt;/strong&gt;，使得 &lt;strong&gt;nums [i] = nums [j]&lt;/strong&gt;，并且 &lt;strong&gt;i 和 j 的差的 绝对值&lt;/strong&gt; 至多为 &lt;strong&gt;k&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,2,3,1], k = 3
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,0,1,1], k = 1
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,2,3,1,2,3], k = 2
+输出: false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.贪心&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.哈希表&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1、维护一个哈希表m，存储每个数字上次出现的位置
+2、遍历nums
+3、如果nums[i]这个数字，上次出现过，且，出现的位置和现在距离小于k，可以直接返回true
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;exists&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;exists&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;nx&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt;
+	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Werkzeug 源码解析(4)</title>
@@ -523,6 +725,14 @@ arr[i] == 2 * arr[j]
                         
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
                     
                 
             </item>
@@ -602,6 +812,14 @@ func main() {
                             
                         
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
                         
                     
                 
@@ -685,6 +903,14 @@ func main() {
                         
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
                     
                 
             </item>
@@ -739,6 +965,60 @@ func main() {
                             
                         
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>1491去掉最低工资和最高工资后的工资平均值</title>
+                <link>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/</guid>
+                <pubDate>Wed, 29 Jul 2020 22:38:21 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/leetcode/">leetcode</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/">数组</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
                         
                     
                 
@@ -816,6 +1096,14 @@ func main() {
                         
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
+                        
                     
                 
             </item>
@@ -891,6 +1179,14 @@ func main() {
                             
                         
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
                         
                     
                 
@@ -989,6 +1285,14 @@ func main() {
                             
                         
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/leetcode/">leetcode</category>
+                                
+                            
                         
                     
                 
@@ -3172,12 +3476,6 @@ def application(environ, start_response):
                                 
                                 
                                 
-                                    <category domain="https://affectalways.github.io/tags/server/">server</category>
-                                
-                            
-                                
-                                
-                                
                                     <category domain="https://affectalways.github.io/tags/gunicorn/">gunicorn</category>
                                 
                             
@@ -3203,6 +3501,20 @@ def application(environ, start_response):
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/celery/">celery</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/python/">python</category>
+                                
+                            
                         
                     
                         
@@ -4509,6 +4821,7 @@ git push （若是第一次发布，需要用到--set-upstream）
                 
                     <description>&lt;pre&gt;&lt;code&gt;title: &amp;quot;665非递减数列&amp;quot;
 date: 2020-07-28T22:55:18+08:00
+tags: [&amp;quot;leetcode&amp;quot;]
 keywords: 
 - leetcode
 - 数组

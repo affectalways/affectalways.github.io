@@ -23,10 +23,158 @@
         
             <copyright>@2020 affectalways</copyright>
         
-        <lastBuildDate>Wed, 12 Aug 2020 23:25:23 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sun, 23 Aug 2020 22:19:33 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://affectalways.github.io/rss.xml" />
         
+        
+            <item>
+                <title>AMQP_整体</title>
+                <link>https://affectalways.github.io/posts/amqp/amqp_%E6%95%B4%E4%BD%93/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/amqp/amqp_%E6%95%B4%E4%BD%93/</guid>
+                <pubDate>Tue, 18 Aug 2020 22:23:07 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h2 id=&#34;message-structure&#34;&gt;Message Structure&lt;/h2&gt;
+&lt;p&gt;A message has two parts: a payload and a label (routing key). The payload is the data that you want to transmit. The label (routing key) describes the payload and the RabbitMQ messaging system uses this to determine who will receive a copy of your message.&lt;/p&gt;
+&lt;p&gt;Unlike TCP — where you need to specify the sender and receiver — AMQP only describes the message with a label. This label includes an exchange name and can optionally include a topic tag. RabbitMQ then sends the label to the interested receivers. This communication is “send-and-forget” and one-directional — see Understanding Messaging: Part One — The Basics for more information on this concept.&lt;/p&gt;
+&lt;h2 id=&#34;consumers-and-producers&#34;&gt;Consumers and Producers&lt;/h2&gt;
+&lt;p&gt;Put simply, producers create messages and consumers receive them. Your application can be a producer when it needs to send a message to another application or it can be a consumer when it needs to receive a message.&lt;/p&gt;
+&lt;h3 id=&#34;producers&#34;&gt;Producers&lt;/h3&gt;
+&lt;p&gt;Producers create messages and publish (send) them to a broker server (in this case, RabbitMQ). Producers create messages and label them for routing.&lt;/p&gt;
+&lt;h3 id=&#34;consumers&#34;&gt;Consumers&lt;/h3&gt;
+&lt;p&gt;Consumers attach to a broker server and subscribe to a queue, which is like a named mailbox. Whenever a message arrives in a particular mailbox, RabbitMQ sends it to one of the subscribed/listening consumers. Labels attached to the message are not passed along during routing. As a result, the consumer should only receive one part of the message — the payload. RabbitMQ does not reveal the producer/sender unless the producer includes that message in the message payload. Figure 2 (below) outlines this process.&lt;/p&gt;
+&lt;h2 id=&#34;routing-a-message&#34;&gt;Routing a Message&lt;/h2&gt;
+&lt;p&gt;There are three parts to any successful routing of a message in AMQP architecture:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchanges: Where producers publish their message&lt;/li&gt;
+&lt;li&gt;Queues: Where consumers receive the message&lt;/li&gt;
+&lt;li&gt;Bindings: How the messages are routed from the exchange to a particular queue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;queues&#34;&gt;Queues&lt;/h3&gt;
+&lt;p&gt;Queues are like named mailboxes — this is where sent messages wait to be consumed. When a consumer subscribes to a queue, messages are sent immediately to the subscribed consumer.&lt;/p&gt;
+&lt;h3 id=&#34;exchanges-and-bindings&#34;&gt;Exchanges and Bindings&lt;/h3&gt;
+&lt;p&gt;So how does a message reach a queue? Whenever you want to deliver a message to a consumer, you must first send it to an exchange. Then, based on certain rules or routing keys, RabbitMQ will decide to which queue it should deliver the message.&lt;/p&gt;
+&lt;p&gt;Rules — or routing keys — enable you to bind queues to exchanges. RabbitMQ will try to match the routing key in the message to those used in the bindings. The message will then be delivered to the queue based on one of three types of exchange: fanout, topic, or direct.&lt;/p&gt;
+&lt;h4 id=&#34;fanout-exchange&#34;&gt;Fanout Exchange&lt;/h4&gt;
+&lt;p&gt;This type of exchange will broadcast all of the messages that it receives to all of the queues bound to it. Any routing key provided with the published message will be ignored.&lt;/p&gt;
+&lt;h4 id=&#34;topic-exchange&#34;&gt;Topic Exchange&lt;/h4&gt;
+&lt;p&gt;In this type of exchange, messages are sent to queues based on the routing key. This means that messages sent to a topic exchange must have a specific routing key that must be a list of words, delimited by dots (example, ‘acs.deviceoperations.’). The wording is limited to 255 bytes.&lt;/p&gt;
+&lt;p&gt;The binding key must be in the same format as the routing key. As a result, a message sent with a particular routing key will be delivered to every queue that is bound with the matching binding key.&lt;/p&gt;
+&lt;p&gt;The binding key allows for these expression rules:&lt;/p&gt;
+&lt;p&gt;* (star) can substitute for exactly one word
+# (hash) can substitute for zero or more words&lt;/p&gt;
+&lt;p&gt;When a queue is bound with “#” (hash) binding key, it will receive all messages, regardless of the routing key, like in fanout exchange.&lt;/p&gt;
+&lt;h4 id=&#34;direct-exchange&#34;&gt;Direct Exchange&lt;/h4&gt;
+&lt;p&gt;When a queue is declared, it is automatically bound to the exchange that uses the queue name as a routing key. If the routing key matches, then the message is delivered to the corresponding queue.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;摘自：https://www.incognito.com/tutorials/understanding-messaging-part-two-rabbitmq-2/
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>AMQP_消息</title>
+                <link>https://affectalways.github.io/posts/amqp/amqp_%E6%B6%88%E6%81%AF/</link>
+                <guid isPermaLink="true">https://affectalways.github.io/posts/amqp/amqp_%E6%B6%88%E6%81%AF/</guid>
+                <pubDate>Tue, 18 Aug 2020 22:22:07 &#43;0800</pubDate>
+                
+                    <author>affectalways@gmail.com (affectalways)</author>
+                
+                <copyright>@2020 affectalways</copyright>
+                
+                    <description>&lt;h2 id=&#34;what-is-messaging&#34;&gt;What is Messaging?&lt;/h2&gt;
+&lt;p&gt;Today, real-time information is constantly required and available. This  needs easy ways to be routed to multiple receivers reliably and quickly. Integration solutions have to deal with a few fundamental challenges:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Networks are unreliable.&lt;/strong&gt; Integration solutions have to transport data from one computer to another across networks, causing delays or interruptions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Networks are slow.&lt;/strong&gt; Sending data across a network is much slower than making a local call.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Any two applications are different.&lt;/strong&gt; Integration solutions need to transmit information between systems that use different programming languages, operating platforms, and data formats. An integration solution needs to be able to interface with all these different technologies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Applications change over time.&lt;/strong&gt; An integration solution has to keep pace with changes in the applications that it connects. It should also minimize the dependencies from one system to another by using loose coupling between applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Messaging is a type of technology that helps you overcome the above challenges through asynchronous, program-to-program communication. Messaging enables software applications to connect and scale by separating the sending and receiving of data. There are several important concepts to understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programs communicate by sending packets of data (messages) to each other.&lt;/li&gt;
+&lt;li&gt;Channels (or queues) are logical pathways that connect the programs and convey messages.&lt;/li&gt;
+&lt;li&gt;A sender or producer is a program that sends a message by writing the message to a channel.&lt;/li&gt;
+&lt;li&gt;A receiver or consumer is a program that receives a message by reading it from a channel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;important-messaging-concepts&#34;&gt;Important Messaging Concepts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Send and forget.&lt;/strong&gt; The sending application sends the message to the message channel (queue). Once that step is complete, the sender can move onto other work while the messaging system transmits the message in the background. The sender does not have to wait for the consumer to receive and process the message.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Store and forward.&lt;/strong&gt; The messaging system stores the message, either in memory or on disk, and delivers the message to the receiver’s computer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-use-a-messaging-system&#34;&gt;Why Use a Messaging System?&lt;/h2&gt;
+&lt;p&gt;Messaging capabilities are provided by a separate software system called a messaging system. A messaging system manages the channels that define the paths of communication between the applications and the sending and receiving of messages. The  main task of a messaging system is to reliably move messages from the sender’s computer to the receiver’s computer.&lt;/p&gt;
+&lt;p&gt;The benefits of messaging include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Remote communication.&lt;/strong&gt; Messaging enables separate applications to communicate and transfer data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Platform/language integration.&lt;/strong&gt; When connecting multiple computer systems via remote communication, it’s likely that these systems use different languages, technologies, and platforms. A messaging system allows these disparate to integrate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Asynchronous communication.&lt;/strong&gt; Messaging enables a “send and forget” approach to communication. The sender does not have to wait for the receiver to receive and process the message.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Variable timing.&lt;/strong&gt; With synchronous communication, the caller must wait for the receiver to finish processing the call before the caller can receive the result and continue. This means that the caller can only make calls as fast as the receiver can perform them. Conversely, asynchronous communication allows the sender to batch requests to the receiver at its own pace and for the receiver to consume the requests at its own different pace.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reliable communication.&lt;/strong&gt; The messaging uses a “store and forward” approach to transmitting messages. The data is packaged as messages, which are atomic, independent units. When the sender sends a message, the messaging system stores the message and then delivers it by forwarding the message to the receiver’s computer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Topic-based messages.&lt;/strong&gt; Receivers can register to consume messages selectively based on particular topics of interest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.rabbitmq.com/&#34;&gt;RabbitMQ&lt;/a&gt; is an asynchronous messaging system that can be be used to allow disparate applications share data via a common protocol, &lt;a href=&#34;http://amqp.org/&#34;&gt;Advanced Message Queuing Protocol (AMQP)&lt;/a&gt;. This protocol was designed to be an open standard that would solve the vast majority of messaging needs and topologies. RabbitMQ is the messaging system used in Incognito Auto Configuration Server.&lt;/p&gt;
+&lt;h2 id=&#34;further-reading&#34;&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;For more information on message components and how the processes work in RabbitMQ, refer to Understanding Messaging: Part Two — RabbitMQ.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;摘自：https://www.incognito.com/tips-and-tutorials/understanding-messaging-part-one-the-basics-2/
+&lt;/code&gt;&lt;/pre&gt;</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/categories/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://affectalways.github.io/tags/amqp/">AMQP</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>AMQP介绍</title>
@@ -74,6 +222,11 @@ AMQP定义了消息代理（broker）需要提供四种交换机类型（
 如果要指示交换机“E”把消息交给消息队列“Q”，那么“Q”就需要与“E”进行绑定。绑定操作是由消息中定义的路由键（Routing key）决定交换机（Exchange）绑定到哪个消息队列（QUEUE）。
 
 路由键（Routing key）的意义在于从发送给交换机的众多消息中选择出某些消息，将其路由给绑定的队列。
+
+打个比方：
+	队列（queue）是我们想要去的位于纽约的目的地
+	交换机（exchange）是JFK机场
+	绑定（binding）就是JFK机场到目的地的路线。能够到达目的地的路线可以是一条或者多条
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;连接（Connection）&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;AMQP中的连接（Connection）是应用程序和AMQP代理（broker）之间的网络连接，例如TCP/IP套接字连接。
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;通道（Channels）&lt;/strong&gt;&lt;/p&gt;

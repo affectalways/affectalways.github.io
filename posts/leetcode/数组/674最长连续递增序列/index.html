@@ -61,7 +61,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-07-28T23:31:15+08:00",
-        "dateModified": "2020-08-12T23:23:28+08:00",
+        "dateModified": "2020-08-23T22:28:46+08:00",
         "url": "https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/",
         "headline": "674最长连续递增序列",
         "description": "674. 最长连续递增序列 给定一个未经排序的整数数组，找到最长且连续的的递增序列，并返回该序列的长度。\n示例 1:\n输入: [1,3,5,4,7]\r输出: 3\r解释: 最长连续递增序列是 [1,3,5], 长度为3。\r尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为5和7在原数组里被4隔开。 示例 2:\n输入: [2,2,2,2,2]\r输出: 1\r解释: 最长连续递增序列是 [2], 长度为1。\r注意：数组长度不会超过10000。\n思路\n滑动窗口...\r代码\nfunc findLengthOfLCIS(nums []int) int {\rlength := len(nums)\rif length \u003c= 1 {\rreturn length\r}\rvar count int = 1\rvar max_length int = 1\rfor index, value := range nums {\rif index == 0 {\rcontinue\r}\rif value \u003e nums[index-1] {\rcount += 1\r} else {\rindex += 1\rcount = 1\r}\rif max_length \u003c count {\rmax_length = count\r}\r}\rreturn max_length\r}\r",
@@ -120,7 +120,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://affectalways.github.io/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-28T23:31:15&#43;08:00" />
-    <meta property="article:modified_time" content="2020-08-12T23:23:28&#43;08:00" />
+    <meta property="article:modified_time" content="2020-08-23T22:28:46&#43;08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -278,7 +278,7 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
     
     
         
-        <time datetime="2020-08-12T23:23:28&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.12</time>
+        <time datetime="2020-08-23T22:28:46&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.23</time>
     
     
     
@@ -381,9 +381,9 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &lt;= 1 {
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2020-08-12 23:23:28 CST" style="cursor:help">
+        <span title="Updated @ 2020-08-23 22:28:46 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-12</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-12</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-23</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-23</text></g></svg>
         </span></div>
 
 

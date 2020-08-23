@@ -63,7 +63,7 @@ Bucket array&#43;-------------------------------------------------&#43;| | | |
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2020-07-26T21:10:37+08:00",
-        "dateModified": "2020-08-12T23:25:09+08:00",
+        "dateModified": "2020-08-23T22:27:11+08:00",
         "url": "https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/",
         "headline": "桶排序",
         "description": "介绍\n​\t桶排序（Bucket sort），是一个排序算法，工作的原理是将数组分到有限数量的桶里。每个桶再个别排序（有可能再使用别的排序算法或是以递归方式继续使用桶排序进行排序）。\n桶排序并不是比较排序，他不受到下限的影响。\n步骤\n桶排序以下列程序进行：\n1.设置一个定量的数组当作空桶子。\r2.寻访序列，并且把项目一个一个放到对应的桶子去。\r3.对每个不是空的桶子进行排序。\r4.从不是空的桶子里把项目再放回原来的序列中。\r说明\n假设有些整数，范围在1-100之间。现在有n=10的序列要进行排序\nOriginal array\r+-------------------------------------------------+\r| 6 | 28 | 96 | 14 | 74 | 37 | 9 | 71 | 91 | 36 |\r+-------------------------------------------------+\r  Create：创建一定数量的空桶，这里我们建立与原始数组长度相等的空桶（10个）。每个空桶对应区间为0~9、10~19、20~29、30~39、40~49、50~59、60~69、70~79、80~89、90-99的区间\nBucket array\r+-------------------------------------------------+\r| | | | | | | | | | |\r+-------------------------------------------------+\r^ ^\r| |\r| |\r| holds values in range 11 to 20\rholds values in range 1 to 10\r  Scout：将原始序列中的元素，放入到对应的桶里",
@@ -125,7 +125,7 @@ Bucket array&#43;-------------------------------------------------&#43;| | | |
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1" />
 <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2020-07-26T21:10:37&#43;08:00" />
-    <meta property="article:modified_time" content="2020-08-12T23:25:09&#43;08:00" />
+    <meta property="article:modified_time" content="2020-08-23T22:27:11&#43;08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -283,7 +283,7 @@ Bucket array&#43;-------------------------------------------------&#43;| | | |
     
     
         
-        <time datetime="2020-08-12T23:25:09&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.12</time>
+        <time datetime="2020-08-23T22:27:11&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.23</time>
     
     
     
@@ -413,9 +413,9 @@ Bucket array&#43;-------------------------------------------------&#43;| | | |
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2020-08-12 23:25:09 CST" style="cursor:help">
+        <span title="Updated @ 2020-08-23 22:27:11 CST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-12</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-12</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-23</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-23</text></g></svg>
         </span></div>
 
 

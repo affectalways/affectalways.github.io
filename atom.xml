@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-08-23T22:19:33&#43;08:00</updated>
+    <updated>2020-08-23T22:35:13&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -275,10 +275,65 @@ AMQP定义了消息代理（broker）需要提供四种交换机类型（
         </entry>
     
         <entry>
+            <title type="text">Kombu源码分析1</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/python/celery/kombu/kombu%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%901/" />
+            <id>https://affectalways.github.io/posts/python/celery/kombu/kombu%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%901/</id>
+            <updated>2020-08-23T22:26:39&#43;08:00</updated>
+            <published>2020-08-12T21:42:11&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/kombu/" term="kombu" label="kombu" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/kombu/" term="kombu" label="kombu" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">219存在重复元素2</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/219%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A02/</id>
-            <updated>2020-08-12T23:23:09&#43;08:00</updated>
+            <updated>2020-08-23T22:27:32&#43;08:00</updated>
             <published>2020-08-10T22:56:18&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -399,7 +454,7 @@ AMQP定义了消息代理（broker）需要提供四种交换机类型（
             <title type="text">Werkzeug 源码解析(4)</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/werkzeug/werkzeug_sc_4/" />
             <id>https://affectalways.github.io/posts/werkzeug/werkzeug_sc_4/</id>
-            <updated>2020-08-05T23:28:52&#43;08:00</updated>
+            <updated>2020-08-23T22:27:03&#43;08:00</updated>
             <published>2020-08-05T22:46:55&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -735,18 +790,6 @@ get_current_url方法
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
                             
                         
@@ -759,7 +802,7 @@ get_current_url方法
             <title type="text">643子数组最大平均数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/643%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0/</id>
-            <updated>2020-08-12T23:23:19&#43;08:00</updated>
+            <updated>2020-08-23T22:27:40&#43;08:00</updated>
             <published>2020-08-05T22:04:50&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -855,7 +898,7 @@ func main() {
             <title type="text">1346检查整数及其两倍数是否存在</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</id>
-            <updated>2020-08-12T23:23:38&#43;08:00</updated>
+            <updated>2020-08-23T22:29:08&#43;08:00</updated>
             <published>2020-08-03T23:28:47&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -928,7 +971,7 @@ arr[i] == 2 * arr[j]
             <title type="text">605种花问题</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</id>
-            <updated>2020-08-12T23:23:13&#43;08:00</updated>
+            <updated>2020-08-23T22:27:36&#43;08:00</updated>
             <published>2020-08-03T23:23:52&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1025,7 +1068,7 @@ func main() {
             <title type="text">167两数之和2</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</id>
-            <updated>2020-08-12T23:22:55&#43;08:00</updated>
+            <updated>2020-08-23T22:27:27&#43;08:00</updated>
             <published>2020-08-03T23:06:59&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1122,7 +1165,7 @@ func main() {
             <title type="text">118杨辉三角</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</id>
-            <updated>2020-08-12T23:22:50&#43;08:00</updated>
+            <updated>2020-08-23T22:27:21&#43;08:00</updated>
             <published>2020-07-29T22:53:20&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1189,19 +1232,95 @@ func main() {
         </entry>
     
         <entry>
-            <title type="text">1491去掉最低工资和最高工资后的工资平均值</title>
-            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/" />
-            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1491%E5%8E%BB%E6%8E%89%E6%9C%80%E4%BD%8E%E5%B7%A5%E8%B5%84%E5%92%8C%E6%9C%80%E9%AB%98%E5%B7%A5%E8%B5%84%E5%90%8E%E7%9A%84%E5%B7%A5%E8%B5%84%E5%B9%B3%E5%9D%87%E5%80%BC/</id>
-            <updated>2020-08-12T23:23:47&#43;08:00</updated>
+            <title type="text">665非递减数列</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/</id>
+            <updated>2020-08-23T22:31:20&#43;08:00</updated>
             <published>2020-07-29T22:38:21&#43;08:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html"></summary>
+            <rights>@2020 affectalways</rights><summary type="html">665. 非递减数列 给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。
+我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。
+示例 1:
+输入: nums = [4,2,3]输出: true解释: 你可以通过把第一个4变成1来使得它成为一个非递减数列。示例 2:
+输入: nums = [4,2,1]输出: false解释: 你不能在只改变一个元素的情况下将其变为非递减数列。说明：</summary>
             
-                <content type="html"></content>
+                <content type="html">&lt;h4 id=&#34;665-非递减数列httpsleetcode-cncomproblemsnon-decreasing-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/non-decreasing-array/&#34;&gt;665. 非递减数列&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&lt;/p&gt;
+&lt;p&gt;我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,3]
+输出: true
+解释: 你可以通过把第一个4变成1来使得它成为一个非递减数列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,1]
+输出: false
+解释: 你不能在只改变一个元素的情况下将其变为非递减数列。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 &amp;lt;= n &amp;lt;= 10 ^ 4
+- 10 ^ 5 &amp;lt;= nums[i] &amp;lt;= 10 ^ 5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;遍历数组，初始count = 0，如果当前元素值比它下一个元素值大，则count += 1，当count &amp;gt; 1时，直接返回false。
+另外，在遍历数组的过程中，如果遇到 “特殊情况”，可以直接返回false；当循环正常结束则返回true
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
+	if len(nums) == 1 {
+		return true
+	}
+	var count int = 0
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if value &amp;lt; nums[index-1] {
+			count += 1
+		}
+		if count &amp;gt; 1 {
+			return false
+		}
+	}
+
+	return true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;但是！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;提交后，运行过程
+
+输入:
+[3,4,2,3]
+输出
+true
+预期结果
+false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;所以要考虑特殊情况&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;现在就需要nums[i-2] &amp;lt;= nums[i-1] &amp;gt; nums[i] &amp;lt;= nums[i+1]这个条件了
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;最终代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
+	if len(nums) &amp;lt;= 2 {
+		return true
+	}
+	var count int = 0
+	for index, value := range nums {
+		if index == 0 {
+			continue
+		}
+		if value &amp;lt; nums[index-1] {
+			count += 1
+			if nums[index-1] &amp;gt; nums[index+1] &amp;amp;&amp;amp; nums[index-2] &amp;gt; value {
+				return false
+			}
+		}
+		if count &amp;gt; 1 {
+			return false
+		}
+	}
+
+	return true
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
             
             
             
@@ -1241,7 +1360,7 @@ func main() {
             <title type="text">1160拼写单词</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</id>
-            <updated>2020-08-12T23:23:35&#43;08:00</updated>
+            <updated>2020-08-23T22:29:04&#43;08:00</updated>
             <published>2020-07-28T23:42:32&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1334,7 +1453,7 @@ func main() {
             <title type="text">674最长连续递增序列</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</id>
-            <updated>2020-08-12T23:23:28&#43;08:00</updated>
+            <updated>2020-08-23T22:28:46&#43;08:00</updated>
             <published>2020-07-28T23:31:15&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1427,8 +1546,8 @@ func findLengthOfLCIS(nums []int) int {length := len(nums)if length &amp;lt;= 
             <title type="text">Offer53 0~n-1中缺失的数字</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/offer530~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97/</id>
-            <updated>2020-08-12T23:23:51&#43;08:00</updated>
-            <published>2020-07-28T22:48:06&#43;08:00</published>
+            <updated>2020-08-23T22:29:26&#43;08:00</updated>
+            <published>2020-07-28T22:48:06&#43;09:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
@@ -1542,7 +1661,7 @@ func main() {
             <title type="text">桶排序</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/" />
             <id>https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E6%A1%B6%E6%8E%92%E5%BA%8F/</id>
-            <updated>2020-08-12T23:25:09&#43;08:00</updated>
+            <updated>2020-08-23T22:27:11&#43;08:00</updated>
             <published>2020-07-26T21:10:37&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1755,7 +1874,7 @@ GoLand下载地址
             <title type="text">1051高度检查器</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/1051%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8/</id>
-            <updated>2020-08-12T23:23:32&#43;08:00</updated>
+            <updated>2020-08-23T22:28:57&#43;08:00</updated>
             <published>2020-07-24T23:12:17&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1865,10 +1984,10 @@ func main() {
         </entry>
     
         <entry>
-            <title type="text">Offer22 链表中倒数第K个节点</title>
+            <title type="text">Offer22链表中倒数第K个节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-25T23:04:32&#43;08:00</updated>
+            <updated>2020-08-23T22:32:48&#43;08:00</updated>
             <published>2020-07-22T23:15:30&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -1967,7 +2086,7 @@ func main() {
             <title type="text">141环形链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-25T23:04:45&#43;08:00</updated>
+            <updated>2020-08-23T22:31:39&#43;08:00</updated>
             <published>2020-07-22T22:13:40&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2368,7 +2487,7 @@ while any(not build.done() for build in builds):
             <title type="text">Offer18删除链表的节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-25T23:04:28&#43;08:00</updated>
+            <updated>2020-08-23T22:32:40&#43;08:00</updated>
             <published>2020-07-20T22:49:28&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2502,10 +2621,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">876 链表的中间结点</title>
+            <title type="text">876链表的中间结点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</id>
-            <updated>2020-08-12T23:24:23&#43;08:00</updated>
+            <updated>2020-08-23T22:32:17&#43;08:00</updated>
             <published>2020-07-16T22:55:17&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2637,10 +2756,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">0201 移除重复节点</title>
+            <title type="text">0201移除重复节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-25T23:03:43&#43;08:00</updated>
+            <updated>2020-08-23T22:31:46&#43;08:00</updated>
             <published>2020-07-16T22:42:51&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2830,7 +2949,7 @@ if __name__ == &#39;__main__&#39;:
             <title type="text">Offer24 反转链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-25T23:04:36&#43;08:00</updated>
+            <updated>2020-08-23T22:32:54&#43;08:00</updated>
             <published>2020-07-16T22:24:25&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -2934,10 +3053,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">1290 二进制链表转整数</title>
+            <title type="text">1290二进制链表转整数</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/1290%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%93%BE%E8%A1%A8%E8%BD%AC%E6%95%B4%E6%95%B0/</id>
-            <updated>2020-08-12T23:24:19&#43;08:00</updated>
+            <updated>2020-08-23T22:32:23&#43;08:00</updated>
             <published>2020-07-15T23:44:39&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3022,10 +3141,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">02.02. 返回倒数第 k 个节点</title>
+            <title type="text">02.02返回倒数第 k 个节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0202%E8%BF%94%E5%9B%9E%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-25T23:04:00&#43;08:00</updated>
+            <updated>2020-08-23T22:31:36&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3104,10 +3223,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">02.03. 删除中间节点</title>
+            <title type="text">02.03删除中间节点</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0203%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9/</id>
-            <updated>2020-07-25T23:04:05&#43;08:00</updated>
+            <updated>2020-08-23T22:31:53&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3169,10 +3288,10 @@ if __name__ == &#39;__main__&#39;:
         </entry>
     
         <entry>
-            <title type="text">0206 回文链表</title>
+            <title type="text">0206回文链表</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0206%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-25T23:04:09&#43;08:00</updated>
+            <updated>2020-08-23T22:31:59&#43;08:00</updated>
             <published>2020-07-15T21:20:33&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3368,18 +3487,6 @@ if __name__ == &#39;__main__&#39;:
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
                             
                         
@@ -3541,18 +3648,6 @@ if __name__ == &#39;__main__&#39;:
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
                             
                         
@@ -3690,18 +3785,6 @@ def application(environ, start_response):
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/werkzeug/" term="werkzeug" label="werkzeug" />
                             
                         
@@ -3714,7 +3797,7 @@ def application(environ, start_response):
             <title type="text">单例模式</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" />
             <id>https://affectalways.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
-            <updated>2020-07-23T00:36:44&#43;08:00</updated>
+            <updated>2020-08-23T22:23:27&#43;08:00</updated>
             <published>2020-06-22T22:28:03&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -3741,12 +3824,6 @@ def application(environ, start_response):
                     
                 
                     
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
                         
                             
                             
@@ -3800,12 +3877,6 @@ def application(environ, start_response):
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
-                            
-                            
-                            
                                 <category scheme="https://affectalways.github.io/tags/gunicorn/" term="gunicorn" label="gunicorn" />
                             
                         
@@ -3839,13 +3910,13 @@ def application(environ, start_response):
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/categories/celery/" term="celery" label="celery" />
+                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
                             
                         
                             
                             
                             
-                                <category scheme="https://affectalways.github.io/categories/python/" term="python" label="python" />
+                                <category scheme="https://affectalways.github.io/categories/celery/" term="celery" label="celery" />
                             
                         
                     
@@ -3856,12 +3927,6 @@ def application(environ, start_response):
                             
                             
                                 <category scheme="https://affectalways.github.io/tags/celery/" term="celery" label="celery" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
                             
                         
                     
@@ -3913,12 +3978,6 @@ def application(environ, start_response):
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
                             
                         
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
                     
                 
             
@@ -3966,12 +4025,6 @@ def application(environ, start_response):
                             
                             
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
                             
                         
                     
@@ -4023,12 +4076,6 @@ def application(environ, start_response):
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
                             
                         
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
                     
                 
             
@@ -4076,12 +4123,6 @@ def application(environ, start_response):
                             
                             
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
                             
                         
                     
@@ -4133,12 +4174,6 @@ def application(environ, start_response):
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
                             
                         
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
                     
                 
             
@@ -4188,12 +4223,6 @@ def application(environ, start_response):
                                 <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
                             
                         
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
-                        
                     
                 
             
@@ -4241,12 +4270,6 @@ def application(environ, start_response):
                             
                             
                                 <category scheme="https://affectalways.github.io/tags/requests/" term="requests" label="requests" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
                             
                         
                     
@@ -4511,18 +4534,6 @@ for result in app(environ, start_response):
                     
                 
                     
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/flask/" term="flask" label="flask" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://affectalways.github.io/tags/python/" term="python" label="python" />
-                            
                         
                             
                             
@@ -5191,131 +5202,21 @@ git push （若是第一次发布，需要用到--set-upstream）
     
         <entry>
             <title type="text"></title>
-            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/" />
-            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/665%E9%9D%9E%E9%80%92%E5%87%8F%E6%95%B0%E5%88%97/</id>
-            <updated>2020-08-12T23:23:24&#43;08:00</updated>
-            <published>0001-01-01T00:00:00&#43;00:00</published>
-            <author>
-                    <name>affectalways</name>
-                    <uri>https://affectalways.github.io/</uri>
-                    <email>affectalways@gmail.com</email>
-                    </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;665非递减数列&amp;quot;date: 2020-07-28T22:55:18+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- 数组- hugo- blogcategories: [&amp;quot;leetcode&amp;quot;, &amp;quot;数组&amp;quot;]draft: false665. 非递减数列 给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。
-我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。</summary>
-            
-                <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;665非递减数列&amp;quot;
-date: 2020-07-28T22:55:18+08:00
-tags: [&amp;quot;leetcode&amp;quot;]
-keywords: 
-- leetcode
-- 数组
-- hugo
-- blog
-categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;数组&amp;quot;]
-draft: false
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;665-非递减数列httpsleetcode-cncomproblemsnon-decreasing-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/non-decreasing-array/&#34;&gt;665. 非递减数列&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;给你一个长度为 n 的整数数组，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。&lt;/p&gt;
-&lt;p&gt;我们是这样定义一个非递减数列的： 对于数组中所有的 i (0 &amp;lt;= i &amp;lt;= n-2)，总满足 nums[i] &amp;lt;= nums[i + 1]。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,3]
-输出: true
-解释: 你可以通过把第一个4变成1来使得它成为一个非递减数列。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: nums = [4,2,1]
-输出: false
-解释: 你不能在只改变一个元素的情况下将其变为非递减数列。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1 &amp;lt;= n &amp;lt;= 10 ^ 4
-- 10 ^ 5 &amp;lt;= nums[i] &amp;lt;= 10 ^ 5
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;遍历数组，初始count = 0，如果当前元素值比它下一个元素值大，则count += 1，当count &amp;gt; 1时，直接返回false。
-另外，在遍历数组的过程中，如果遇到 “特殊情况”，可以直接返回false；当循环正常结束则返回true
-
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
-	if len(nums) == 1 {
-		return true
-	}
-	var count int = 0
-	for index, value := range nums {
-		if index == 0 {
-			continue
-		}
-		if value &amp;lt; nums[index-1] {
-			count += 1
-		}
-		if count &amp;gt; 1 {
-			return false
-		}
-	}
-
-	return true
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;但是！！！&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;提交后，运行过程
-
-输入:
-[3,4,2,3]
-输出
-true
-预期结果
-false
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;所以要考虑特殊情况&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;现在就需要nums[i-2] &amp;lt;= nums[i-1] &amp;gt; nums[i] &amp;lt;= nums[i+1]这个条件了
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;最终代码&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;func checkPossibility(nums []int) bool {
-	if len(nums) &amp;lt;= 2 {
-		return true
-	}
-	var count int = 0
-	for index, value := range nums {
-		if index == 0 {
-			continue
-		}
-		if value &amp;lt; nums[index-1] {
-			count += 1
-			if nums[index-1] &amp;gt; nums[index+1] &amp;amp;&amp;amp; nums[index-2] &amp;gt; value {
-				return false
-			}
-		}
-		if count &amp;gt; 1 {
-			return false
-		}
-	}
-
-	return true
-}
-&lt;/code&gt;&lt;/pre&gt;</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/0207%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4/</id>
-            <updated>2020-07-25T23:04:13&#43;08:00</updated>
+            <updated>2020-08-23T22:32:08&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;0207 链表相交&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- 0207 链表相交- 算法- 链表description: &amp;quot;leetcode，0207 链表相交&amp;quot;categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]draft: false面试题 02.07. 链表相交 我竟然没读懂题！！！！！！！！！！！
+            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;0207链表相交&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- 0207 链表相交- 算法- 链表description: &amp;quot;leetcode，0207 链表相交&amp;quot;categories: [&amp;quot;leetcode&amp;quot;,&amp;quot;链表&amp;quot;]draft: false面试题 02.07. 链表相交 我竟然没读懂题！！！！！！！！！！！
 给定两个（单向）链表，判定它们是否相交并返回交点。请注意相交的定义基于节点的引用，而不是基于节点的值。换句话说，如果一个链表的第k个节点与另一个链表的第j个节点是同一节点（引用完全相同），则这两个链表相交。
 示例 1：
 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3输出：Reference of the node with value = 8输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。示例 2：</summary>
             
-                <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;0207 链表相交&amp;quot;
+                <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;0207链表相交&amp;quot;
 date: 2020-07-15T21:20:33+08:00
 tags: [&amp;quot;leetcode&amp;quot;]
 keywords: 
@@ -5327,7 +5228,7 @@ keywords:
 - 算法
 - 链表
 description: &amp;quot;leetcode，0207 链表相交&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;,&amp;quot;链表&amp;quot;]
 draft: false
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;面试题-0207-链表相交httpsleetcode-cncomproblemsintersection-of-two-linked-lists-lcci&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/&#34;&gt;面试题 02.07. 链表相交&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;我竟然没读懂题！！！！！！！！！！！&lt;/strong&gt;&lt;/p&gt;
@@ -5439,18 +5340,18 @@ if __name__ == &#39;__main__&#39;:
             <title type="text"></title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" />
             <id>https://affectalways.github.io/posts/leetcode/%E9%93%BE%E8%A1%A8/offer06%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/</id>
-            <updated>2020-07-25T23:04:25&#43;08:00</updated>
+            <updated>2020-08-23T22:32:34&#43;08:00</updated>
             <published>0001-01-01T00:00:00&#43;00:00</published>
             <author>
                     <name>affectalways</name>
                     <uri>https://affectalways.github.io/</uri>
                     <email>affectalways@gmail.com</email>
                     </author>
-            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;Offer 06. 从尾到头打印链表&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- Offer 06. 从尾到头打印链表- 算法- 链表description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]draft: false剑指 Offer 06. 从尾到头打印链表 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+            <rights>@2020 affectalways</rights><summary type="html">title: &amp;quot;Offer06从尾到头打印链表&amp;quot;date: 2020-07-15T21:20:33+08:00tags: [&amp;quot;leetcode&amp;quot;]keywords: - leetcode- blog- 博客- 领扣- Offer 06. 从尾到头打印链表- 算法- 链表description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;categories: [&amp;quot;leetcode&amp;quot;,&amp;quot;链表&amp;quot;]draft: false剑指 Offer 06. 从尾到头打印链表 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
 示例 1：
 输入：head = [1,3,2]输出：[2,3,1]限制：</summary>
             
-                <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;Offer 06. 从尾到头打印链表&amp;quot;
+                <content type="html">&lt;pre&gt;&lt;code&gt;title: &amp;quot;Offer06从尾到头打印链表&amp;quot;
 date: 2020-07-15T21:20:33+08:00
 tags: [&amp;quot;leetcode&amp;quot;]
 keywords: 
@@ -5462,9 +5363,8 @@ keywords:
 - 算法
 - 链表
 description: &amp;quot;leetcode，Offer 06. 从尾到头打印链表&amp;quot;
-categories: [&amp;quot;leetcode&amp;quot;, &amp;quot;链表&amp;quot;]
+categories: [&amp;quot;leetcode&amp;quot;,&amp;quot;链表&amp;quot;]
 draft: false
-
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/&#34;&gt;剑指 Offer 06. 从尾到头打印链表&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;

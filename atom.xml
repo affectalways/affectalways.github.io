@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-08-23T22:35:13&#43;08:00</updated>
+    <updated>2020-08-30T23:24:14&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -16,6 +16,654 @@
             </author>
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
+        <entry>
+            <title type="text">34在排序数组中查找元素的第一个和最后一个位置</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</id>
+            <updated>2020-08-27T23:15:33&#43;08:00</updated>
+            <published>2020-08-27T23:03:34&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">34. 在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
+你的算法时间复杂度必须是 O(log n) 级别。
+如果数组中不存在目标值，返回 [-1, -1]。
+示例 1:
+输入: nums = [5,7,7,8,8,10], target = 8输出: [3,4]示例 2:
+输入: nums = [5,7,7,8,8,10], target = 6输出: [-1,-1]思路
+算法复杂度O(log n)，一看就是二分了</summary>
+            
+                <content type="html">&lt;h4 id=&#34;34-在排序数组中查找元素的第一个和最后一个位置httpsleetcode-cncomproblemsfind-first-and-last-position-of-element-in-sorted-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/&#34;&gt;34. 在排序数组中查找元素的第一个和最后一个位置&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。&lt;/p&gt;
+&lt;p&gt;你的算法时间复杂度必须是 O(log n) 级别。&lt;/p&gt;
+&lt;p&gt;如果数组中不存在目标值，返回 [-1, -1]。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [5,7,7,8,8,10], target = 8
+输出: [3,4]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [5,7,7,8,8,10], target = 6
+输出: [-1,-1]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;算法复杂度O(log n)，一看就是二分了
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">31下一个排列</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</id>
+            <updated>2020-08-30T23:23:29&#43;08:00</updated>
+            <published>2020-08-27T22:40:32&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">31. 下一个排列 实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
+如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+必须原地修改，只允许使用额外常数空间。
+以下是一些例子，输入位于左侧列，其相应输出位于右侧列。
+1,2,3 → 1,3,23,2,1 → 1,2,31,1,5 → 1,5,1思路
+下一个排列”的定义是：给定数字序列的字典序中下一个更大的排列。如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。给定若干个数字，将其组合为一个整数。如何将这些数字重新排列，以得到下一个更大的整数。如 123 下一个更大的数为 132。如果没有更大的整数，则输出最小的整数。1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：1.在**尽可能靠右的低位**进行交换，需要**从后向前查找**2.将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换3.</summary>
+            
+                <content type="html">&lt;h4 id=&#34;31-下一个排列httpsleetcode-cncomproblemsnext-permutation&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/next-permutation/&#34;&gt;31. 下一个排列&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。&lt;/p&gt;
+&lt;p&gt;如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。&lt;/p&gt;
+&lt;p&gt;必须原地修改，只允许使用额外常数空间。&lt;/p&gt;
+&lt;p&gt;以下是一些例子，输入位于左侧列，其相应输出位于右侧列。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;下一个排列”的定义是：给定数字序列的字典序中下一个更大的排列。如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
+
+给定若干个数字，将其组合为一个整数。如何将这些数字重新排列，以得到下一个更大的整数。如 123 下一个更大的数为 132。如果没有更大的整数，则输出最小的整数。
+
+1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。
+2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：
+	1.在**尽可能靠右的低位**进行交换，需要**从后向前查找**
+	2.将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换
+	3.将「大数」换到前面后，需要将「大数」后面的所有数重置为升序，升序排列就是最小的排列。以 123465 为例：首先按照上一步，交换 5 和 4，得到 123564；然后需要将 5 之后的数重置为升序，得到 123546。显然 123546 比 123564 更小，123546 就是 123465 的下一个排列
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;1.从后往前找到第一个两个相邻元素为升序的集合（i,j），满足A[i] &amp;lt; A[j], A[j,end]必然是降序的
+2.将A[i]与A[j]交换
+3.A[j,end]因为是降序的，重置为逆序
+5.如果在步骤1找不到，则说明当前数组为一个降序数组，直接跳到步骤4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def nextPermutation(self, nums) -&amp;gt; None:
+        &amp;quot;&amp;quot;&amp;quot;
+        Do not return anything, modify nums in-place instead.
+        &amp;quot;&amp;quot;&amp;quot;
+        if len(nums) &amp;lt; 2: return
+        for i in range(len(nums) - 2, -1, -1):
+            if nums[i] &amp;lt; nums[i + 1]:
+                for j in range(len(nums) - 1, i, -1):
+                    if nums[j] &amp;gt; nums[i]:
+                        nums[i], nums[j] = nums[j], nums[i]
+                        break
+                nums[i + 1:] = sorted(nums[i + 1:])
+                return
+        return nums.sort()
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">18四数之和</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/18%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/18%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
+            <updated>2020-08-26T22:24:17&#43;08:00</updated>
+            <published>2020-08-26T21:31:40&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">18. 四数之和 给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断nums中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+注意：
+答案中不可以包含重复的四元组。
+示例：
+给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。满足要求的四元组集合为：[[-1, 0, 0, 1],[-2, -1, 1, 2],[-2, 0, 0, 2]]思路</summary>
+            
+                <content type="html">&lt;h4 id=&#34;18-四数之和httpsleetcode-cncomproblems4sum&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/4sum/&#34;&gt;18. 四数之和&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个包含 n 个整数的数组 &lt;code&gt;nums&lt;/code&gt; 和一个目标值&lt;code&gt; target&lt;/code&gt;，判断&lt;code&gt;nums&lt;/code&gt;中是否存在四个元素 a，b，c 和 d ，使得&lt;code&gt; a + b + c + d&lt;/code&gt; 的值与 &lt;code&gt;target &lt;/code&gt;相等？找出&lt;code&gt;所有满足条件且不重复的四元组&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;答案中&lt;code&gt;不可以包含&lt;/code&gt;重复的四元组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
+
+满足要求的四元组集合为：
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;参考15三数之和，只不过是增加一层循环，还是使用两个指针
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;func fourSum(nums []int, target int) [][]int {
+	if len(nums) &amp;lt; 4 {
+		return nil
+	}
+
+	// 生序排序
+	sort.Ints(nums)
+	// 遍历、收集等于targe的组合
+	var equals [][]int
+	for i := 0; i &amp;lt; len(nums)-3; i++ {
+		// 第一个元素去重
+		if i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i-1] {
+			continue
+		}
+
+		for j := i + 1; j &amp;lt; len(nums)-2; j++ {
+			// 第二个元素去重
+			if j &amp;gt; i+1 &amp;amp;&amp;amp; nums[j] == nums[j-1] {
+				continue
+			}
+
+			k, l := j+1, len(nums)-1
+			for k &amp;lt; l {
+				sum := nums[i] + nums[j] + nums[k] + nums[l]
+				distance := sum - target
+				if distance == 0 {
+					equals = append(equals, []int{nums[i], nums[j], nums[k], nums[l]})
+				}
+				if distance &amp;gt; 0 {
+					// 第四个元素去重
+					for cur := l; l &amp;gt; k &amp;amp;&amp;amp; nums[l] == nums[cur]; l-- {
+					}
+				} else {
+					// 第三个元素去重
+					for cur := k; k &amp;lt; l &amp;amp;&amp;amp; nums[k] == nums[cur]; k++ {
+					}
+				}
+			}
+		}
+	}
+	return equals
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">16最接近的三数之和</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
+            <updated>2020-08-26T21:29:49&#43;08:00</updated>
+            <published>2020-08-25T21:38:15&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">16. 最接近的三数之和 给定一个包括 n 个整数的数组nums和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+示例：
+输入：nums = [-1,2,1,-4], target = 1输出：2解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。提示：
+3 &amp;lt;= nums.length &amp;lt;= 10^3-10^3 &amp;lt;= nums[i] &amp;lt;= 10^3-10^4 &amp;lt;= target &amp;lt;= 10^4思路</summary>
+            
+                <content type="html">&lt;h4 id=&#34;16-最接近的三数之和httpsleetcode-cncomproblems3sum-closest&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/3sum-closest/&#34;&gt;16. 最接近的三数之和&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个包括 &lt;code&gt;n &lt;/code&gt;个整数的数组&lt;code&gt;nums&lt;/code&gt;和 一个目标值&lt;code&gt; target&lt;/code&gt;。找出 &lt;code&gt;nums 中的三个整数&lt;/code&gt;，使得&lt;code&gt;它们的和与 target 最接近&lt;/code&gt;。返回这三个数的和。假定每组输入只存在唯一答案。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [-1,2,1,-4], target = 1
+输出：2
+解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;3 &amp;lt;= nums.length &amp;lt;= 10^3
+-10^3 &amp;lt;= nums[i] &amp;lt;= 10^3
+-10^4 &amp;lt;= target &amp;lt;= 10^4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;同15三数之和类似
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;math&amp;quot;
+	&amp;quot;sort&amp;quot;
+)
+
+func threeSumClosest(nums []int, target int) int {
+	sort.Ints(nums)
+	var length int = len(nums)
+	var result int
+	if length &amp;lt; 3 {
+		return result
+	}
+	tmp := int(math.NaN())
+	for index, value := range nums {
+		var left int = index + 1
+		var right int = length - 1
+
+		for left &amp;lt; right {
+			sum := value + nums[left] + nums[right]
+			diff := sum - target
+			var abs_diff = math.Abs(float64(diff))
+			if diff == 0 {
+				return sum
+			} else if diff &amp;lt; 0 {
+				if abs_diff &amp;lt; math.Abs(float64(tmp)) {
+					tmp = int(abs_diff)
+					result = sum
+				}
+				left += 1
+			} else if diff &amp;gt; 0 {
+				if abs_diff &amp;lt; math.Abs(float64(tmp)) {
+					tmp = int(abs_diff)
+					result = sum
+				}
+				right -= 1
+			}
+
+		}
+	}
+
+	return result
+
+}
+
+
+func main() {
+	height := []int{-1, 2, 1, -4}
+	result := threeSumClosest(height, 1)
+	fmt.Print(result)
+}
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">15三数之和</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/15%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/15%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
+            <updated>2020-08-25T21:36:47&#43;08:00</updated>
+            <published>2020-08-24T23:02:44&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">15. 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 *a，b，c ，*使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
+**注意：**答案中不可以包含重复的三元组。
+示例：
+给定数组 nums = [-1, 0, 1, 2, -1, -4]，满足要求的三元组集合为：[[-1, 0, 1],[-1, -1, 2]]思路
+摘自https://leetcode-cn.com/problems/3sum/solution/man-hua-jue-bu-wu-ren-zi-di-xiang-kuai-su-kan-dong/本题的暴力题解可以仿照二数之和，直接三层遍历，取和为 0 的三元组，并记录下来，最后再去重。但是作为一个有智慧的人，我们不能这么去做。因为我们的目标是找数，当然使用指针的方式最简单。假若我们的数组为：</summary>
+            
+                <content type="html">&lt;h4 id=&#34;15-三数之和httpsleetcode-cncomproblems3sum&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/3sum/&#34;&gt;15. 三数之和&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你一个包含 &lt;em&gt;n&lt;/em&gt; 个整数的数组 &lt;code&gt;nums&lt;/code&gt;，判断 &lt;code&gt;nums&lt;/code&gt; 中是否存在三个元素 *a，b，c ，*使得 &lt;em&gt;a + b + c =&lt;/em&gt; 0 ？请你找出所有满足条件且不重复的三元组。&lt;/p&gt;
+&lt;p&gt;**注意：**答案中不可以包含重复的三元组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+
+满足要求的三元组集合为：
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;摘自https://leetcode-cn.com/problems/3sum/solution/man-hua-jue-bu-wu-ren-zi-di-xiang-kuai-su-kan-dong/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;本题的暴力题解可以仿照二数之和，直接三层遍历，取和为 0 的三元组，并记录下来，最后再去重。但是作为一个有智慧的人，我们不能这么去做。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;因为我们的目标是找数，当然使用指针的方式最简单。假若我们的数组为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[-1, 0, 1, 2, -1, -4]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;求解过程如下：首先我们先把数组排个序（原因一会儿说），排完序长这样：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/d4406e3661f9577169dcb55844357674eb028126928ba00e3959aa203f828a52-image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;因为我们要同时找三个数，所以采取&lt;code&gt;固定一个数，同时用双指针来查找另外两个数的方式。&lt;/code&gt;所以初始化时，我们选择固定第一个元素（当然，这一轮走完了，这个蓝框框我们就要也往前移动），同时将下一个元素和末尾元素分别设上 left 和 right 指针。画出图来就是下面这个样子：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/28cc3bb8d64fa243ffe5db78a716e21d1e2ddea22119ee10448141488e5a24a1-image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;现在已经找到了三个数，当然是计算其三值是否满足三元组。但是这里因为我们已经排好了序，如果**固定下来的数（上面蓝色框框）本身就大于 0，那三数之和必然无法等于 0 **。比如下面这种：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/cdb4439d84fc88c1921c8c3996e2a49869890550cb6c2f610066a64fc1d75884-image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后自然用脚指头也能想到，我们需要移动指针。现在我们的排序就发挥出用处了，&lt;code&gt;如果和大于 0，那就说明 right 的值太大，需要左移。如果和小于 0，那就说明 left 的值太小，需要右移&lt;/code&gt;。(上面这个思考过程是本题的核心) 整个过程如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/6f1bb787c64bb1bf745307e18f55a1d36fd1127866e73b5974d14d24f94e48ae-image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中：在第 6 行时，因为三数之和大于 0，所以 right 进行了左移。最后一行，跳过了重复的 -1。&lt;/p&gt;
+&lt;p&gt;然后啰嗦一句，因为我们需要处理重复值的情况。除了固定下来的i值（蓝框框），left 和 right 当然也是需要处理重复的情况，所以对于 left 和 left+1，以及 right 和 right-1，我们都单独做一下重复值的处理。（其实没啥处理，就是简单的跳过）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;sort&amp;quot;
+)
+
+func threeSum(nums []int) [][]int {
+	sort.Ints(nums)
+
+	var result [][]int
+
+	length := len(nums)
+	if length &amp;lt; 3 {
+		return result
+	}
+	for index, value := range nums {
+		if value &amp;gt; 0 {
+			return result
+		}
+		if index &amp;gt; 0 &amp;amp;&amp;amp; nums[index] == nums[index-1] {
+			continue
+		}
+		left := index + 1
+		right := length - 1
+		for left &amp;lt; right {
+			sum := nums[left] + nums[right] + value
+			if sum == 0 {
+				result = append(result, []int{value, nums[left], nums[right]})
+				for left &amp;lt; right &amp;amp;&amp;amp; nums[left] == nums[left+1] {
+					left += 1
+				}
+				for left &amp;lt; right &amp;amp;&amp;amp; nums[right] == nums[right-1] {
+					right -= 1
+				}
+				left += 1
+				right -= 1
+			} else if sum &amp;lt; 0 {
+				left += 1
+			} else {
+				right -= 1
+			}
+		}
+
+	}
+	return result
+}
+
+func main() {
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	result := threeSum(nums)
+	fmt.Print(result)
+}
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">11盛最多水的容器</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/11%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/11%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</id>
+            <updated>2020-08-24T23:02:48&#43;08:00</updated>
+            <published>2020-08-24T22:32:48&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">11. 盛最多水的容器 给你 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+说明：你不能倾斜容器，且 n 的值至少为 2。
+图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。示例：
+输入：[1,8,6,2,5,4,8,3,7]输出：49解题思路
+双指针代码
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  func maxArea(height []int) int { result := 0 length := len(height) if length &amp;lt;= 1 { return result } left := 0 right := length - 1 var m, n int for left &amp;lt; right { m = right - left if height[right] &amp;lt; height[left] { n = height[right] right -= 1 } else { n = height[left] left += 1 } square := m * n if square &amp;gt; result { result = square } } return result }   </summary>
+            
+                <content type="html">&lt;h4 id=&#34;11-盛最多水的容器httpsleetcode-cncomproblemscontainer-with-most-water&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/container-with-most-water/&#34;&gt;11. 盛最多水的容器&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给你 &lt;code&gt;n&lt;/code&gt; 个非负整数 &lt;code&gt;a1，a2，...，an&lt;/code&gt;，每个数代表坐标中的一个点 &lt;code&gt;(i, ai)&lt;/code&gt; 。在坐标内画 &lt;code&gt;n&lt;/code&gt; 条垂直线，垂直线 i 的两个端点分别为 &lt;code&gt;(i, ai)&lt;/code&gt; 和&lt;code&gt; (i, 0)&lt;/code&gt;。找出其中的两条线，使得它们与 &lt;code&gt;x&lt;/code&gt; 轴共同构成的容器可以容纳最多的水。&lt;/p&gt;
+&lt;p&gt;说明：你不能倾斜容器，且 &lt;code&gt;n&lt;/code&gt; 的值至少为 &lt;code&gt;2&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：[1,8,6,2,5,4,8,3,7]
+输出：49
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;双指针
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;maxArea&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+   &lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+   &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+         &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+         &lt;span class=&#34;nx&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+         &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+         &lt;span class=&#34;nx&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+      &lt;span class=&#34;nx&#34;&gt;square&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;n&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;square&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+         &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;square&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">AMQP_整体</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/amqp/amqp_%E6%95%B4%E4%BD%93/" />

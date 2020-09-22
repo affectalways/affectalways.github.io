@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">affectalways</title>
     <subtitle type="html">affectalways.</subtitle>
-    <updated>2020-08-30T23:24:14&#43;08:00</updated>
+    <updated>2020-09-22T22:04:04&#43;08:00</updated>
     <id>https://affectalways.github.io/</id>
     <link rel="alternate" type="text/html" href="https://affectalways.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://affectalways.github.io/atom.xml" />
@@ -17,10 +17,276 @@
     <rights>@2020 affectalways</rights>
     <generator uri="https://gohugo.io/" version="0.74.3">Hugo</generator>
         <entry>
+            <title type="text">20有效的括号</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%A0%88/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%A0%88/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</id>
+            <updated>2020-09-22T22:03:40&#43;08:00</updated>
+            <published>2020-09-22T21:56:32&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">20. 有效的括号 给定一个只包括 &amp;lsquo;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&amp;rsquo; 的字符串，判断字符串是否有效。
+有效字符串需满足：
+​	1.左括号必须用相同类型的右括号闭合。 ​	2.左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串。
+示例 1:
+输入: &amp;quot;()&amp;quot;输出: true示例 2:
+输入: &amp;quot;()[]{}&amp;quot;输出: true示例 3:
+输入: &amp;quot;(]&amp;quot;输出: false示例 4:
+输入: &amp;quot;([)]&amp;quot;输出: false示例 5:
+输入: &amp;quot;{[]}&amp;quot;输出: true解题思路</summary>
+            
+                <content type="html">&lt;h4 id=&#34;20-有效的括号httpsleetcode-cncomproblemsvalid-parentheses&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/valid-parentheses/&#34;&gt;20. 有效的括号&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一个只包括 &amp;lsquo;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&amp;rsquo; 的字符串，判断字符串是否有效。&lt;/p&gt;
+&lt;p&gt;有效字符串需满足：&lt;/p&gt;
+&lt;p&gt;​	1.左括号必须用相同类型的右括号闭合。
+​	2.左括号必须以正确的顺序闭合。
+注意空字符串可被认为是有效字符串。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: &amp;quot;()&amp;quot;
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: &amp;quot;()[]{}&amp;quot;
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: &amp;quot;(]&amp;quot;
+输出: false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: &amp;quot;([)]&amp;quot;
+输出: false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 5:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: &amp;quot;{[]}&amp;quot;
+输出: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题思路&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;栈
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Solution:
+    def isValid(self, s):
+        &amp;quot;&amp;quot;&amp;quot;
+        :type s: str
+        :rtype: bool
+        &amp;quot;&amp;quot;&amp;quot;
+        sign_dict = {&#39;)&#39;: &#39;(&#39;, &#39;}&#39;: &#39;{&#39;, &#39;]&#39;: &#39;[&#39;}
+        tmp_list = []
+
+        if len(s) % 2 != 0:
+            return False
+        for element in s:
+            if element in sign_dict.keys():
+                if not len(tmp_list):
+                    return False
+
+                before = tmp_list.pop()
+                if sign_dict[element] != before:
+                    return False
+            else:
+                tmp_list.append(element)
+        if len(tmp_list):
+            return False
+        return True
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%A0%88/" term="栈" label="栈" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">回溯算法</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" />
+            <id>https://affectalways.github.io/posts/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</id>
+            <updated>2020-09-03T22:47:50&#43;08:00</updated>
+            <published>2020-09-03T22:05:47&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">Backtracking Algorithm In this tutorial, you will learn what a backtracking algorithm is. Also, you will find an example of a backtracking approcah.
+A backtracking algorithm is a problem-solving algorithm that uses a brute force approach for finding the desired output.
+The Brute force approach tries out all the possible solutions and chooses the desired/best solutions.</summary>
+            
+                <content type="html">&lt;h2 id=&#34;backtracking-algorithm&#34;&gt;Backtracking Algorithm&lt;/h2&gt;
+&lt;p&gt;In this tutorial, you will learn what a backtracking algorithm is. Also, you will find an example of a backtracking approcah.&lt;/p&gt;
+&lt;p&gt;A backtracking algorithm is a problem-solving algorithm that uses a &lt;strong&gt;brute force approach&lt;/strong&gt; for finding the desired output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The Brute force approach tries out all the possible solutions and chooses the desired/best solutions.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The term backtracking suggests that if the current solution is not suitable, then backtrack and try other solutions. Thus, recursion is used in this approach.&lt;/p&gt;
+&lt;p&gt;This approach is used to solve problems that have multiple solutions.&lt;/p&gt;
+&lt;p&gt;Backtracking algorithm is applied to some specific types of problems,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Decision problem used to find a feasible solution of the problem.&lt;/li&gt;
+&lt;li&gt;Optimisation problem used to find the best solution that can be applied.&lt;/li&gt;
+&lt;li&gt;Enumeration problem used to find the set of all feasible solutions of the problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tutorialspoint.com/assets/questions/media/31087/backtracking.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Green is the start point, blue is the intermediate point, red are points with no feasible solution, dark green is end solution.&lt;/p&gt;
+&lt;p&gt;Here, when the algorithm propagates to an end to check if it is a solution or not, if it is then returns the solution otherwise backtracks to the point one step behind it to find track to the next point to find solution.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Step 1 − if current_position is goal, return success
+Step 2 − else,
+Step 3 − if current_position is an end point, return failed.
+Step 4 − else, if current_position is not end point, explore and repeat above steps.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;backtracking-algorithm-1&#34;&gt;Backtracking Algorithm&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;backtrack(x)
+    if x is not a solution
+        return false
+    if x is a new solution
+        add to list of solutions
+    backtrack(expand x)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s use this backtracking problem to find the solution to &lt;strong&gt;N-Queen Problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In N-Queen problem, we are given an NxN chessboard and we have to place n queens on the board in such a way that no two queens attack each other. A queen will attack another queen if it is placed in horizontal, vertical or diagonal points in its way. Here, we will do 4-Queen problem.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.tutorialspoint.com/assets/questions/media/31087/n-queen_problem.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here, the binary output for n queen problem with 1’s as queens to the positions are placed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{0 , 1 , 0 , 0}
+{0 , 0 , 0 , 1}
+{1 , 0 , 0 , 0}
+{0 , 0 , 1 , 0}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For solving n queens problem, we will try placing queen into different positions of one row. And checks if it clashes with other queens. If current positioning of queens if there are any two queens attacking each other. If they are attacking, we will backtrack to previous location of the queen and change its positions. And check clash of queen again.&lt;/p&gt;
+&lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Step 1 − Start from 1st position in the array.Step 2 − Place queens in the board and check. Do,
+   Step 2.1 − After placing the queen, mark the position as a part of the solution and then recursively check if this will lead to a solution.
+   Step 2.2 − Now, if placing the queen doesn’t lead to a solution and trackback and go to step (a) and place queens to other rows.
+   Step 2.3 − If placing queen returns a lead to solution return TRUE.
+Step 3 − If all queens are placed return TRUE.
+Step 4 − If all rows are tried and no solution is found, return FALSE.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;select from：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.programiz.com/dsa/backtracking-algorithm&#34;&gt;https://www.programiz.com/dsa/backtracking-algorithm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tutorialspoint.com/introduction-to-backtracking&#34;&gt;https://www.tutorialspoint.com/introduction-to-backtracking&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E7%AE%97%E6%B3%95/" term="算法" label="算法" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/%E7%AE%97%E6%B3%95/" term="算法" label="算法" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">78子集</title>
+            <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/78%E5%AD%90%E9%9B%86/" />
+            <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/78%E5%AD%90%E9%9B%86/</id>
+            <updated>2020-09-03T21:56:14&#43;08:00</updated>
+            <published>2020-09-01T23:52:08&#43;08:00</published>
+            <author>
+                    <name>affectalways</name>
+                    <uri>https://affectalways.github.io/</uri>
+                    <email>affectalways@gmail.com</email>
+                    </author>
+            <rights>@2020 affectalways</rights><summary type="html">78. 子集 给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
+**说明：**解集不能包含重复的子集。
+示例:
+输入: nums = [1,2,3]输出:[[3],[1],[2],[1,2,3],[1,3],[2,3],[1,2],[]]</summary>
+            
+                <content type="html">&lt;h4 id=&#34;78-子集httpsleetcode-cncomproblemssubsets&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/subsets/&#34;&gt;78. 子集&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;给定一组&lt;strong&gt;不含重复元素&lt;/strong&gt;的整数数组 &lt;em&gt;nums&lt;/em&gt;，返回该数组所有可能的子集（幂集）。&lt;/p&gt;
+&lt;p&gt;**说明：**解集不能包含重复的子集。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: nums = [1,2,3]
+输出:
+[
+  [3],
+  [1],
+  [2],
+  [1,2,3],
+  [1,3],
+  [2,3],
+  [1,2],
+  []
+]
+
+
+&lt;/code&gt;&lt;/pre&gt;</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/categories/%E6%95%B0%E7%BB%84/" term="数组" label="数组" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://affectalways.github.io/tags/leetcode/" term="leetcode" label="leetcode" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">34在排序数组中查找元素的第一个和最后一个位置</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/34%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</id>
-            <updated>2020-08-27T23:15:33&#43;08:00</updated>
+            <updated>2020-09-01T23:52:12&#43;08:00</updated>
             <published>2020-08-27T23:03:34&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -33,7 +299,7 @@
 示例 1:
 输入: nums = [5,7,7,8,8,10], target = 8输出: [3,4]示例 2:
 输入: nums = [5,7,7,8,8,10], target = 6输出: [-1,-1]思路
-算法复杂度O(log n)，一看就是二分了</summary>
+算法复杂度O(log n)，一看就是二分了解题步骤</summary>
             
                 <content type="html">&lt;h4 id=&#34;34-在排序数组中查找元素的第一个和最后一个位置httpsleetcode-cncomproblemsfind-first-and-last-position-of-element-in-sorted-array&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/&#34;&gt;34. 在排序数组中查找元素的第一个和最后一个位置&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。&lt;/p&gt;
@@ -47,7 +313,8 @@
 输出: [-1,-1]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;算法复杂度O(log n)，一看就是二分了
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题步骤&lt;/strong&gt;&lt;/p&gt;
+</content>
             
             
             
@@ -87,7 +354,7 @@
             <title type="text">31下一个排列</title>
             <link rel="alternate" type="text/html" href="https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/" />
             <id>https://affectalways.github.io/posts/leetcode/%E6%95%B0%E7%BB%84/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</id>
-            <updated>2020-08-30T23:23:29&#43;08:00</updated>
+            <updated>2020-09-01T23:52:14&#43;08:00</updated>
             <published>2020-08-27T22:40:32&#43;08:00</published>
             <author>
                     <name>affectalways</name>
@@ -99,7 +366,7 @@
 必须原地修改，只允许使用额外常数空间。
 以下是一些例子，输入位于左侧列，其相应输出位于右侧列。
 1,2,3 → 1,3,23,2,1 → 1,2,31,1,5 → 1,5,1思路
-下一个排列”的定义是：给定数字序列的字典序中下一个更大的排列。如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。给定若干个数字，将其组合为一个整数。如何将这些数字重新排列，以得到下一个更大的整数。如 123 下一个更大的数为 132。如果没有更大的整数，则输出最小的整数。1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：1.在**尽可能靠右的低位**进行交换，需要**从后向前查找**2.将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换3.</summary>
+1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：1.在**尽可能靠右的低位**进行交换，需要**从后向前查找**2.将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换3.将「大数」换到前面后，需要将「大数」后面的所有数重置为升序，升序排列就是最小的排列。以 123465 为例：首先按照上一步，交换 5 和 4，得到 123564；然后需要将 5 之后的数重置为升序，得到 123546。显然 123546 比 123564 更小，123546 就是 123465 的下一个排列解题步骤</summary>
             
                 <content type="html">&lt;h4 id=&#34;31-下一个排列httpsleetcode-cncomproblemsnext-permutation&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/next-permutation/&#34;&gt;31. 下一个排列&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。&lt;/p&gt;
@@ -110,20 +377,27 @@
 3,2,1 → 1,2,3
 1,1,5 → 1,5,1
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;思路&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;下一个排列”的定义是：给定数字序列的字典序中下一个更大的排列。如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。
-
-给定若干个数字，将其组合为一个整数。如何将这些数字重新排列，以得到下一个更大的整数。如 123 下一个更大的数为 132。如果没有更大的整数，则输出最小的整数。
-
-1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。
+&lt;pre&gt;&lt;code&gt;1.我们希望下一个数**比当前数大**，这样才满足“下一个排列”的定义。因此只需要将后面的「大数」与前面的「小数」交换，就能得到一个更大的数。比如 123456，将 5 和 6 交换就能得到一个更大的数 123465。
 2.我们还希望下一个数增加的幅度尽可能的小，这样才满足“下一个排列与当前排列紧邻“的要求。为了满足这个要求，我们需要：
 	1.在**尽可能靠右的低位**进行交换，需要**从后向前查找**
 	2.将一个 尽可能小的「大数」 与前面的「小数」交换。比如 123465，下一个排列应该把 5 和 4 交换而不是把 6 和 4 交换
 	3.将「大数」换到前面后，需要将「大数」后面的所有数重置为升序，升序排列就是最小的排列。以 123465 为例：首先按照上一步，交换 5 和 4，得到 123564；然后需要将 5 之后的数重置为升序，得到 123546。显然 123546 比 123564 更小，123546 就是 123465 的下一个排列
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;1.从后往前找到第一个两个相邻元素为升序的集合（i,j），满足A[i] &amp;lt; A[j], A[j,end]必然是降序的
-2.将A[i]与A[j]交换
-3.A[j,end]因为是降序的，重置为逆序
-5.如果在步骤1找不到，则说明当前数组为一个降序数组，直接跳到步骤4
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;解题步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;从后往前找到第一对两个连续的数字，并且满足条件A[i]&amp;lt;A[i+1], A[i+1: end]肯定是降序排列的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现在需要从A[i+1: end]中找到最接近A[i]的值，记做A[j]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交换A[i]和A[j]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把A[i+1: end] 按升序排序，就是最后的结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class Solution:
     def nextPermutation(self, nums) -&amp;gt; None:
         &amp;quot;&amp;quot;&amp;quot;

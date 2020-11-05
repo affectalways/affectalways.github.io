@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>flask - 分类 - affectalways</title>
+        <link>https://affectalways.github.io/categories/flask/</link>
+        <description>flask - 分类 - affectalways</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>affectalways</copyright><lastBuildDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/flask/" rel="self" type="application/rss+xml" /><item>
+    <title>Flask 源码解析（1）</title>
+    <link>https://affectalways.github.io/flask_source_code_1/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（2）</title>
+    <link>https://affectalways.github.io/flask_source_code_2/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_2/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（3）</title>
+    <link>https://affectalways.github.io/flask_source_code_3/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_3/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（4）</title>
+    <link>https://affectalways.github.io/flask_source_code_4/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_4/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（5）</title>
+    <link>https://affectalways.github.io/flask_source_code_5/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_5/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（6）</title>
+    <link>https://affectalways.github.io/flask_source_code_6/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_6/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

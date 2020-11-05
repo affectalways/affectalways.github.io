@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>WSGI - 分类 - affectalways</title>
+        <link>https://affectalways.github.io/categories/wsgi/</link>
+        <description>WSGI - 分类 - affectalways</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>affectalways</copyright><lastBuildDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/wsgi/" rel="self" type="application/rss+xml" /><item>
+    <title>WSGI 理解（1）</title>
+    <link>https://affectalways.github.io/wsgi_kl_1/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/wsgi_kl_1/</guid>
+    <description><![CDATA[WSGI 是个什么东西？ 实际的生产环境中，Python应用程序是放在服务器的http server（比如Apache、Nginx等）上的。现在的问题是]]></description>
+</item></channel>
+</rss>

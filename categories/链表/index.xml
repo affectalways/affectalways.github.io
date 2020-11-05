@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>链表 - 分类 - affectalways</title>
+        <link>https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/</link>
+        <description>链表 - 分类 - affectalways</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>affectalways</copyright><lastBuildDate>Wed, 22 Jul 2020 23:15:30 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>Offer22 链表中倒数第K个节点</title>
+    <link>https://affectalways.github.io/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Wed, 22 Jul 2020 23:15:30 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/offer22-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[剑指 Offer 22. 链表中倒数第k个节点 输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节]]></description>
+</item><item>
+    <title>Offer22 链表中倒数第K个节点</title>
+    <link>https://affectalways.github.io/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Wed, 22 Jul 2020 23:15:30 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/offer22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[剑指 Offer 22. 链表中倒数第k个节点 输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节]]></description>
+</item><item>
+    <title>141环形链表</title>
+    <link>https://affectalways.github.io/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Wed, 22 Jul 2020 22:13:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[141. 环形链表 给定一个链表，判断链表中是否有环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -]]></description>
+</item><item>
+    <title>141环形链表</title>
+    <link>https://affectalways.github.io/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Wed, 22 Jul 2020 22:13:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[141. 环形链表 给定一个链表，判断链表中是否有环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -]]></description>
+</item><item>
+    <title>Offer18删除链表的节点</title>
+    <link>https://affectalways.github.io/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Mon, 20 Jul 2020 22:49:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/offer18-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[剑指 Offer 18. 删除链表的节点 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。 返回删除后的链表的头节点。 **注意：**此题对比原]]></description>
+</item><item>
+    <title>Offer18删除链表的节点</title>
+    <link>https://affectalways.github.io/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Mon, 20 Jul 2020 22:49:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/offer18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[剑指 Offer 18. 删除链表的节点 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。 返回删除后的链表的头节点。 **注意：**此题对比原]]></description>
+</item><item>
+    <title>876 链表的中间结点</title>
+    <link>https://affectalways.github.io/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
+    <pubDate>Thu, 16 Jul 2020 22:55:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
+    <description><![CDATA[876. 链表的中间结点 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。 如果有两个中间结点，则返回第二个中间结点。 示例 1： 1 2 3 4 5 输入：[1]]></description>
+</item><item>
+    <title>876 链表的中间结点</title>
+    <link>https://affectalways.github.io/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</link>
+    <pubDate>Thu, 16 Jul 2020 22:55:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/876%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9/</guid>
+    <description><![CDATA[876. 链表的中间结点 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。 如果有两个中间结点，则返回第二个中间结点。 示例 1： 1 2 3 4 5 输入：[1]]></description>
+</item><item>
+    <title>0201 移除重复节点</title>
+    <link>https://affectalways.github.io/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Thu, 16 Jul 2020 22:42:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/0201-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[面试题 02.01. 移除重复节点 编写代码，移除未排序链表中的重复节点。保留最开始出现的节点。 示例1: 1 2 输入：[1, 2, 3, 3, 2, 1] 输出：[1, 2, 3] 示例2: 1]]></description>
+</item><item>
+    <title>0201 移除重复节点</title>
+    <link>https://affectalways.github.io/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
+    <pubDate>Thu, 16 Jul 2020 22:42:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/0201%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
+    <description><![CDATA[面试题 02.01. 移除重复节点 编写代码，移除未排序链表中的重复节点。保留最开始出现的节点。 示例1: 1 2 输入：[1, 2, 3, 3, 2, 1] 输出：[1, 2, 3] 示例2: 1]]></description>
+</item></channel>
+</rss>

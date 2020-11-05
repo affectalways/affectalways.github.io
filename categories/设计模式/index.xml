@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>设计模式 - 分类 - affectalways</title>
+        <link>https://affectalways.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <description>设计模式 - 分类 - affectalways</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>affectalways</copyright><lastBuildDate>Mon, 22 Jun 2020 22:28:03 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>单例模式</title>
+    <link>https://affectalways.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+    <pubDate>Mon, 22 Jun 2020 22:28:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

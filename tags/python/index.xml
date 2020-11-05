@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>python - 标签 - affectalways</title>
+        <link>https://affectalways.github.io/tags/python/</link>
+        <description>python - 标签 - affectalways</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>affectalways</copyright><lastBuildDate>Wed, 05 Aug 2020 22:46:55 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Werkzeug 源码解析(4)</title>
+    <link>https://affectalways.github.io/werkzeug_sc_4/</link>
+    <pubDate>Wed, 05 Aug 2020 22:46:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/werkzeug_sc_4/</guid>
+    <description><![CDATA[wsgi.py开讲 wsgi.py封装了一系列方法，现在讲几个自认为是常用的方法。 get_current_url方法 （1）作用： 1 获取当前请求]]></description>
+</item><item>
+    <title>Instagram在PyCon2017的演讲摘要</title>
+    <link>https://affectalways.github.io/instagram%E5%9C%A8pycon2017%E7%9A%84%E6%BC%94%E8%AE%B2%E6%91%98%E8%A6%81/</link>
+    <pubDate>Tue, 21 Jul 2020 22:38:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/instagram%E5%9C%A8pycon2017%E7%9A%84%E6%BC%94%E8%AE%B2%E6%91%98%E8%A6%81/</guid>
+    <description><![CDATA[郑重声明：本篇文章非原创，摘自https://www.zlovezl.cn/articles/instagram-pycon-2017/ PyCon 简]]></description>
+</item><item>
+    <title>Werkzeug 源码解析(1)</title>
+    <link>https://affectalways.github.io/werkzeug_sc_1/</link>
+    <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/werkzeug_sc_1/</guid>
+    <description><![CDATA[Werkzeug是什么？ Werkzeug是一个基于WSGI的Web应用框架（说框架可能不合理，官方文档给出的是应用程序库）。想要了解更多请看]]></description>
+</item><item>
+    <title>Werkzeug 源码解析(2)</title>
+    <link>https://affectalways.github.io/werkzeug_sc_2/</link>
+    <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/werkzeug_sc_2/</guid>
+    <description><![CDATA[从哪开始呢？ 熟悉目录层级 参照Werkzeug官方文档给出的示例，重点关注Request,Response,run_simple 1 2 3 4 5 6 7]]></description>
+</item><item>
+    <title>Werkzeug 源码解析(3)</title>
+    <link>https://affectalways.github.io/werkzeug_sc_3/</link>
+    <pubDate>Tue, 23 Jun 2020 23:08:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/werkzeug_sc_3/</guid>
+    <description><![CDATA[Werkzeug Request 源码解析 代码示例： 1 2 3 4 5 6 7 8 from werkzeug.wrappers import Request, Response def application(environ, start_response): request = Request(environ) text = &#39;Hello %s!&#39; % request.args.get(&#39;name&#39;, &#39;World&#39;) response = Response(text, mimetype=&#39;text/plain&#39;) return response(environ, start_response) 请注意，之后Request和Response的相关源]]></description>
+</item><item>
+    <title>单例模式</title>
+    <link>https://affectalways.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+    <pubDate>Mon, 22 Jun 2020 22:28:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Gunicorn 源码解析(1)</title>
+    <link>https://affectalways.github.io/gunicorn_source_code_1/</link>
+    <pubDate>Sat, 20 Jun 2020 11:29:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/gunicorn_source_code_1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Celery 源码解析（1）</title>
+    <link>https://affectalways.github.io/celery_source_code_1/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/celery_source_code_1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（1）</title>
+    <link>https://affectalways.github.io/flask_source_code_1/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_1/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Flask 源码解析（2）</title>
+    <link>https://affectalways.github.io/flask_source_code_2/</link>
+    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/flask_source_code_2/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

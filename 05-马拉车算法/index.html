@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>05 马拉车算法 - affectalways</title><meta name="Description" content="leetcode，05 马拉车算法"><meta property="og:title" content="05 马拉车算法" />
+<meta property="og:description" content="leetcode，05 马拉车算法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2020-06-23T23:05:37+08:00" />
+<meta property="article:modified_time" content="2020-06-23T23:05:37+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="05 马拉车算法"/>
+<meta name="twitter:description" content="leetcode，05 马拉车算法"/>
+<meta name="application-name" content="affectalways">
+<meta name="apple-mobile-web-app-title" content="affectalways"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://example.com/06-z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/" /><link rel="next" href="https://example.com/04-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "05 马拉车算法",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95\/"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "leetcode","wordcount":  938 ,
+        "url": "https:\/\/example.com\/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95\/","datePublished": "2020-06-23T23:05:37+08:00","dateModified": "2020-06-23T23:05:37+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": "leetcode，05 马拉车算法"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="affectalways"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>affectalways</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/affectalways/" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="affectalways"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>affectalways</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/affectalways/" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">05 马拉车算法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>xxxx</a></span>&nbsp;<span class="post-category">included in <a href="/categories/leetcode/"><i class="far fa-folder fa-fw"></i>leetcode</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="23230-11-65">23230-11-65</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;938 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;<span id="/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="05 马拉车算法">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1整体思路">1.整体思路</a></li>
+        <li><a href="#2预处理">2.预处理</a></li>
+        <li><a href="#3详解">3.详解</a>
+          <ul>
+            <li><a href="#4求原字符串下标">4.求原字符串下标</a></li>
+            <li><a href="#5求每个-p--i-">5.求每个 P [ i ]</a></li>
+            <li><a href="#1超出了r">(1)超出了R</a></li>
+            <li><a href="#2-p--i_mirror--遇到了原字符串的左边界">(2) P [ i_mirror ] 遇到了原字符串的左边界</a></li>
+            <li><a href="#3i-等于了-r">(3)i 等于了 R</a></li>
+            <li><a href="#6考虑-c-和-r-的更新">6.考虑 C 和 R 的更新</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><a href="https://blog.csdn.net/liuwei0604/article/details/50414542">https://blog.csdn.net/liuwei0604/article/details/50414542</a> 马拉车算法可以在线性时间复杂度内求出一个字符串的最长回文字串。其核心思想跟 KMP 相似，即反复利用已掌握的情况。</p>
+<h3 id="1整体思路">1.整体思路</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">这个算法的主要思路是维护一个跟原串 str 一样长的数组 lens。lens[i] 表示以 str[i] 为中点的回串其中一边的长度。这里有的人把中点算进去，有的人记录两边的长度，其实都一样，我这里是只记录一边的长度，不包括中点。比如 &#34;CDCDE&#34;
+str:  [C, D, C, D, E]
+lens: [0, 1, 1, 0, 0]
+</code></pre></td></tr></table>
+</div>
+</div><p>那么 lens 里最大的自然就对应最长回串的中点了。所以这个算法的核心就是如何快速计算 lens。</p>
+<h3 id="2预处理">2.预处理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">回文有奇偶长度两种情况，通过补充间隔符可以将这两种情况化简为奇数长度。
+
+比如 ABA 补充为 #A#B#A# 中点还是 B，ABBA 补充为 #A#B#B#A# 中点为 #，最后可以去掉。
+
+算法用 JavaScript 写，我将原串转为数组，间隔符就用 null。
+
+最后在两侧补上哨兵点方便遍历中止。我用了 NaN。所以看起来是这样
+var arr = [NaN, null]
+for (let i = 0; i &lt; str.length; i += 1) {
+  arr.push(str[i])
+  arr.push(null)
+}
+arr.push(NaN)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3详解">3.详解</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">马拉车算法 Manacher‘s Algorithm 是用来查找一个字符串的最长回文子串的线性方法，由一个叫 Manacher 的人在 1975 年发明的，这个方法的最大贡献是在于将时间复杂度提升到了线性。
+
+首先我们解决下奇数和偶数的问题，在每个字符间插入 &#34;#&#34;，并且为了使得扩展的过程中，到边界后自动结束，在两端分别插入 &#34;^&#34; 和 &#34;$&#34;，两个不可能在字符串中出现的字符，这样中心扩展的时候，判断两端字符是否相等的时候，如果到了边界就一定会不相等，从而出了循环。经过处理，字符串的长度永远都是奇数了。
+马拉车算法 Manacher‘s Algorithm 是用来查找一个字符串的最长回文子串的线性方法，由一个叫 Manacher 的人在 1975 年发明的，这个方法的最大贡献是在于将时间复杂度提升到了线性。
+
+首先我们解决下奇数和偶数的问题，在每个字符间插入 &#34;#&#34;，并且为了使得扩展的过程中，到边界后自动结束，在两端分别插入 &#34;^&#34; 和 &#34;$&#34;，两个不可能在字符串中出现的字符，这样中心扩展的时候，判断两端字符是否相等的时候，如果到了边界就一定会不相等，从而出了循环。经过处理，字符串的长度永远都是奇数了。
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.leetcode-cn.com/ad2b5e0da4a3a35b60f60c9a5a2be07a8074f9be0fe1597351eeff7dc460789a-image.png?ynotemdtimestamp=1593701291427"
+        data-srcset="https://pic.leetcode-cn.com/ad2b5e0da4a3a35b60f60c9a5a2be07a8074f9be0fe1597351eeff7dc460789a-image.png?ynotemdtimestamp=1593701291427, https://pic.leetcode-cn.com/ad2b5e0da4a3a35b60f60c9a5a2be07a8074f9be0fe1597351eeff7dc460789a-image.png?ynotemdtimestamp=1593701291427 1.5x, https://pic.leetcode-cn.com/ad2b5e0da4a3a35b60f60c9a5a2be07a8074f9be0fe1597351eeff7dc460789a-image.png?ynotemdtimestamp=1593701291427 2x"
+        data-sizes="auto"
+        alt="https://pic.leetcode-cn.com/ad2b5e0da4a3a35b60f60c9a5a2be07a8074f9be0fe1597351eeff7dc460789a-image.png?ynotemdtimestamp=1593701291427"
+        title="image" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">首先我们用一个数组 P 保存从中心扩展的最大个数，而它刚好也是去掉 &#34;#&#34; 的原字符串的总长度。例如下图中下标是 6 的地方，可以看到 P[ 6 ] 等于 5，所以它是从左边扩展 5 个字符，相应的右边也是扩展 5 个字符，也就是 &#34;#c#b#c#b#c#&#34;。而去掉 # 恢复到原来的字符串，变成 &#34;cbcbc&#34;，它的长度刚好也就是 5。
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.leetcode-cn.com/ae2c30d48d35faa7f3d0d8bc4fe18d0691f3d13dcfc5846ddce1bf7a002681f5-image.png?ynotemdtimestamp=1593701291427"
+        data-srcset="https://pic.leetcode-cn.com/ae2c30d48d35faa7f3d0d8bc4fe18d0691f3d13dcfc5846ddce1bf7a002681f5-image.png?ynotemdtimestamp=1593701291427, https://pic.leetcode-cn.com/ae2c30d48d35faa7f3d0d8bc4fe18d0691f3d13dcfc5846ddce1bf7a002681f5-image.png?ynotemdtimestamp=1593701291427 1.5x, https://pic.leetcode-cn.com/ae2c30d48d35faa7f3d0d8bc4fe18d0691f3d13dcfc5846ddce1bf7a002681f5-image.png?ynotemdtimestamp=1593701291427 2x"
+        data-sizes="auto"
+        alt="https://pic.leetcode-cn.com/ae2c30d48d35faa7f3d0d8bc4fe18d0691f3d13dcfc5846ddce1bf7a002681f5-image.png?ynotemdtimestamp=1593701291427"
+        title="image" /></p>
+<h4 id="4求原字符串下标">4.求原字符串下标</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">用 P 的下标 i 减去 P [ i ]，再除以 2，就是原字符串的开头下标了。
+
+例如我们找到 P[ i ] 的最大值为 5，也就是回文串的最大长度是 5，对应的下标是 6，所以原字符串的开头下标是（6 - 5 ）/ 2 = 0。所以我们只需要返回原字符串的第 0 到 第（5 - 1）位就可以了。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="5求每个-p--i-">5.求每个 P [ i ]</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">接下来是算法的关键了，它充分利用了回文串的对称性。
+
+我们用 C 表示回文串的中心，用 R 表示回文串的右边半径。所以 R = C + P[ i ]。C 和 R 所对应的回文串是当前循环中 R 最靠右的回文串。
+
+让我们考虑求 P [ i ] 的时候，如下图。
+
+用 i_mirror 表示当前需要求的第 i 个字符关于 C 对应的下标。
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.leetcode-cn.com/29eb66280ca149c3bf5d9906e066b4a2b39d1bf8f9dd0533ca00479aca6f4f39-image.png?ynotemdtimestamp=1593701291427"
+        data-srcset="https://pic.leetcode-cn.com/29eb66280ca149c3bf5d9906e066b4a2b39d1bf8f9dd0533ca00479aca6f4f39-image.png?ynotemdtimestamp=1593701291427, https://pic.leetcode-cn.com/29eb66280ca149c3bf5d9906e066b4a2b39d1bf8f9dd0533ca00479aca6f4f39-image.png?ynotemdtimestamp=1593701291427 1.5x, https://pic.leetcode-cn.com/29eb66280ca149c3bf5d9906e066b4a2b39d1bf8f9dd0533ca00479aca6f4f39-image.png?ynotemdtimestamp=1593701291427 2x"
+        data-sizes="auto"
+        alt="https://pic.leetcode-cn.com/29eb66280ca149c3bf5d9906e066b4a2b39d1bf8f9dd0533ca00479aca6f4f39-image.png?ynotemdtimestamp=1593701291427"
+        title="image" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">我们现在要求 P [ i ]，如果是用中心扩展法，那就向两边扩展比对就行了。但是我们其实可以利用回文串 C 的对称性。i 关于 C 的对称点是 i_mirror，P [ i_mirror ] = 3，所以 P [ i ] 也等于 3。
+
+但是有三种情况将会造成直接赋值为 P [ i_mirror ] 是不正确的，下边一一讨论。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="1超出了r">(1)超出了R</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.leetcode-cn.com/b0d52a5f30747e55ef09b3c7b7cfc23026e37040edc41f387263e8f8a0ba8f49-image.png?ynotemdtimestamp=1593701291427"
+        data-srcset="https://pic.leetcode-cn.com/b0d52a5f30747e55ef09b3c7b7cfc23026e37040edc41f387263e8f8a0ba8f49-image.png?ynotemdtimestamp=1593701291427, https://pic.leetcode-cn.com/b0d52a5f30747e55ef09b3c7b7cfc23026e37040edc41f387263e8f8a0ba8f49-image.png?ynotemdtimestamp=1593701291427 1.5x, https://pic.leetcode-cn.com/b0d52a5f30747e55ef09b3c7b7cfc23026e37040edc41f387263e8f8a0ba8f49-image.png?ynotemdtimestamp=1593701291427 2x"
+        data-sizes="auto"
+        alt="https://pic.leetcode-cn.com/b0d52a5f30747e55ef09b3c7b7cfc23026e37040edc41f387263e8f8a0ba8f49-image.png?ynotemdtimestamp=1593701291427"
+        title="image" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">当我们要求 P [ i ] 的时候，P [ mirror ] = 7，而此时 P [ i ] 并不等于 7，为什么呢，因为我们从 i 开始往后数 7 个，等于 22，已经超过了最右的 R，此时不能利用对称性了，但我们一定可以扩展到 R 的，所以 P [ i ] 至少等于 R - i = 20 - 15 = 5，会不会更大呢，我们只需要比较 T [ R+1 ] 和 T [ R+1 ]关于 i 的对称点就行了，就像中心扩展法一样一个个扩展。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="2-p--i_mirror--遇到了原字符串的左边界">(2) P [ i_mirror ] 遇到了原字符串的左边界</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">此时P [ i_mirror ] = 1，但是 P [ i ] 赋值成 1 是不正确的，出现这种情况的原因是 P [ i_mirror ] 在扩展的时候首先是 &#34;#&#34; == &#34;#&#34;，之后遇到了 &#34;^&#34; 和另一个字符比较，也就是到了边界，才终止循环的。而 P [ i ] 并没有遇到边界，所以我们可以继续通过中心扩展法一步一步向两边扩展就行了。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="3i-等于了-r">(3)i 等于了 R</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">此时我们先把 P [ i ] 赋值为 0，然后通过中心扩展法一步一步扩展就行了。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="6考虑-c-和-r-的更新">6.考虑 C 和 R 的更新</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">就这样一步一步的求出每个 P [ i ]，当求出的 P [ i ] 的右边界大于当前的 R 时，我们就需要更新 C 和 R 为当前的回文串了。因为我们必须保证 i 在 R 里面，所以一旦有更右边的 R 就要更新 R。
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://pic.leetcode-cn.com/5fbe52880634a9d5fa60ad5e126e8c5c38c5a6eadd0c901a3495dc1307d46d6b-image.png?ynotemdtimestamp=1593701291427"
+        data-srcset="https://pic.leetcode-cn.com/5fbe52880634a9d5fa60ad5e126e8c5c38c5a6eadd0c901a3495dc1307d46d6b-image.png?ynotemdtimestamp=1593701291427, https://pic.leetcode-cn.com/5fbe52880634a9d5fa60ad5e126e8c5c38c5a6eadd0c901a3495dc1307d46d6b-image.png?ynotemdtimestamp=1593701291427 1.5x, https://pic.leetcode-cn.com/5fbe52880634a9d5fa60ad5e126e8c5c38c5a6eadd0c901a3495dc1307d46d6b-image.png?ynotemdtimestamp=1593701291427 2x"
+        data-sizes="auto"
+        alt="https://pic.leetcode-cn.com/5fbe52880634a9d5fa60ad5e126e8c5c38c5a6eadd0c901a3495dc1307d46d6b-image.png?ynotemdtimestamp=1593701291427"
+        title="image" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">此时的 P [ i ] 求出来将会是 3，P [ i ] 对应的右边界将是 10 + 3 = 13，所以大于当前的 R，我们需要把 C 更新成 i 的值，也就是 10，R 更新成 13。继续下边的循环。
+public String preProcess(String s) {
+    int n = s.length();
+    if (n == 0) {
+        return &#34;^$&#34;;
+    }
+    String ret = &#34;^&#34;;
+    for (int i = 0; i &lt; n; i++)
+        ret += &#34;#&#34; + s.charAt(i);
+    ret += &#34;#$&#34;;
+    return ret;
+}
+
+// 马拉车算法
+public String longestPalindrome2(String s) {
+    String T = preProcess(s);
+    int n = T.length();
+    int[] P = new int[n];
+    int C = 0, R = 0;
+    for (int i = 1; i &lt; n - 1; i++) {
+        int i_mirror = 2 * C - i;
+        if (R &gt; i) {
+            P[i] = Math.min(R - i, P[i_mirror]);// 防止超出 R
+        } else {
+            P[i] = 0;// 等于 R 的情况
+        }
+
+        // 碰到之前讲的三种情况时候，需要利用中心扩展法
+        while (T.charAt(i + 1 + P[i]) == T.charAt(i - 1 - P[i])) {
+            P[i]++;
+        }
+
+        // 判断是否需要更新 R
+        if (i + P[i] &gt; R) {
+            C = i;
+            R = i + P[i];
+        }
+
+    }
+
+    // 找出 P 的最大值
+    int maxLen = 0;
+    int centerIndex = 0;
+    for (int i = 1; i &lt; n - 1; i++) {
+        if (P[i] &gt; maxLen) {
+            maxLen = P[i];
+            centerIndex = i;
+        }
+    }
+    int start = (centerIndex - maxLen) / 2; //最开始讲的求原字符串下标
+    return s.substring(start, start + maxLen);
+}
+class Solution:
+    def longestPalindrome(self, s):
+        format_s = self.pre_process(s)
+        length = len(format_s)
+        ps = [0] * length
+
+        center = 0
+        right = 0
+        for current in range(1, length - 1):
+            current_mirror = 2 * center - current
+            if (current + ps[current_mirror]) &lt; right and (current_mirror - 1) != 0:
+                ps[current] = ps[current_mirror]
+            elif (current + ps[current_mirror]) &lt; right and (current_mirror - 1) == 0:
+                i = 1
+                while (current - i) &gt;= 0 and (current + i) &lt; length and format_s[current - i] == format_s[current + i]:
+                    ps[current] += 1
+                    i+=1
+                if ps[current] &lt; ps[current_mirror]:
+                    ps[current] = ps[current_mirror]
+            else:
+                i = 1
+                while (current - i) &gt;= 0 and (current + i) &lt; length and format_s[current - i] == format_s[
+                    current + i]:
+                    ps[current] += 1
+                    i += 1
+
+            if ps[current] + center &gt; right:
+                center = current
+                right = ps[current] + center
+
+        max_length = 0
+        center_index = 0
+        for i in range(1, length -1):
+            if ps[i] &gt; max_length:
+                max_length = ps[i]
+                center_index = i
+        start = (center_index - max_length) // 2
+        return s[start:start + max_length]
+
+    def pre_process(self, s):
+        result = &#34;#&#34;
+        for i in range(len(s)):
+            result += s[i]
+            result += &#39;#&#39;
+        return result
+
+
+if __name__ == &#39;__main__&#39;:
+    solution = Solution()
+    result = solution.longestPalindrome(&#34;ababcbab&#34;)
+    print(result)
+时间复杂度：for 循环里边套了一层 while 循环，难道不是 O(n²)？不！其实是 O(n)。不严谨的想一下，因为 while 循环访问 R 右边的数字用来扩展，也就是那些还未求出的节点，然后不断扩展，而期间访问的节点下次就不会再进入 while 了，可以利用对称得到自己的解，所以每个节点访问都是常数次，所以是 O ( n )。
+
+空间复杂度：O(n)。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="总结">总结</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">时间复杂度从三次方降到了一次，美妙！这里两次用到了动态规划去求解，初步认识了动态规划，就是将之前求的值保存起来，方便后边的计算，使得一些多余的计算消失了。并且在动态规划中，通过观察数组的利用情况，从而降低了空间复杂度。而 Manacher 算法对回文串对称性的充分利用，不得不让人叹服，自己加油啦
+
+作者：windliang
+链接：https://leetcode-cn.com/problems/longest-palindromic-substring/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-bao-gu/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 23230-11-65</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" data-title="05 马拉车算法" data-via="xxxx" data-hashtags="leetcode"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" data-hashtag="leetcode"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" data-title="05 马拉车算法"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" data-title="05 马拉车算法"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://example.com/05-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95/" data-title="05 马拉车算法"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">leetcode</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/06-z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/" class="prev" rel="prev" title="06 Z 字形变换"><i class="fas fa-angle-left fa-fw"></i>06 Z 字形变换</a>
+            <a href="/04-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="next" rel="next" title="04 寻找两个有序数组的中位数">04 寻找两个有序数组的中位数<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.76.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

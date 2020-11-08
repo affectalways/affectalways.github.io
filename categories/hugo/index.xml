@@ -4,7 +4,14 @@
         <link>https://affectalways.github.io/categories/hugo/</link>
         <description>hugo - 分类 - </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 17 Jun 2020 21:48:44 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/hugo/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 08 Nov 2020 20:53:09 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Adding_Google_Analytics_and_AdSense_to_a_Hugo_website</title>
+    <link>https://affectalways.github.io/add_adsense/</link>
+    <pubDate>Sun, 08 Nov 2020 20:53:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/add_adsense/</guid>
+    <description><![CDATA[Adding Google Analytics and AdSense to a Hugo website Hugo is a great static website generator, I use it for this blog and am absolutely loving it! However, the first issue that I came across was that the theme that I’m using LoveIT does not come with any configuration options for using Google Analytics or including Google AdSense ads. I also wanted to include some custom headers such]]></description>
+</item><item>
     <title>Hugo 添加评论功能</title>
     <link>https://affectalways.github.io/hugo_comment/</link>
     <pubDate>Wed, 17 Jun 2020 21:48:44 &#43;0800</pubDate>

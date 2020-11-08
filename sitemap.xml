@@ -2,14 +2,18 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://affectalways.github.io/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://affectalways.github.io/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/add_adsense/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/categories/blog/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/categories/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/tags/hugo/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/categories/hugo/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/posts/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://affectalways.github.io/tags/</loc><lastmod>2020-11-08T20:53:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://affectalways.github.io/about/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/posts/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/categories/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/tags/flask/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/tags/python/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/categories/python/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/tags/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/tags/werkzeug/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/categories/werkzeug/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/werkzeug_sc_4/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
@@ -113,9 +117,6 @@
             <loc>https://affectalways.github.io/categories/wsgi/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/tags/wsgi/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/wsgi_kl_1/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/categories/blog/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/tags/hugo/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://affectalways.github.io/categories/hugo/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/hugo_comment/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/hugo_seo/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://affectalways.github.io/hugo_tags/</loc><lastmod>2020-10-29T22:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>

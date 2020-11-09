@@ -4,7 +4,14 @@
         <link>https://affectalways.github.io/tags/python/</link>
         <description>python - 标签 - </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Aug 2020 22:46:55 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Python格式化curl返回的json</title>
+    <link>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</link>
+    <pubDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</guid>
+    <description><![CDATA[Python格式化Curl返回的Json 在 API 调试过程中除了使用 GUI 工具（类似：Postman）我最常使用的就是 curl 命令了 ，简单快捷，但是 curl 的输出]]></description>
+</item><item>
     <title>Werkzeug 源码解析(4)</title>
     <link>https://affectalways.github.io/werkzeug_sc_4/</link>
     <pubDate>Wed, 05 Aug 2020 22:46:55 &#43;0800</pubDate>
@@ -66,13 +73,6 @@
     <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://affectalways.github.io/flask_source_code_1/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Flask 源码解析（2）</title>
-    <link>https://affectalways.github.io/flask_source_code_2/</link>
-    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/flask_source_code_2/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

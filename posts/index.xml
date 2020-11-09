@@ -4,7 +4,14 @@
         <link>https://affectalways.github.io/posts/</link>
         <description>所有文章 | </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 08 Nov 2020 20:53:09 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Python格式化curl返回的json</title>
+    <link>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</link>
+    <pubDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</guid>
+    <description><![CDATA[Python格式化Curl返回的Json 在 API 调试过程中除了使用 GUI 工具（类似：Postman）我最常使用的就是 curl 命令了 ，简单快捷，但是 curl 的输出]]></description>
+</item><item>
     <title>Adding_Google_Analytics_and_AdSense_to_a_Hugo_website</title>
     <link>https://affectalways.github.io/add_adsense/</link>
     <pubDate>Sun, 08 Nov 2020 20:53:09 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://affectalways.github.io/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</guid>
     <description><![CDATA[1160. 拼写单词 给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。 假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』]]></description>
-</item><item>
-    <title>674最长连续递增序列</title>
-    <link>https://affectalways.github.io/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</link>
-    <pubDate>Tue, 28 Jul 2020 23:31:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/</guid>
-    <description><![CDATA[674. 最长连续递增序列 给定一个未经排序的整数数组，找到最长且连续的的递增序列，并返回该序列的长度。 示例 1: 1 2 3 4 输入: [1,3,5,4,7] 输出: 3 解释: 最长连续递]]></description>
 </item></channel>
 </rss>

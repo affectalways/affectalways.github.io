@@ -4,7 +4,14 @@
         <link>https://affectalways.github.io/posts/</link>
         <description>所有文章 | </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 22:58:41 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Ssh启用禁用history</title>
+    <link>https://affectalways.github.io/ssh%E5%90%AF%E7%94%A8%E7%A6%81%E7%94%A8history/</link>
+    <pubDate>Mon, 09 Nov 2020 22:58:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/ssh%E5%90%AF%E7%94%A8%E7%A6%81%E7%94%A8history/</guid>
+    <description><![CDATA[SSH 启用禁用history 想在terminal中执行上一条命令，按了向上的方向键，但是没反应，以为键盘坏了，确定了下，原来是history命令]]></description>
+</item><item>
     <title>Python格式化curl返回的json</title>
     <link>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</link>
     <pubDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://affectalways.github.io/118%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
     <description><![CDATA[118. 杨辉三角 给定一个非负整数 *numRows，*生成杨辉三角的前 numRows 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 示例: 1 2 3 4 5 6 7 8 9]]></description>
-</item><item>
-    <title>1160拼写单词</title>
-    <link>https://affectalways.github.io/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</link>
-    <pubDate>Tue, 28 Jul 2020 23:42:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/1160%E6%8B%BC%E5%86%99%E5%8D%95%E8%AF%8D/</guid>
-    <description><![CDATA[1160. 拼写单词 给你一份『词汇表』（字符串数组） words 和一张『字母表』（字符串） chars。 假如你可以用 chars 中的『字母』（字符）拼写出 words 中的某个『单词』]]></description>
 </item></channel>
 </rss>

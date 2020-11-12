@@ -1,4 +1,4 @@
-# Celery_bug_1
+# Celery：Import fails with SyntaxError: invalid syntax
 
 
 ## Celery：Import fails with SyntaxError: invalid syntax

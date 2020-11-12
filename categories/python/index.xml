@@ -4,7 +4,21 @@
         <link>https://affectalways.github.io/categories/python/</link>
         <description>python - 分类 - </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Bug: Python第三方库cx_Oracle阻塞gevent</title>
+    <link>https://affectalways.github.io/cx_oracle_block_gevent_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_block_gevent_bug/</guid>
+    <description><![CDATA[Bug：Python第三方库cx_Oracle阻塞gevent 问题描述： 线上维护一个项目，flask + celery + gevent + sqlite，下发一个B段弱密]]></description>
+</item><item>
+    <title>Bug：python第三方库cx_Oracle生成大量xml日志</title>
+    <link>https://affectalways.github.io/cx_oracle_log_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_log_bug/</guid>
+    <description><![CDATA[Bug：python第三方库cx_Oracle生成大量xml日志 又tm是cx_Oracle！ 线上环境突然无法访问前端，后端排查发现服务都挂了]]></description>
+</item><item>
     <title>Python格式化curl返回的json</title>
     <link>https://affectalways.github.io/python%E6%A0%BC%E5%BC%8F%E5%8C%96curl%E8%BF%94%E5%9B%9E%E7%9A%84json/</link>
     <pubDate>Mon, 09 Nov 2020 22:44:36 &#43;0800</pubDate>
@@ -59,20 +73,6 @@
     <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://affectalways.github.io/flask_source_code_1/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Flask 源码解析（2）</title>
-    <link>https://affectalways.github.io/flask_source_code_2/</link>
-    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/flask_source_code_2/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Flask 源码解析（3）</title>
-    <link>https://affectalways.github.io/flask_source_code_3/</link>
-    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/flask_source_code_3/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

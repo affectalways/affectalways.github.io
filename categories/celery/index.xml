@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>celery - 分类 - </title>
+        <link>https://affectalways.github.io/categories/celery/</link>
+        <description>celery - 分类 - </description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/categories/celery/" rel="self" type="application/rss+xml" /><item>
+    <title>Bug: Python第三方库cx_Oracle阻塞gevent</title>
+    <link>https://affectalways.github.io/cx_oracle_block_gevent_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_block_gevent_bug/</guid>
+    <description><![CDATA[Bug：Python第三方库cx_Oracle阻塞gevent 问题描述： 线上维护一个项目，flask + celery + gevent + sqlite，下发一个B段弱密]]></description>
+</item></channel>
+</rss>

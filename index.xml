@@ -4,10 +4,24 @@
         <link>https://affectalways.github.io/</link>
         <description>affectalways</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 11 Nov 2020 20:29:36 &#43;0800</lastBuildDate>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</lastBuildDate>
             <atom:link href="https://affectalways.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Celery_bug_1</title>
+    <title>Bug: Python第三方库cx_Oracle阻塞gevent</title>
+    <link>https://affectalways.github.io/cx_oracle_block_gevent_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_block_gevent_bug/</guid>
+    <description><![CDATA[Bug：Python第三方库cx_Oracle阻塞gevent 问题描述： 线上维护一个项目，flask + celery + gevent + sqlite，下发一个B段弱密]]></description>
+</item><item>
+    <title>Bug：python第三方库cx_Oracle生成大量xml日志</title>
+    <link>https://affectalways.github.io/cx_oracle_log_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_log_bug/</guid>
+    <description><![CDATA[Bug：python第三方库cx_Oracle生成大量xml日志 又tm是cx_Oracle！ 线上环境突然无法访问前端，后端排查发现服务都挂了]]></description>
+</item><item>
+    <title>Celery：Import fails with SyntaxError: invalid syntax</title>
     <link>https://affectalways.github.io/celery_bug_1/</link>
     <pubDate>Wed, 11 Nov 2020 20:29:36 &#43;0800</pubDate>
     <author>作者</author>
@@ -62,19 +76,5 @@
     <author>作者</author>
     <guid>https://affectalways.github.io/1346%E6%A3%80%E6%9F%A5%E6%95%B4%E6%95%B0%E5%8F%8A%E5%85%B6%E4%B8%A4%E5%80%8D%E6%95%B0%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</guid>
     <description><![CDATA[1346. 检查整数及其两倍数是否存在 给你一个整数数组 arr，请你检查是否存在两个整数 N 和 M，满足 N 是 M 的两倍（即，N = 2 * M）。 更正式地，检查是否存]]></description>
-</item><item>
-    <title>605种花问题</title>
-    <link>https://affectalways.github.io/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</link>
-    <pubDate>Mon, 03 Aug 2020 23:23:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/605%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98/</guid>
-    <description><![CDATA[605. 种花问题 假设你有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花卉不能种植在相邻的地块上，它们会争夺水源，两者都会死去。 给定一]]></description>
-</item><item>
-    <title>167两数之和2</title>
-    <link>https://affectalways.github.io/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</link>
-    <pubDate>Mon, 03 Aug 2020 23:06:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/167%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C2/</guid>
-    <description><![CDATA[167. 两数之和 II - 输入有序数组 给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。 函数应该返回这两个下标值 index1 和 index2，]]></description>
 </item></channel>
 </rss>

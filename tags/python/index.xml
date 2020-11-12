@@ -4,8 +4,22 @@
         <link>https://affectalways.github.io/tags/python/</link>
         <description>python - 标签 - </description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>affectalways@gmail.com (affectalways)</managingEditor>
-            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 11 Nov 2020 20:29:36 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>Celery_bug_1</title>
+            <webMaster>affectalways@gmail.com (affectalways)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</lastBuildDate><atom:link href="https://affectalways.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Bug: Python第三方库cx_Oracle阻塞gevent</title>
+    <link>https://affectalways.github.io/cx_oracle_block_gevent_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_block_gevent_bug/</guid>
+    <description><![CDATA[Bug：Python第三方库cx_Oracle阻塞gevent 问题描述： 线上维护一个项目，flask + celery + gevent + sqlite，下发一个B段弱密]]></description>
+</item><item>
+    <title>Bug：python第三方库cx_Oracle生成大量xml日志</title>
+    <link>https://affectalways.github.io/cx_oracle_log_bug/</link>
+    <pubDate>Thu, 12 Nov 2020 21:48:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://affectalways.github.io/cx_oracle_log_bug/</guid>
+    <description><![CDATA[Bug：python第三方库cx_Oracle生成大量xml日志 又tm是cx_Oracle！ 线上环境突然无法访问前端，后端排查发现服务都挂了]]></description>
+</item><item>
+    <title>Celery：Import fails with SyntaxError: invalid syntax</title>
     <link>https://affectalways.github.io/celery_bug_1/</link>
     <pubDate>Wed, 11 Nov 2020 20:29:36 &#43;0800</pubDate>
     <author>作者</author>
@@ -59,20 +73,6 @@
     <pubDate>Mon, 22 Jun 2020 22:28:03 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://affectalways.github.io/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Gunicorn 源码解析(1)</title>
-    <link>https://affectalways.github.io/gunicorn_source_code_1/</link>
-    <pubDate>Sat, 20 Jun 2020 11:29:06 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/gunicorn_source_code_1/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Celery 源码解析（1）</title>
-    <link>https://affectalways.github.io/celery_source_code_1/</link>
-    <pubDate>Sat, 20 Jun 2020 11:24:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://affectalways.github.io/celery_source_code_1/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
